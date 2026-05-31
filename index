@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeamlessOutbound – Outbound Operating Systems</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#2563EB',
+              dark: '#1D4ED8',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 border-b border-gray-800 bg-gray-950/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-brand flex items-center justify-center text-sm font-bold">
+          SO
+        </div>
+        <span class="font-semibold tracking-tight">SeamlessOutbound</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+        <a href="#problem" class="hover:text-white">Problem</a>
+        <a href="#system" class="hover:text-white">System</a>
+        <a href="#how" class="hover:text-white">How It Works</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#calendly" class="hover:text-white">Book Call</a>
+        <a href="#form" class="hover:text-white">Form</a>
+      </nav>
+
+      <a href="#calendly" class="hidden md:inline-flex px-4 py-2 bg-brand hover:bg-brand-dark rounded-lg text-sm font-semibold">
+        Book Call
+      </a>
+
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-gray-700">
+        <div class="w-4 h-0.5 bg-gray-200 mb-1"></div>
+        <div class="w-4 h-0.5 bg-gray-200 mb-1"></div>
+        <div class="w-4 h-0.5 bg-gray-200"></div>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-800 bg-gray-950">
+      <nav class="px-4 py-4 flex flex-col gap-3 text-sm text-gray-300">
+        <a href="#problem" class="hover:text-white">Problem</a>
+        <a href="#system" class="hover:text-white">System</a>
+        <a href="#how" class="hover:text-white">How It Works</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#calendly" class="hover:text-white">Book Call</a>
+        <a href="#form" class="hover:text-white">Form</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="px-6 py-20 md:py-28 max-w-6xl mx-auto fade-up">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+          Turn Clay, Instantly & Apollo
+          <span class="block text-brand mt-1">Into a Predictable Outbound Engine</span>
+        </h1>
+
+        <p class="mt-6 text-lg text-gray-300 leading-relaxed">
+          You already have the tools.  
+          I build the outbound operating system your business runs on so interest turns into qualified conversations — consistently and predictably.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#calendly" class="px-6 py-3 bg-brand hover:bg-brand-dark rounded-xl text-sm font-semibold shadow-lg shadow-brand/30">
+            Book a Call
+          </a>
+          <a href="#form" class="px-6 py-3 border border-gray-700 hover:border-gray-500 rounded-xl text-sm font-semibold text-gray-200">
+            Fill Out Form
+          </a>
+        </div>
+
+        <p class="mt-8 text-gray-400 italic">
+          “Tools create activity. Airtight, predictable systems create revenue.”
+        </p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8">
+        <h3 class="text-sm font-semibold text-gray-400 mb-4 uppercase tracking-wide">
+          What I actually build
+        </h3>
+        <ul class="space-y-3 text-sm text-gray-200">
+          <li>• Domain rules that keep you out of spam</li>
+          <li>• Deliverability engineering for safe scale</li>
+          <li>• CRM architecture so no lead gets lost</li>
+          <li>• Pipeline logic that decides what happens next</li>
+          <li>• Qualification workflows that surface real buyers</li>
+          <li>• AI‑assisted follow‑up & objection handling</li>
+          <li>• Trust‑building and clean SDR handoff</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF STRIP -->
+  <section class="px-6 pb-10 fade-up">
+    <div class="max-w-6xl mx-auto border border-gray-800 rounded-2xl bg-gray-900/60 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+      <p class="text-sm text-gray-300">
+        Built for agencies & B2B teams already using Clay, Instantly, Apollo — but not getting the pipeline they should.
+      </p>
+      <p class="text-xs text-gray-500">
+        Outbound infrastructure, not “another tool setup”.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem" class="px-6 py-20 bg-gray-900 fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">The Problem Isn’t Your Tools — It’s the Missing System</h2>
+
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Most teams already use Clay, Instantly, Apollo, maybe even an SDR or VA.  
+        But they still struggle with inconsistent pipeline, low reply quality, and unpredictable revenue.  
+        That’s because tools create <span class="text-white font-semibold">activity</span>.  
+        Only systems create <span class="text-white font-semibold">revenue</span>.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-10 text-gray-300 text-sm">
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-100">What you have now</h3>
+          <ul class="space-y-2">
+            <li>• Lists, sequences, inboxes</li>
+            <li>• Tools that don’t talk to each other</li>
+            <li>• SDRs chasing random replies</li>
+            <li>• No clear view of what’s working</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-100">What’s missing</h3>
+          <ul class="space-y-2">
+            <li>• Deliverability rules and domain strategy</li>
+            <li>• Real CRM architecture and data hygiene</li>
+            <li>• Pipeline logic and qualification criteria</li>
+            <li>• Clean SDR handoff and feedback loop</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM / WHAT I DO -->
+  <section id="system" class="px-6 py-24 fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">I Build the Outbound Operating System Your Tools Plug Into</h2>
+      <p class="text-gray-300 mb-12 text-lg max-w-3xl">
+        Totally — Clay and Instantly are great tools.  
+        What I do isn’t tools. I build the outbound operating system your business runs on so interest turns into qualified conversations.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-10 text-sm text-gray-200">
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">Domain Rules</h3>
+          <p class="text-gray-300">Guardrails that keep your outbound out of spam and running safely at scale.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">Deliverability Engineering</h3>
+          <p class="text-gray-300">Domains, warmup, records, and sending structure so your emails actually land.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">CRM Architecture</h3>
+          <p class="text-gray-300">How leads are captured, tagged, qualified, and moved from interest to booked calls without slipping through the cracks.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">Pipeline Logic</h3>
+          <p class="text-gray-300">The decision‑making engine that ensures every lead gets the right message at the right time.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">Qualification Workflows</h3>
+          <p class="text-gray-300">Filters and steps that turn random replies into real sales conversations by surfacing only real buyers.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">AI‑Assisted Follow‑Up</h3>
+          <p class="text-gray-300">Smart follow‑ups, objection handling, and iteration that improve over time instead of staying static.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">Trust‑Building</h3>
+          <p class="text-gray-300">Messaging and assets that answer “Why you?” before the call even happens.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">Clean SDR Handoff</h3>
+          <p class="text-gray-300">Warm, context‑rich leads handed to your rep with notes, history, and next steps — so they can just show up and close.</p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-2 text-brand">Feedback & Iteration Loop</h3>
+          <p class="text-gray-300">Continuous improvement based on real replies, calls, and closed‑won data.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDLY SECTION -->
+  <section id="calendly" class="px-6 py-24 bg-gray-900 fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Prefer to Book Instantly?</h2>
+      <p class="text-gray-300 mb-8 text-lg">
+        Skip the back‑and‑forth. Choose a time that works for you and lock in your outbound audit.
+      </p>
+
+      <!-- ⭐ Calendly Embed Placeholder ⭐ -->
+      <div class="bg-gray-950 border border-gray-800 rounded-2xl p-10 shadow-xl">
+        <p class="text-gray-400 italic mb-4">
+          Your Calendly embed goes here.
+        </p>
+
+        <div class="w-full h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-sm">
+          Calendly Embed Placeholder
+        </div>
+      </div>
+
+      <a href="#form" class="mt-8 inline-block text-sm text-gray-400 hover:text-gray-200">
+        Prefer the form instead? Click here.
+      </a>
+    </div>
+  </section>
+    <!-- FORM SECTION -->
+  <section id="form" class="px-6 py-28 fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Kick Off Your Outbound Audit</h2>
+      <p class="text-gray-300 mb-8 text-lg">
+        Drop your details below. This form will trigger your GHL or HubSpot automation and start the process.
+      </p>
+
+      <!-- ⭐ GHL / HUBSPOT FORM EMBED PLACEHOLDER ⭐ -->
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-10 shadow-xl">
+        <p class="text-gray-400 italic mb-4">
+          Your form embed goes here.
+        </p>
+
+        <div class="w-full h-64 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 text-sm">
+          GHL / HubSpot Form Embed Placeholder
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="px-6 pb-16 fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Turn Your Tools Into a Real Outbound Engine</h2>
+      <p class="text-gray-300 mb-6 text-lg">
+        You don’t need another tool. You need an outbound operating system that turns interest into qualified conversations — predictably.
+      </p>
+      <a href="#calendly" class="px-8 py-3 bg-brand hover:bg-brand-dark rounded-xl text-sm font-semibold">
+        Book Your 15‑Minute Outbound Audit
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="px-6 py-8 text-center text-gray-500 text-xs border-t border-gray-900">
+    © 2026 SeamlessOutbound. Outbound infrastructure for teams that care about pipeline quality.
+  </footer>
+
+  <!-- JS: mobile menu + fade-up on scroll -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
 
