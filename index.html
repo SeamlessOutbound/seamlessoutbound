@@ -27,30 +27,29 @@
 </head>
 
 <body class="bg-soDark text-white font-sans">
+  <!-- Background gradient -->
   <div class="fixed inset-0 -z-10 bg-gradient-to-br from-soPurple/40 via-soDark to-soBlue/40 opacity-70"></div>
   <div class="fixed inset-0 -z-20 bg-soDark"></div>
 
   <!-- NAVBAR -->
   <header class="border-b border-white/10 bg-black/40 backdrop-blur">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="logo.png" alt="Seamless Outbound Logo" class="h-9 w-auto" />
-        <div class="flex flex-col">
-          <span class="font-semibold tracking-tight text-lg">Seamless Outbound</span>
-          <span class="text-xs text-gray-300">Revenue Systems for Marketing Agencies</span>
-        </div>
-      </div>
+      
+      <!-- LOGO ONLY -->
+      <img src="logo.png" alt="Seamless Outbound Logo" class="h-10 w-auto" />
+
       <nav class="hidden md:flex items-center gap-6 text-sm text-gray-200">
         <a href="#how" class="hover:text-white">How it works</a>
-        <a href="#why" class="hover:text-white">Why agencies choose us</a>
+        <a href="#why" class="hover:text-white">Why us</a>
         <a href="#outcome" class="hover:text-white">Outcome</a>
         <a href="#cta" class="hover:text-white">Get started</a>
       </nav>
+
       <a
         href="https://calendly.com/seamlessoutbound/30-minute-meeting"
         class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-soPurple to-soBlue hover:from-soBlue hover:to-soPurple shadow-lg shadow-soPurple/40 transition"
       >
-        Book a strategy call
+        Book a call
       </a>
     </div>
   </header>
@@ -70,6 +69,7 @@
             </span>
             for your marketing agency.
           </h1>
+
           <p class="text-gray-200 text-sm md:text-base mb-6">
             A hybrid outbound operating system that turns your existing stack into a predictable pipeline engine.
             Automation builds the volume. Human precision closes the deals.
@@ -86,22 +86,31 @@
               href="#how"
               class="inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-medium border border-white/20 text-gray-100 hover:bg-white/5 transition"
             >
-              See how the system works
+              See how it works
             </a>
           </div>
         </div>
 
-        <!-- HERO IMAGE PLACEHOLDER -->
+        <!-- HERO IMAGE -->
         <div class="relative">
           <div class="absolute -inset-10 bg-gradient-to-tr from-soPurple/40 via-transparent to-soBlue/40 blur-3xl opacity-70"></div>
-          <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl h-72 flex items-center justify-center">
-            <span class="text-gray-400 text-xs uppercase tracking-wide">
-              IMAGE PLACEHOLDER — SYSTEM DIAGRAM
-            </span>
+          <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">
+            <img src="system.png" alt="System Diagram" class="rounded-lg w-full h-auto" />
           </div>
         </div>
 
       </div>
+    </section>
+
+    <!-- WHY TOOLS FAIL -->
+    <section class="py-14 border-t border-white/10">
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">
+        Tools send emails. Your pipeline still stalls.
+      </h2>
+      <p class="text-sm text-gray-200 mb-6 max-w-2xl">
+        You already use Instantly, Clay, Apollo, HubSpot. They send emails. They enrich data. They log activity.
+        But they don’t qualify, escalate, revive, or feed your closer. You end up with activity, not revenue.
+      </p>
     </section>
 
     <!-- HOW IT WORKS -->
@@ -109,41 +118,27 @@
       <h2 class="text-xl md:text-2xl font-semibold mb-3">
         A hybrid outbound operating system for agencies.
       </h2>
-      <p class="text-sm text-gray-200 mb-8 max-w-2xl">
-        We don’t replace your tools. We connect them into one revenue‑producing system that combines automation with human precision.
-      </p>
 
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <!-- TEXT -->
-        <div class="space-y-4 text-sm text-gray-300">
+      <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
+        <div class="space-y-4">
           <h3 class="font-semibold text-gray-100 text-sm">We plug into:</h3>
           <ul class="space-y-2 text-xs">
             <li>• Your CRM (HubSpot, Close, etc.)</li>
             <li>• Your outbound tools (Instantly, Clay, Apollo)</li>
-            <li>• Your AI (OpenAI‑powered logic)</li>
-            <li>• Your closer and sales process</li>
+            <li>• Your AI logic</li>
+            <li>• Your closer</li>
           </ul>
 
           <h3 class="font-semibold text-gray-100 text-sm mt-6">And we build:</h3>
           <ul class="space-y-2 text-xs">
-            <li>• Custom AI logic trained on your offer, pricing, ICP, and objections</li>
-            <li>• Qualification flows so only real buyers reach your closer</li>
-            <li>• Escalation rules so hot leads never get stuck in the inbox</li>
-            <li>• Deal briefs so your closer walks into every call fully prepared</li>
+            <li>• AI qualification flows</li>
+            <li>• Escalation rules</li>
+            <li>• Deal briefs</li>
+            <li>• Call task automation</li>
           </ul>
         </div>
 
-        <!-- IMAGE PLACEHOLDER #2 -->
-        <div class="relative">
-          <div class="absolute -inset-10 bg-gradient-to-tr from-soPurple/40 via-transparent to-soBlue/40 blur-3xl opacity-70"></div>
-          <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl h-72 flex items-center justify-center">
-            <span class="text-gray-400 text-xs uppercase tracking-wide">
-              IMAGE PLACEHOLDER — DEAL BRIEF / WORKFLOW MOCKUP
-            </span>
-          </div>
-        </div>
-
+        <!-- Removed second image to keep homepage clean -->
       </div>
     </section>
 
@@ -154,14 +149,14 @@
       </h2>
       <div class="grid md:grid-cols-2 gap-6 text-xs text-gray-200">
         <ul class="space-y-2">
-          <li>• More qualified conversations, not just more replies</li>
-          <li>• A closer who always knows who to call next and why</li>
-          <li>• Old leads and lost deals coming back as booked calls</li>
+          <li>• More qualified conversations</li>
+          <li>• A closer who knows who to call next</li>
+          <li>• Old leads revived into booked calls</li>
         </ul>
         <ul class="space-y-2">
-          <li>• A CRM that actually produces revenue instead of collecting dust</li>
-          <li>• Outbound that keeps hunting when inbound slows</li>
-          <li>• A system you can scale, not a freelancer you outgrow</li>
+          <li>• A CRM that produces revenue</li>
+          <li>• Outbound that hunts even when inbound slows</li>
+          <li>• A scalable system, not a freelancer</li>
         </ul>
       </div>
     </section>
@@ -172,8 +167,7 @@
         Ready to turn outbound into a predictable revenue engine?
       </h2>
       <p class="text-sm text-gray-200 mb-5 max-w-xl">
-        On a 30‑minute strategy call, we’ll walk through your current stack, where revenue is leaking, and what a hybrid
-        outbound OS would look like for your agency.
+        On a 30‑minute strategy call, we’ll walk through your stack, where revenue is leaking, and what a hybrid outbound OS would look like for your agency.
       </p>
       <a
         href="https://calendly.com/seamlessoutbound/30-minute-meeting"
