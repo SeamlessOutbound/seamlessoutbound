@@ -2,237 +2,261 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Seamless Outbound – Pipeline Revival for Marketing Agencies</title>
+  <title>Seamless Outbound – AI Sales Training for Agencies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            soDark: '#050816',
-            soPurple: '#6A4CFF',
-            soBlue: '#3DA9FC',
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
   <style>
-    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    header {
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+      padding: 16px 0;
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: bold;
+      color: #38bdf8;
+      font-size: 18px;
+    }
+    nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #e5e7eb;
+    }
+    .container {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+    h1, h2, h3 {
+      color: #f9fafb;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 32px 0 12px;
+    }
+    p {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+    ul {
+      padding-left: 18px;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+    .hero {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+    }
+    .hero-text p {
+      margin-bottom: 12px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .cta-btn:hover {
+      background: #0ea5e9;
+    }
+    .secondary-link {
+      display: inline-block;
+      margin-left: 12px;
+      font-size: 13px;
+      color: #9ca3af;
+      text-decoration: none;
+    }
+    .secondary-link:hover {
+      color: #e5e7eb;
+    }
+    .image-placeholder {
+      width: 100%;
+      height: 220px;
+      background: #111827;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      font-size: 13px;
+    }
+    footer {
+      border-top: 1px solid #1f2937;
+      padding: 16px 0;
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none;
+      }
+    }
   </style>
 </head>
+<body>
 
-<body class="bg-soDark text-white font-sans">
-  <!-- Background gradient -->
-  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-soPurple/40 via-soDark to-soBlue/40 opacity-70"></div>
-  <div class="fixed inset-0 -z-20 bg-soDark"></div>
+<header>
+  <div class="nav-inner">
+    <div class="logo">Seamless Outbound</div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#chain">Learning chain</a>
+      <a href="#who">Who it’s for</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- NAVBAR -->
-  <header class="border-b border-white/10 bg-black/40 backdrop-blur py-3 md:py-4">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-      
-      <!-- LOGO -->
-      <img src="logo.png" alt="Seamless Outbound Logo" class="h-14 md:h-20 w-auto object-contain" />
+<main class="container">
 
-      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-200">
-        <a href="#how" class="hover:text-white">How it works</a>
-        <a href="#who" class="hover:text-white">Who it's for</a>
-        <a href="#why" class="hover:text-white">Why this works</a>
-        <a href="#outcome" class="hover:text-white">Outcome</a>
-        <a href="#cta" class="hover:text-white">Get started</a>
-      </nav>
-
-      <a
-        href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-        class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-soPurple to-soBlue hover:from-soBlue hover:to-soPurple shadow-lg shadow-soPurple/40 transition"
-      >
-        Book a call
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>AI Sales Training for Agencies That Want a System That Learns</h1>
+      <p>
+        We train your AI to sell like your top rep using your calls, objections, and real buyer behavior.
+        If you don’t have the system, we install it. If you do, we optimize it.
+      </p>
+      <p>
+        The result: a self-improving sales system that gets smarter every week — instead of a static script that goes stale.
+      </p>
+      <a class="cta-btn" href="https://calendly.com/seamlessoutbound/30-minute-meeting" target="_blank">
+        Book a strategy call
       </a>
+      <a class="secondary-link" href="#how">See how the training works →</a>
     </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4">
-
-    <!-- HERO -->
-    <section class="pt-16 pb-20 md:pt-24 md:pb-28">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-
-        <!-- HERO TEXT -->
-        <div>
-          <h1 class="text-3xl md:text-5xl font-semibold leading-tight mb-4">
-            Turn your CRM + outbound tools into a
-            <span class="bg-gradient-to-r from-soPurple to-soBlue bg-clip-text text-transparent">
-              predictable call‑generating system.
-            </span>
-          </h1>
-
-          <p class="text-gray-200 text-sm md:text-base mb-6">
-            Seamless Outbound revives your old leads, systemizes your outbound, and feeds your closer with qualified conversations — without hiring SDRs or adding more tools.
-          </p>
-
-          <div class="flex flex-wrap gap-3 mb-6">
-            <a
-              href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-              class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-soPurple to-soBlue hover:from-soBlue hover:to-soPurple shadow-lg shadow-soPurple/40 transition"
-            >
-              Book a strategy call
-            </a>
-            <a
-              href="#how"
-              class="inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-medium border border-white/20 text-gray-100 hover:bg-white/5 transition"
-            >
-              See how it works
-            </a>
-          </div>
-        </div>
-
-        <!-- HERO IMAGE -->
-        <div class="relative">
-          <div class="absolute -inset-10 bg-gradient-to-tr from-soPurple/40 via-transparent to-soBlue/40 blur-3xl opacity-70"></div>
-          <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">
-            <img src="system.png" alt="System Diagram" class="rounded-lg w-full h-auto" />
-          </div>
-        </div>
-
+    <div>
+      <div class="image-placeholder">
+        Hero image / AI + sales team visual
       </div>
-    </section>
-
-    <!-- WHO THIS IS FOR -->
-    <section id="who" class="py-16 border-t border-white/10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-3">Who this is for</h2>
-      <p class="text-sm text-gray-200 mb-6 max-w-2xl">
-        Seamless Outbound is built specifically for marketing agencies who:
-      </p>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li>• Have a closer but not enough calls</li>
-        <li>• Have a CRM full of untouched or old leads</li>
-        <li>• Have outbound tools but no system connecting them</li>
-        <li>• Tried outbound before but couldn’t make it consistent</li>
-        <li>• Want predictable pipeline without hiring SDRs</li>
-      </ul>
-    </section>
-
-    <!-- WHY THIS WORKS -->
-    <section id="why" class="py-16 border-t border-white/10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-3">Why this works</h2>
-      <p class="text-sm text-gray-200 mb-6 max-w-2xl">
-        Outbound tools send messages. CRMs store data. But neither produces revenue on their own. Seamless Outbound connects everything into a single operating system that revives pipeline and feeds your closer.
-      </p>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li>• CRM revival turns old leads into booked calls</li>
-        <li>• AI logic qualifies, routes, and escalates opportunities</li>
-        <li>• Deal briefs give your closer context before every call</li>
-        <li>• Call tasks ensure no lead is ever forgotten</li>
-        <li>• Weekly reporting keeps pipeline predictable</li>
-      </ul>
-    </section>
-
-    <!-- WHAT YOU GET -->
-    <section id="how" class="py-16 border-t border-white/10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-3">What you get</h2>
-      <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
-        <ul class="space-y-2">
-          <li>• CRM cleanup + revival</li>
-          <li>• AI qualification logic</li>
-          <li>• Deal briefs for every opportunity</li>
-          <li>• Call tasks for your closer</li>
-        </ul>
-        <ul class="space-y-2">
-          <li>• Escalation rules</li>
-          <li>• Pipeline reactivation</li>
-          <li>• Weekly reporting</li>
-          <li>• Full outbound orchestration</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- BEFORE VS AFTER -->
-    <section class="py-16 border-t border-white/10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-3">Before vs After Seamless Outbound</h2>
-      <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
-        <div>
-          <h3 class="font-semibold text-gray-100 mb-2">Before</h3>
-          <ul class="space-y-2">
-            <li>• Dead CRM</li>
-            <li>• Old leads ignored</li>
-            <li>• Closer idle</li>
-            <li>• Outbound random</li>
-            <li>• No predictable calls</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-semibold text-gray-100 mb-2">After</h3>
-          <ul class="space-y-2">
-            <li>• CRM revived</li>
-            <li>• Old leads reactivated</li>
-            <li>• Closer fed daily</li>
-            <li>• Outbound systemized</li>
-            <li>• Predictable booked calls</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- OUTCOME -->
-    <section id="outcome" class="py-16 border-t border-white/10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-3">The outcome</h2>
-      <p class="text-sm text-gray-200 mb-6 max-w-xl">
-        When the system is live, your agency gets predictable pipeline without hiring SDRs or adding more tools.
-      </p>
-      <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
-        <ul class="space-y-2">
-          <li>• More qualified conversations</li>
-          <li>• A closer who knows who to call next</li>
-          <li>• Old leads revived into booked calls</li>
-        </ul>
-        <ul class="space-y-2">
-          <li>• A CRM that produces revenue</li>
-          <li>• Outbound that hunts even when inbound slows</li>
-          <li>• A scalable system, not a freelancer</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- FOUNDER NOTE -->
-    <section class="py-16 border-t border-white/10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-3">A note from the founder</h2>
-      <p class="text-sm text-gray-300 max-w-2xl">
-        I’ve spent over a decade in outbound sales, CRM architecture, and automation engineering. I built Seamless Outbound because agencies don’t need more tools — they need a system that revives pipeline and feeds their closer. If you want predictable calls without hiring SDRs, let’s talk.
-      </p>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="py-16 border-t border-white/10">
-      <h2 class="text-xl md:text-2xl font-semibold mb-3">
-        Ready to revive your pipeline?
-      </h2>
-      <p class="text-sm text-gray-200 mb-5 max-w-xl">
-        On a 30‑minute strategy call, we’ll walk through your CRM, outbound tools, and where revenue is leaking — then map out your Seamless Outbound system.
-      </p>
-      <a
-        href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-        class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-soPurple to-soBlue hover:from-soBlue hover:to-soPurple shadow-lg shadow-soPurple/40 transition"
-      >
-        Book your 30‑minute strategy call
-      </a>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-white/10 py-6 text-xs text-gray-400">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
-      <span>© <span id="year"></span> Seamless Outbound. All rights reserved.</span>
-      <span>Pipeline Revival for Marketing Agencies.</span>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <h2>How AI sales training works</h2>
+    <p>
+      We don’t start with tools. We start with your buyers, your best reps, and your real conversations.
+      Then we turn that into a training system for your AI and your sales process.
+    </p>
+    <ul>
+      <li>We analyze your calls, wins, and losses.</li>
+      <li>We extract your best messaging, stories, and objection handling.</li>
+      <li>We train your AI to respond like your top rep — not a generic script.</li>
+      <li>We connect it to your CRM and workflows so it actually drives revenue.</li>
+      <li>We improve it weekly based on new conversations and outcomes.</li>
+    </ul>
+  </section>
+
+  <!-- LEARNING CHAIN -->
+  <section id="chain">
+    <h2>The Seamless Learning Chain</h2>
+    <p>
+      This is the core of Seamless Outbound: a 6-step learning chain that turns your sales motion into a system that improves itself.
+    </p>
+    <ul>
+      <li><strong>1. Interview your best customers</strong> – Why they bought, what they feared, what finally made them say yes.</li>
+      <li><strong>2. Model your best salespeople</strong> – Tone, pacing, questions, objection handling, and closing patterns.</li>
+      <li><strong>3. Listen to your market</strong> – New objections, new competitors, and shifting priorities.</li>
+      <li><strong>4. Map patterns and objections</strong> – Turn calls into structured intelligence your AI can learn from.</li>
+      <li><strong>5. Train the AI</strong> – Teach it to think, speak, and react like your top rep.</li>
+      <li><strong>6. Improve weekly</strong> – Tune prompts, flows, and messaging based on real outcomes.</li>
+    </ul>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section>
+    <h2>What you get</h2>
+    <ul>
+      <li>AI trained on your best sales behavior, not generic templates.</li>
+      <li>Objection-aware messaging that reflects your real market.</li>
+      <li>Playbooks your human reps can use alongside the AI.</li>
+      <li>Optional CRM + automation setup (HubSpot, GoHighLevel, Close, Zapier, Make).</li>
+      <li>Weekly improvement cycles based on call recordings and CRM data.</li>
+    </ul>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section id="who">
+    <h2>Who this is for</h2>
+    <p>We work with established B2B agencies and service businesses that:</p>
+    <ul>
+      <li>Already have clients and revenue.</li>
+      <li>Have real sales calls, not just demos or free trials.</li>
+      <li>Want AI that actually performs, not just “sounds smart.”</li>
+      <li>Care about long-term learning, not one-off campaigns.</li>
+    </ul>
+    <p>
+      If you’re pre-revenue or still figuring out your offer, this isn’t the right fit yet.
+    </p>
+  </section>
+
+  <!-- BLOG TEASER -->
+  <section>
+    <h2>From the blog</h2>
+    <p>
+      Learn how to think about AI in sales, how to train it properly, and how to build a system that learns from every conversation.
+    </p>
+    <p>
+      <a href="blog.html" style="color:#38bdf8; text-decoration:none;">Read the blog →</a>
+    </p>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact">
+    <h2>Book a strategy call</h2>
+    <p>
+      On a 30-minute call, we’ll walk through your current sales motion, where your AI (or team) is underperforming,
+      and what a learning system could look like for your agency.
+    </p>
+    <a class="cta-btn" href="https://calendly.com/seamlessoutbound/30-minute-meeting" target="_blank">
+      Book your 30-minute strategy call
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Seamless Outbound – AI Sales Training & Revenue Intelligence
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
