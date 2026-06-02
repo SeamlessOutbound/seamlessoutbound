@@ -31,164 +31,197 @@
 
 <body class="bg-soDark text-white font-sans">
 
-<!-- BACKGROUND -->
-<div class="fixed inset-0 -z-20 bg-gradient-to-br from-soNeon/30 via-soDark to-soBlue/30"></div>
-<div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,76,240,0.15),transparent_60%)]"></div>
+  <!-- BACKGROUND -->
+  <div class="fixed inset-0 -z-20 bg-gradient-to-br from-soNeon/30 via-soDark to-soBlue/30"></div>
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,76,240,0.15),transparent_60%)]"></div>
 
-<!-- NAVBAR -->
-<header class="border-b border-white/10 bg-black/40 backdrop-blur py-4">
-  <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <!-- LOGO -->
+      <img src="logo.png" alt="Seamless Outbound Logo" class="h-10 md:h-14 w-auto object-contain" />
 
-    <div class="text-xl font-bold text-soBlue">Seamless Outbound</div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#how" class="hover:text-white">How it works</a>
+        <a href="#chain" class="hover:text-white">Learning chain</a>
+        <a href="#who" class="hover:text-white">Who it’s for</a>
+        <a href="#cta" class="hover:text-white">Get started</a>
+      </nav>
 
-    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
-      <a href="#how" class="hover:text-white">How it works</a>
-      <a href="#chain" class="hover:text-white">Learning chain</a>
-      <a href="#who" class="hover:text-white">Who it’s for</a>
-      <a href="blog.html" class="hover:text-white">Blog</a>
-      <a href="#cta" class="hover:text-white">Get started</a>
-    </nav>
+      <a
+        href="https://calendly.com/seamlessoutbound/30-minute-meeting"
+        class="hidden md:inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
+      >
+        Book a call
+      </a>
+    </div>
+  </header>
 
-    <a
-      href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-      class="hidden md:inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
-    >
-      Book a call
-    </a>
-  </div>
-</header>
+  <main class="max-w-6xl mx-auto px-4">
 
-<main class="max-w-6xl mx-auto px-4">
+    <!-- HERO -->
+    <section class="pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4">
+          Train your AI to
+          <span class="bg-gradient-to-r from-soNeon to-soBlue bg-clip-text text-transparent">
+            sell like your top rep.
+          </span>
+        </h1>
 
-<!-- HERO -->
-<section class="pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
+        <p class="text-gray-300 text-base mb-6">
+          We turn your calls, objections, wins, losses, and buyer psychology into a
+          continuously improving AI sales system — not a static script.
+        </p>
 
-  <div>
-    <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4">
-      Train your AI to
-      <span class="bg-gradient-to-r from-soNeon to-soBlue bg-clip-text text-transparent">
-        sell like your top rep.
-      </span>
-    </h1>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="https://calendly.com/seamlessoutbound/30-minute-meeting"
+            class="px-5 py-2.5 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
+          >
+            Book a strategy call
+          </a>
 
-    <p class="text-gray-300 text-base mb-6">
-      We turn your calls, objections, wins, losses, and buyer psychology into a
-      continuously improving AI sales system — not a static script.
-    </p>
+          <a href="#how" class="px-4 py-2.5 rounded-full border border-white/20 text-gray-200 hover:bg-white/5 text-sm">
+            See how it works
+          </a>
+        </div>
+      </div>
 
-    <div class="flex flex-wrap gap-3">
+      <div class="relative">
+        <div class="absolute -inset-10 bg-gradient-to-tr from-soNeon/40 via-transparent to-soBlue/40 blur-3xl opacity-70"></div>
+        <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">
+          <img
+            src="hero-placeholder.png"
+            alt="AI Sales Training Visual"
+            class="rounded-lg w-full h-auto cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(106,76,255,0.6)]"
+            onclick="openModal(this.src)"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">How AI Sales Training Works</h2>
+      <p class="text-gray-300 max-w-2xl mb-6">
+        We don’t start with tools. We start with your buyers, your best reps, and your real conversations.
+        Then we turn that into a training system for your AI — and your team.
+      </p>
+
+      <ul class="space-y-2 text-gray-300 text-sm">
+        <li>• Analyze your calls, wins, and losses</li>
+        <li>• Extract your best messaging and objection handling</li>
+        <li>• Train your AI to respond like your top rep</li>
+        <li>• Connect it to your CRM + workflows</li>
+        <li>• Improve it weekly based on real outcomes</li>
+      </ul>
+    </section>
+
+    <!-- LEARNING CHAIN -->
+    <section id="chain" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">The Seamless Learning Chain</h2>
+
+      <p class="text-gray-300 max-w-2xl mb-6">
+        Your competitive advantage: a sales system that learns from every conversation.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
+        <ul class="space-y-2">
+          <li><strong>1. Interview customers</strong> — Why they bought, what they feared.</li>
+          <li><strong>2. Model your best reps</strong> — Tone, pacing, objection handling.</li>
+          <li><strong>3. Listen to your market</strong> — New objections, new competitors.</li>
+        </ul>
+
+        <ul class="space-y-2">
+          <li><strong>4. Map patterns</strong> — Turn calls into structured intelligence.</li>
+          <li><strong>5. Train the AI</strong> — Teach it to think like your top rep.</li>
+          <li><strong>6. Improve weekly</strong> — Tune messaging + flows based on outcomes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section id="who" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">Who This Is For</h2>
+
+      <p class="text-gray-300 max-w-2xl mb-6">
+        We work with established B2B agencies and service businesses that:
+      </p>
+
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• Already have clients + revenue</li>
+        <li>• Have real sales calls, not just demos</li>
+        <li>• Want AI that actually performs</li>
+        <li>• Want a system that improves every week</li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">Ready to Train Your AI?</h2>
+      <p class="text-gray-300 max-w-xl mb-6">
+        On a 30‑minute call, we’ll walk through your sales motion, where your AI (or team) is underperforming,
+        and what a learning system could look like for your agency.
+      </p>
+
       <a
         href="https://calendly.com/seamlessoutbound/30-minute-meeting"
         class="px-5 py-2.5 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
       >
-        Book a strategy call
+        Book your strategy call
       </a>
+    </section>
 
-      <a href="#how" class="px-4 py-2.5 rounded-full border border-white/20 text-gray-200 hover:bg-white/5 text-sm">
-        See how it works
-      </a>
-    </div>
+  </main>
+
+  <footer class="border-t border-white/10 py-6 text-xs text-gray-400 text-center">
+    © <span id="year"></span> Seamless Outbound — AI Sales Training & Revenue Intelligence
+  </footer>
+
+  <!-- IMAGE MODAL -->
+  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+    <img
+      id="modalImage"
+      class="max-w-3xl w-full rounded-lg shadow-2xl border border-white/20 scale-95 opacity-0 transition-all duration-300"
+    />
   </div>
 
-  <div class="relative">
-    <div class="absolute -inset-10 bg-gradient-to-tr from-soNeon/40 via-transparent to-soBlue/40 blur-3xl opacity-70"></div>
-    <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">
-      <img src="seamlessoutboundpic.png" class="rounded-lg w-full h-auto" alt="AI Sales Training Visual" />
-    </div>
-  </div>
-
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="py-16 border-t border-white/10">
-  <h2 class="text-2xl font-semibold mb-4">How AI Sales Training Works</h2>
-  <p class="text-gray-300 max-w-2xl mb-6">
-    We don’t start with tools. We start with your buyers, your best reps, and your real conversations.
-    Then we turn that into a training system for your AI — and your team.
-  </p>
-
-  <ul class="space-y-2 text-gray-300 text-sm">
-    <li>• Analyze your calls, wins, and losses</li>
-    <li>• Extract your best messaging and objection handling</li>
-    <li>• Train your AI to respond like your top rep</li>
-    <li>• Connect it to your CRM + workflows</li>
-    <li>• Improve it weekly based on real outcomes</li>
-  </ul>
-</section>
-
-<!-- LEARNING CHAIN -->
-<section id="chain" class="py-16 border-t border-white/10">
-  <h2 class="text-2xl font-semibold mb-4">The Seamless Learning Chain</h2>
-
-  <p class="text-gray-300 max-w-2xl mb-6">
-    Your competitive advantage: a sales system that learns from every conversation.
-  </p>
-
-  <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
-
-    <ul class="space-y-2">
-      <li><strong>1. Interview customers</strong> — Why they bought, what they feared.</li>
-      <li><strong>2. Model your best reps</strong> — Tone, pacing, objection handling.</li>
-      <li><strong>3. Listen to your market</strong> — New objections, new competitors.</li>
-    </ul>
-
-    <ul class="space-y-2">
-      <li><strong>4. Map patterns</strong> — Turn calls into structured intelligence.</li>
-      <li><strong>5. Train the AI</strong> — Teach it to think like your top rep.</li>
-      <li><strong>6. Improve weekly</strong> — Tune messaging + flows based on outcomes.</li>
-    </ul>
-
-  </div>
-</section>
-
-<!-- WHO IT'S FOR -->
-<section id="who" class="py-16 border-t border-white/10">
-  <h2 class="text-2xl font-semibold mb-4">Who This Is For</h2>
-
-  <p class="text-gray-300 max-w-2xl mb-6">
-    We work with established B2B agencies and service businesses that:
-  </p>
-
-  <ul class="space-y-2 text-sm text-gray-300">
-    <li>• Already have clients + revenue</li>
-    <li>• Have real sales calls, not just demos</li>
-    <li>• Want AI that actually performs</li>
-    <li>• Want a system that improves every week</li>
-  </ul>
-</section>
-
-<!-- BLOG -->
-<section class="py-16 border-t border-white/10">
-  <h2 class="text-2xl font-semibold mb-4">From the Blog</h2>
-  <p class="text-gray-300 mb-4">Insights on AI, sales psychology, and building systems that learn.</p>
-  <a href="blog.html" class="text-soBlue hover:text-soPink text-sm">Read the blog →</a>
-</section>
-
-<!-- CTA -->
-<section id="cta" class="py-16 border-t border-white/10">
-  <h2 class="text-2xl font-semibold mb-4">Ready to Train Your AI?</h2>
-  <p class="text-gray-300 max-w-xl mb-6">
-    On a 30‑minute call, we’ll walk through your sales motion, where your AI (or team) is underperforming,
-    and what a learning system could look like for your agency.
-  </p>
-
+  <!-- FLOATING CTA -->
   <a
     href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-    class="px-5 py-2.5 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
+    class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink shadow-lg shadow-soNeon/40 text-sm font-medium transition"
   >
-    Book your strategy call
+    Book a Call
   </a>
-</section>
 
-</main>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<footer class="border-t border-white/10 py-6 text-xs text-gray-400 text-center">
-  © <span id="year"></span> Seamless Outbound — AI Sales Training & Revenue Intelligence
-</footer>
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const img = document.getElementById('modalImage');
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+      img.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      setTimeout(() => {
+        img.classList.remove('scale-95', 'opacity-0');
+        img.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    document.getElementById('imageModal').addEventListener('click', function () {
+      const img = document.getElementById('modalImage');
+      img.classList.add('scale-95', 'opacity-0');
+
+      setTimeout(() => {
+        this.classList.add('hidden');
+        this.classList.remove('flex');
+      }, 200);
+    });
+  </script>
 
 </body>
 </html>
