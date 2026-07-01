@@ -1,316 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3P9VLM00VS');
-</script>
-  <meta charset="UTF-8" />
-  <title>Seamless Outbound – Outbound Sales Engineering & Infrastructure</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            soDark: "#050510",
-            soNeon: "#6A4CFF",
-            soBlue: "#3DA9FC",
-            soPink: "#FF4CF0",
-          },
-          fontFamily: {
-            sans: ["Inter", "system-ui", "sans-serif"],
-          },
-        },
-      },
-    };
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
-</head>
-<body class="bg-soDark text-white font-sans">
-
-  <div class="fixed inset-0 -z-20 bg-gradient-to-br from-soNeon/30 via-soDark to-soBlue/30"></div>
-  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,76,240,0.15),transparent_60%)]"></div>
-
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-      <img src="logo.png" alt="Seamless Outbound Logo" class="h-16 md:h-24 w-auto object-contain" />
-      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
-        <a href="#how" class="hover:text-white">How it works</a>
-        <a href="#chain" class="hover:text-white">Systems & People</a>
-        <a href="#agents" class="hover:text-white">Infrastructure</a>
-        <a href="#who" class="hover:text-white">Target Fit</a>
-        <a href="#team" class="hover:text-white">Team</a>
-        <a href="#cta" class="hover:text-white">Get started</a>
-        <a href="blog.html" class="hover:text-white">Blog</a>
-      </nav>
-      <a
-        href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-        class="hidden md:inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
-      >
-        Book a call
+<!-- Reframed Header/Intro Section -->
+<section class="pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+    <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4">
+      Unlock Your HubSpot Pipeline.
+      <span class="bg-gradient-to-r from-soNeon to-soBlue bg-clip-text text-transparent">
+        Stop Losing Leads to Technical Friction.
+      </span>
+    </h1>
+    <p class="text-gray-300 text-base mb-6">
+      We specialize in HubSpot CRM architecture and sales automation. We audit your lead routing, fix broken webhook integrations, and optimize your sales stack to ensure every prospect is tracked, engaged, and nurtured—without manual data entry.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium">
+        Request a CRM Audit
       </a>
     </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4">
-    
-    <section class="pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4">
-          Eliminate Outbound Sales Friction.
-          <span class="bg-gradient-to-r from-soNeon to-soBlue bg-clip-text text-transparent">
-            Audit Systems & People.
-          </span>
-        </h1>
-        <p class="text-gray-300 text-base mb-6">
-          We are platform-agnostic Technical Operational Mechanics. We inspect your backend data plumbing to resolve leaking webhooks between scraping systems and CRMs, while auditing frontline pipeline execution to ensure your team has zero human or automated friction.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a
-            href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-            class="px-5 py-2.5 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
-          >
-            Book a Pipeline Investigation
-          </a>
-          <a href="#how" class="px-4 py-2.5 rounded-full border border-white/20 text-gray-200 hover:bg-white/5 text-sm">
-            See how it works
-          </a>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="absolute -inset-10 bg-gradient-to-tr from-soNeon/40 via-transparent to-soBlue/40 blur-3xl opacity-70"></div>
-        <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">
-          <img
-            src="seamlessoutboundpic.png"
-            alt="AI Sales Training Visual"
-            class="rounded-lg w-full h-auto cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(106,76,255,0.6)]"
-            onclick="openModal(this.src)"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">How We Repair Outbound Sales Channels</h2>
-      <p class="text-gray-300 max-w-2xl mb-6">
-        When an outbound sales floor scales past 10 representatives, system volume explodes and out-of-the-box software fails. We look under the hood to diagnose both structural engineering drops and human execution gaps.
-      </p>
-      <ul class="space-y-2 text-gray-300 text-sm">
-        <li>• <strong>Infrastructure Audits:</strong> Verifying API routing layers, webhook payload drops, and data sync mechanics.</li>
-        <li>• <strong>Contextual Tool Refinement:</strong> Adjusting prompt arrays to deliver highly accurate, self-aware communications.</li>
-        <li>• <strong>Frontline Process Calibration:</strong> Aligning rep dials, objection responses, and pacing with live market indicators.</li>
-        <li>• <strong>Automated Pipeline Plumbing:</strong> Engineering clean record flows using customized Make.com frameworks.</li>
-        <li>• <strong>Continuous Maintenance:</strong> Tweaking software properties and manual behaviors to consistently insulate company revenue.</li>
-      </ul>
-    </section>
-
-    <section id="chain" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">Balancing Technology & Human Capital</h2>
-      <p class="text-gray-300 max-w-2xl mb-6">
-        Sustainable pipeline velocity requires an uncompromised connection between software infrastructure and your human assets.
-      </p>
-      <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
-        <ul class="space-y-2">
-          <li><strong>1. Digital Plumbing</strong> — We track down dropped payloads, expired API keys, and hidden data leaks.</li>
-          <li><strong>2. Systems Architecture</strong> — Engineering structured automation paths from tools like Instantly into Close or HubSpot.</li>
-          <li><strong>3. Contextual Self-Awareness</strong> — Training messaging modules to process nuances without producing standard robotic responses.</li>
-        </ul>
-        <ul class="space-y-2">
-          <li><strong>4. Ground-Level Diagnostics</strong> — Evaluating live human sales data to pinpoint exactly where pipeline velocity stalls.</li>
-          <li><strong>5. Execution Alignment</strong> — Structuring clean scripts and training parameters modeled directly after top frontline producers.</li>
-          <li><strong>6. Legacy Data Onboarding</strong> — Bridging offline workflows into automated engines without forcing expensive system rewrites.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="agents" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">System Integration & Software Tuning</h2>
-      <p class="text-gray-300 max-w-2xl mb-6">
-        Whether your system requires a structural repair on pre-existing data integrations or a completely new low-code backend deployment, we optimize the loop.
-      </p>
-      <div class="space-y-4 text-sm text-gray-300">
-        <div>
-          <strong>If you run automated outbound sales tools:</strong>
-          <ul class="ml-4 mt-2 space-y-1">
-            <li>• We audit deliverability constraints, webhook pathways, and connection protocols</li>
-            <li>• Root out hidden technical friction slowing down your primary outreach modules</li>
-            <li>• Reprogram communication layers to display complete situational awareness and data integrity</li>
-          </ul>
-        </div>
-        <div>
-          <strong>If your internal workflows rely on human operators:</strong>
-          <ul class="ml-4 mt-2 space-y-1">
-            <li>• We design clean automation interfaces that remove manual data entry tasks</li>
-            <li>• Connect frontend triggers directly into secure CRM and reporting dashboards</li>
-            <li>• Insulate your team's focus so human assets run without technical administrative drag</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20">
-      <div class="relative max-w-5xl mx-auto">
-        <div class="absolute -inset-12 bg-gradient-to-tr from-soNeon/40 via-transparent to-soBlue/40 blur-3xl opacity-60"></div>
-        <img 
-          src="ai_sales_intelligence_infographic.svg"
-          alt="AI Sales System Visual"
-          class="relative max-w-full h-auto rounded-2xl border border-white/10 shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(106,76,255,0.6)]"
-        />
-      </div>
-    </section>
-
-    <section id="who" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">Who We Engineer Solutions For</h2>
-      <p class="text-gray-300 max-w-2xl mb-6">
-        We align exclusively with high-growth scaling firms, service agencies, and localized modernization sectors that:
-      </p>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li>• Have 10 to 50 employees and experience data drops or technical sync errors past out-of-the-box setups</li>
-        <li>• Lose prospects or operational momentum because info fails to safely reach representative screens</li>
-        <li>• Rely on a mix of automated outbound tools and ground-level execution workflows</li>
-        <li>• Demand clear, platform-agnostic architectures designed to maximize immediate cash reserves</li>
-      </ul>
-    </section>
-
-    <section id="team" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">The Mechanics Behind the Engine</h2>
-      <p class="text-gray-300 max-w-2xl mb-10">
-        An elite deployment team of platform architects, senior software engineers, and communication specialists dedicated to removing outbound sales friction.
-      </p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center relative">
-            <div class="w-6 h-6 rounded-full bg-soNeon absolute top-1"></div>
-            <div class="w-10 h-10 border-t-2 border-l-2 border-r-2 border-white/40 rounded-t-xl absolute bottom-1"></div>
-            <div class="w-8 h-0.5 bg-soBlue absolute bottom-4"></div>
-          </div>
-          <h3 class="font-medium text-white text-base">Floyd</h3>
-          <p class="text-xs text-gradient bg-gradient-to-r from-soNeon to-soBlue bg-clip-text text-transparent font-semibold mt-1">CEO, Sr. Software Dev, Sales Architect & Coach</p>
-          <p class="text-[11px] text-gray-400 mt-2 leading-relaxed">Frontline operations mechanic specializing in pipeline velocity, technical data plumbing, and diagnostic execution coaching.</p>
-        </div>
-
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center relative">
-            <div class="w-6 h-6 rounded-full bg-soBlue absolute top-1"></div>
-            <div class="w-10 h-10 border-t-2 border-l-2 border-r-2 border-white/40 rounded-t-xl absolute bottom-1"></div>
-            <div class="w-4 h-4 border border-soPink rounded-sm absolute bottom-3"></div>
-          </div>
-          <h3 class="font-medium text-white text-base">Khalid</h3>
-          <p class="text-xs text-gray-300 font-semibold mt-1">Co-Founder & Tech Lead</p>
-          <p class="text-[11px] text-gray-400 mt-2 leading-relaxed">Senior Software Engineer commanding custom automation and secure data ingestion architectures.</p>
-        </div>
-
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center relative">
-            <div class="w-6 h-6 rounded-full bg-gray-400 absolute top-1"></div>
-            <div class="w-10 h-10 border-t-2 border-l-2 border-r-2 border-white/40 rounded-t-xl absolute bottom-1"></div>
-            <div class="w-6 h-1 bg-soNeon absolute bottom-5"></div>
-          </div>
-          <h3 class="font-medium text-white text-base">Adam</h3>
-          <p class="text-xs text-gray-300 font-semibold mt-1">Senior Consultant</p>
-          <p class="text-[11px] text-gray-400 mt-2 leading-relaxed">Senior Software Engineer specializing in enterprise data schema integrity and system database audits.</p>
-        </div>
-
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center relative">
-            <div class="w-6 h-6 rounded-full bg-soPink absolute top-1"></div>
-            <div class="w-10 h-10 border-t-2 border-l-2 border-r-2 border-white/40 rounded-t-xl absolute bottom-1"></div>
-            <div class="w-2 h-4 border-l border-b border-soBlue absolute bottom-3 -rotate-45"></div>
-          </div>
-          <h3 class="font-medium text-white text-base">Abdullah</h3>
-          <p class="text-xs text-gray-300 font-semibold mt-1">Designer & Problem Solver</p>
-          <p class="text-[11px] text-gray-400 mt-2 leading-relaxed">Interface architect specializing in digital user experience, workflow layouts, and frictionless frontend logic.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="fomo" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">Unoptimized Frameworks Leak Capital — Audited Outbound Secures It</h2>
-      <p class="text-gray-300 max-w-2xl mb-6">
-        Most operations purchase software tools, chain generic outreach loops together, and assume pipelines will scale. They break under stress. Misconfigured systems behave exactly like uncoached sales teams—intermittent, off-message, and burning through pristine territory.
-      </p>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li>• Outbound sales sequences running without context broadcast generic spam that destroys primary domain health.</li>
-        <li>• Personnel hit invisible workflow bottlenecks, causing daily activity metrics to drop below profitable baselines.</li>
-        <li>• Defective API handoffs drop valid data loads into webhook dead-zones rather than live pipelines.</li>
-        <li>• Localized transactional operations remain stuck in manual processing states due to missing cloud integrations.</li>
-        <li>• Architectures engineered with deep system verification capture premium client conversion speed instantly.</li>
-      </ul>
-      <p class="text-gray-300 max-w-xl mt-6">
-        Rigorous process audit isn’t an accessory feature—it is the definitive dividing line between bleeding company runway and stacking the corporate vault.
-      </p>
-    </section>
-
-    <section id="cta" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">Ready to Run an Outbound Sales Investigation?</h2>
-      <p class="text-gray-300 max-w-xl mb-6">
-        On a 30‑minute infrastructure call, we’ll step through your current software integrations, pinpoint active data friction boundaries, and isolate human or automated bottlenecks.
-      </p>
-      <a
-        href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-        class="px-5 py-2.5 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink transition shadow-lg shadow-soNeon/40 text-sm font-medium"
-      >
-        Book Your Structural Audit
-      </a>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-white/10 py-6 text-xs text-gray-400 text-center">
-    © <span id="year"></span> Seamless Outbound — Outbound Sales Engineering & Technical Plumbing
-  </footer>
-
-  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-    <img
-      id="modalImage"
-      class="max-w-3xl w-full rounded-lg shadow-2xl border border-white/20 scale-95 opacity-0 transition-all duration-300"
-      alt="Modal Viewer Target"
-    />
   </div>
+</section>
 
-  <a
-    href="https://calendly.com/seamlessoutbound/30-minute-meeting"
-    class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-gradient-to-r from-soNeon to-soBlue hover:from-soBlue hover:to-soPink shadow-lg shadow-soNeon/40 text-sm font-medium transition"
-  >
-    Book an Audit
-  </a>
+<!-- Reframed "How it Works" -->
+<section id="how" class="py-16 border-t border-white/10">
+  <h2 class="text-2xl font-semibold mb-4">Optimizing Your HubSpot Ecosystem</h2>
+  <ul class="space-y-4 text-gray-300 text-sm">
+    <li>• <strong>Lead-to-CRM Automation:</strong> Mapping data from external scraping tools directly into HubSpot with 100% field accuracy.</li>
+    <li>• <strong>Workflow Debugging:</strong> Solving for "stuck" deals or broken triggers that prevent your sales team from timely follow-ups.</li>
+    <li>• <strong>Data Hygiene Audits:</strong> Eliminating duplicate records and ensuring your CRM properties are clean for reporting.</li>
+    <li>• <strong>Pipeline Intelligence:</strong> Configuring custom properties and automated sequences that mirror your top-performing reps.</li>
+  </ul>
+</section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    function openModal(src) {
-      const modal = document.getElementById('imageModal');
-      const img = document.getElementById('modalImage');
-
-      img.src = src;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-
-      setTimeout(() => {
-        img.classList.remove('scale-95', 'opacity-0');
-        img.classList.add('scale-100', 'opacity-100');
-      }, 10);
-    }
-
-    document.getElementById('imageModal').addEventListener('click', function () {
-      const img = document.getElementById('modalImage');
-      img.classList.add('scale-95', 'opacity-0');
-
-      setTimeout(() => {
-        this.classList.add('hidden');
-        this.classList.remove('flex');
-      }, 200);
-    });
-  </script>
-</body>
-</html>
+<!-- Reframed "Infrastructure/Systems" -->
+<section id="agents" class="py-16 border-t border-white/10">
+  <h2 class="text-2xl font-semibold mb-4">High-Velocity Sales Engineering</h2>
+  <div class="space-y-6 text-sm text-gray-300">
+    <div>
+      <strong class="text-white">Is your CRM slowing you down?</strong>
+      <p class="mt-2">We bridge the gap between automated lead generation and human sales execution. If your team is spending more time on data entry than on calls, we re-engineer your interface and background automations to reclaim their time.</p>
+    </div>
+  </div>
+</section>
