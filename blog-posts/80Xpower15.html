@@ -14,8 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Wistia External Script (Required for Wistia embeds to run correctly) -->
-  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+  <!-- Wistia External Scripts for Web Component Support -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/fudpjvvykm.js" async type="module"></script>
 
   <script>
     tailwind.config = {
@@ -33,6 +34,13 @@
   <style>
     .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
     h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
+    
+    /* Wistia Unloading Blur Patch */
+    wistia-player[media-id='fudpjvvykm']:not(:defined) { 
+      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/fudpjvvykm/swatch'); 
+      display: block; 
+      filter: blur(5px); 
+    }
   </style>
 </head>
 <body class="bg-soDark text-white font-sans antialiased">
@@ -109,14 +117,13 @@
         </div>
       </div>
 
-      <!-- STEP 5 -->
+      <!-- STEP 5 (Updated Wistia Element) -->
       <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
         <div>
-          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative">
-            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0; position:relative; height:100%; width:100%;">
-              <div class="wistia_responsive_wrapper" style="height:100%; left:0; position:absolute; top:0; width:100%;">
-                <iframe src="https://fast.wistia.net/embed/iframe/ayycxwpu1b?videoFoam=true" title="Step 05 Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen width="100%" height="100%"></iframe>
-              </div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative bg-black">
+            <!-- Container forces Wistia component to match responsive limits -->
+            <div class="absolute inset-0 flex items-center justify-center w-full h-full">
+              <wistia-player media-id="fudpjvvykm" class="w-full h-full object-cover"></wistia-player>
             </div>
           </div>
           <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 05 • Negotiation</span>
@@ -125,14 +132,13 @@
         </div>
       </div>
 
-      <!-- STEP 6 -->
+      <!-- STEP 6 (Updated Wistia Element) -->
       <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
         <div>
-          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative">
-            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0; position:relative; height:100%; width:100%;">
-              <div class="wistia_responsive_wrapper" style="height:100%; left:0; position:absolute; top:0; width:100%;">
-                <iframe src="https://fast.wistia.net/embed/iframe/90146hx6h5?videoFoam=true" title="Step 06 Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen width="100%" height="100%"></iframe>
-              </div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative bg-black">
+            <!-- Container forces Wistia component to match responsive limits -->
+            <div class="absolute inset-0 flex items-center justify-center w-full h-full">
+              <wistia-player media-id="fudpjvvykm" class="w-full h-full object-cover"></wistia-player>
             </div>
           </div>
           <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 06 • Technical Setup</span>
