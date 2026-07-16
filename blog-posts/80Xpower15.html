@@ -14,9 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Wistia External Scripts for Web Component Support -->
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/fudpjvvykm.js" async type="module"></script>
+  <!-- Wistia Global Embed Script -->
+  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
   <script>
     tailwind.config = {
@@ -34,13 +33,6 @@
   <style>
     .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
     h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
-    
-    /* Wistia Unloading Blur Patch */
-    wistia-player[media-id='fudpjvvykm']:not(:defined) { 
-      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/fudpjvvykm/swatch'); 
-      display: block; 
-      filter: blur(5px); 
-    }
   </style>
 </head>
 <body class="bg-soDark text-white font-sans antialiased">
@@ -117,14 +109,11 @@
         </div>
       </div>
 
-      <!-- STEP 5 (Updated Wistia Element) -->
+      <!-- STEP 5 (Updated Standard iFrame) -->
       <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
         <div>
-          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative bg-black">
-            <!-- Container forces Wistia component to match responsive limits -->
-            <div class="absolute inset-0 flex items-center justify-center w-full h-full">
-              <wistia-player media-id="fudpjvvykm" class="w-full h-full object-cover"></wistia-player>
-            </div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative">
+            <iframe src="https://fast.wistia.net/embed/iframe/ayycxwpu1b" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="w-full h-full absolute inset-0" name="wistia_embed" msallowfullscreen></iframe>
           </div>
           <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 05 • Negotiation</span>
           <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Handling Subconscious Resistance</h3>
@@ -132,14 +121,11 @@
         </div>
       </div>
 
-      <!-- STEP 6 (Updated Wistia Element) -->
+      <!-- STEP 6 (Updated Standard iFrame) -->
       <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
         <div>
-          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative bg-black">
-            <!-- Container forces Wistia component to match responsive limits -->
-            <div class="absolute inset-0 flex items-center justify-center w-full h-full">
-              <wistia-player media-id="fudpjvvykm" class="w-full h-full object-cover"></wistia-player>
-            </div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative">
+            <iframe src="https://fast.wistia.net/embed/iframe/90146hx6h5" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="w-full h-full absolute inset-0" name="wistia_embed" msallowfullscreen></iframe>
           </div>
           <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 06 • Technical Setup</span>
           <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">HubSpot & Close CRM Layouts</h3>
