@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHYCN9WWRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LHYCN9WWRX');
+  </script>
   <meta charset="UTF-8" />
   <title>Blog – Seamless Outbound</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,26 +41,50 @@
       <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="hidden md:inline-flex px-4 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-medium">Book a call</a>
     </div>
   </header>
-  <!-- Post Card -->
-  <main class="max-w-4xl mx-auto px-4 py-16">
+
+  <!-- Main Blog Feed -->
+  <main class="max-w-4xl mx-auto px-4 py-16 space-y-8">
+    
+    <div class="mb-12">
+      <p class="text-hubOrange font-black uppercase tracking-[0.2em] text-[10px] mb-2">Systems &amp; Biohacking Insights</p>
+      <h1 class="text-4xl font-black uppercase tracking-tighter">Seamless Insights</h1>
+      <p class="text-gray-400 mt-2">Tactical breakdowns on pipeline engineering, CRM architecture, and outbound execution.</p>
+    </div>
+
+    <!-- FEATURED: 80XPower15 Playbook Portal Link -->
+    <div class="border-2 border-hubOrange/45 rounded-2xl p-8 bg-gradient-to-br from-black/60 to-hubOrange/5 backdrop-blur hover:border-hubOrange transition group">
+      <div class="text-xs text-hubOrange mb-3 font-black uppercase tracking-widest">July 2026 • Program Release</div>
+      <h2 class="text-3xl font-black uppercase tracking-tight mb-3">
+        <a href="playbook/index.html" class="hover:text-hubOrange transition text-white">80XPower15™ Outbound &amp; Closing Playbook</a>
+      </h2>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        Increase your sales team's call output by 30% using the most innovative, modern outbound system. Engineered by Floyd Orr, this portal covers sleep science, neuro-regulation, stress reduction, and modern CRM mechanics.
+      </p>
+      <a href="playbook/index.html" class="inline-flex items-center text-sm font-black uppercase tracking-wider text-hubOrange hover:underline">
+        Access the 10-Video Portal →
+      </a>
+    </div>
+
+    <!-- Post Card 1 -->
     <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
       <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Sales Engineering</div>
-       <h2 class="text-2xl font-semibold mb-3">
-       <a href="blog-posts/orphaned-deals.html" class="hover:text-hubOrange transition">The Silent Killer in Your HubSpot Pipeline</a>
-       </h2>
+      <h2 class="text-2xl font-semibold mb-3">
+        <a href="blog-posts/orphaned-deals.html" class="hover:text-hubOrange transition">The Silent Killer in Your HubSpot Pipeline</a>
+      </h2>
       <p class="text-gray-300 mb-4">Are "orphaned" deals leaking revenue from your CRM? Stop manual auditing and start engineering a self-auditing pipeline that flags stalled deals instantly.</p>
       <a href="blog-posts/orphaned-deals.html" class="text-sm font-medium text-hubOrange hover:underline">Watch the Workflow →</a>
     </div>
-    </div>
-    <!-- Post Card -->
-      <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
-        <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Sales Engineering</div>
-        <h2 class="text-2xl font-semibold mb-3">
+
+    <!-- Post Card 2 -->
+    <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
+      <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Sales Engineering</div>
+      <h2 class="text-2xl font-semibold mb-3">
         <a href="blog-posts/custom-ai.html" class="hover:text-hubOrange transition">Instantly/Copilot vs. Custom AI: Why Off-the-Shelf Tools Slow Your Responses</a>
-        </h2>
-        <p class="text-gray-300 mb-4">Generic AI agents create bottlenecks. I tested Instantly and Microsoft Copilot against my custom-engineered HubSpot AI to prove why off-the-shelf logic is killing your response velocity.</p>
-        <a href="blog-posts/custom-ai.html" class="text-sm font-medium text-hubOrange hover:underline">Watch the Test →</a>
-      </div>
+      </h2>
+      <p class="text-gray-300 mb-4">Generic AI agents create bottlenecks. I tested Instantly and Microsoft Copilot against my custom-engineered HubSpot AI to prove why off-the-shelf logic is killing your response velocity.</p>
+      <a href="blog-posts/custom-ai.html" class="text-sm font-medium text-hubOrange hover:underline">Watch the Test →</a>
+    </div>
+
   </main>
 
 </body>
