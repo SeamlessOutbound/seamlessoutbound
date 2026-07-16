@@ -1,0 +1,226 @@
+Below is the complete, production-ready HTML code for your dedicated **`80xpower15-playbook.html`** page.
+
+It keeps your exact dark, high-performance aesthetic (using the deep midnight `#050510` background and your signature `#FF7A59` orange accents). It displays your **9-part masterclass in a professional, responsive 3x3 grid**.
+
+I have structured the video embeds dynamically:
+
+* **YouTube Videos:** Uses clean, standard unlisted embed links.
+* **Wistia Videos:** Configured using clean, responsive Wistia iFrame links.
+* **Pricing Hook:** The bottom of the page features a heavy structural card designed to lock down a high-value conversion. If you decide to pull down the free videos later and turn this into a paid product, the backend infrastructure is already wired in.
+
+Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** directory.
+
+---
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHYCN9WWRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LHYCN9WWRX');
+  </script>
+  <meta charset="UTF-8" />
+  <title>80XPower15: Outbound & Closing Playbook – Seamless Outbound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#3DA9FC",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
+  </style>
+</head>
+<body class="bg-soDark text-white font-sans antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <a href="../index.html"><img src="../logo.png" alt="logo" class="h-16 md:h-24 w-auto object-contain" /></a>
+      <a href="../index.html" class="text-sm text-gray-300 hover:text-hubOrange transition">← Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Hero Content -->
+  <main class="max-w-7xl mx-auto px-4 py-16">
+    <div class="max-w-4xl mb-16">
+      <p class="text-hubOrange font-black uppercase tracking-[0.2em] text-[10px] mb-3">80XPower15™ Systems Framework</p>
+      <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6">
+        The Full Outbound & <br/>
+        <span class="text-hubOrange">Closing Playbook</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+        This program was forged in the absolute collapse of my life to solve my own biological output limits. I work with founders and VPs to eliminate the human friction of sales execution. Below is the raw, 9-video tactical pipeline program to scale your team's cold outreach capacity.
+      </p>
+    </div>
+
+    <!-- Video Grid (3x3 Layout) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- STEP 1 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/UPTCbJ7BLOU" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 01 • Infrastructure</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">The Biological Baseline</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">How to regulate your nervous system to naturally overcome call hesitation and keep raw volume high.</p>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/UoLHFrBXNng" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 02 • Pipeline</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Structuring High-Velocity Deals</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Eliminating administrative drag from HubSpot and Close so reps spend hours dialing, not auditing.</p>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/_FsFuhQcPE8" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 03 • Mechanics</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Zero-Hesitation Execution</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Removing the conscious gaps between outreach steps to sustain peak flow without mental fatigue.</p>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/AqxzjRSl_5I" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 04 • Outreach</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Cold Sequence Design</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Structuring automated sequence layouts that clear technical roadblocks and hit the main inbox.</p>
+        </div>
+      </div>
+
+      <!-- STEP 5 (Wistia Integration) -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe src="https://fast.wistia.net/embed/iframe/ayycxwpu1b" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="w-full h-full" name="wistia_embed"></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 05 • Negotiation</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Handling Subconscious Resistance</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">How to communicate past your prospect's defense barriers to keep the negotiation loop friendly.</p>
+        </div>
+      </div>
+
+      <!-- STEP 6 (Wistia Integration) -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe src="https://fast.wistia.net/embed/iframe/90146hx6h5" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="w-full h-full" name="wistia_embed"></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 06 • Technical Setup</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">HubSpot & Close CRM Layouts</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">A complete workflow deep-dive showing how to architecture auto-assign logic and deal status notifications.</p>
+        </div>
+      </div>
+
+      <!-- STEP 7 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/pDySNIQG_Og" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 07 • Playbooks</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Closing Strategy Mapping</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Creating highly structured script models that eliminate human error during critical demo phases.</p>
+        </div>
+      </div>
+
+      <!-- STEP 8 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/-KAoA0wauVs" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 08 • Scaling</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Hiring & Retaining Reps</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">Using biological resilience models to protect your sales floor from burnout and expensive turnover.</p>
+        </div>
+      </div>
+
+      <!-- STEP 9 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/IY8ljueW8_k" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 09 • Systems Loop</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">The Continuous Feedback Cycle</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">How to loop conversion data back into your CRM pipelines to scale outbound performance by 20%.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Extra Video URL (Optional Reference Container) -->
+    <!-- Note: Wd_kuL_gROk has been kept secure in backup if you ever need to split paths. -->
+
+    <!-- Call To Action / Future Monetization Section -->
+    <section class="mt-24 max-w-4xl mx-auto text-center">
+      <div class="glass border-2 border-hubOrange/40 rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+        <div class="absolute -top-4 -right-4 bg-hubOrange text-black px-6 py-2 rounded-full font-black uppercase text-[10px] tracking-widest shadow-lg">
+          Institutional Access
+        </div>
+        
+        <div class="mb-8 flex flex-col items-center">
+          <img src="../gurantee.png" alt="20% Performance Bond" class="h-44 w-auto mb-4" onerror="this.src='https://via.placeholder.com/200x200/000000/ff7a59?text=20%+BOND+SEAL'">
+          <p class="text-gray-400 font-bold uppercase text-[10px] tracking-widest max-w-md">
+            🛡️ Guaranteed Output: We engineer and deploy high-performance sales architecture to lift output by at least 20% or we refund the process.
+          </p>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8 text-white">
+          Scale Your Sales <span class="text-hubOrange">Infrastructure.</span>
+        </h2>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="w-full sm:w-auto inline-flex items-center justify-center bg-hubOrange text-black px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-orange-600 transition text-sm">
+            Book Systems Audit
+          </a>
+          <a href="https://biohackingsales.gumroad.com/l/oigvs" class="w-full sm:w-auto inline-flex items-center justify-center border border-white/10 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-white/5 transition text-sm">
+            Buy Master License • $3,350
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-12 text-center text-gray-600 text-[9px] font-black uppercase tracking-[0.3em] px-6">
+    &copy; 2026 Seamless Outbound LLC | The 80XPower15 System | Built in the Collapse
+  </footer>
+
+</body>
+</html>
+
+```
