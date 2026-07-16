@@ -1,18 +1,3 @@
-Below is the complete, production-ready HTML code for your dedicated **`80xpower15-playbook.html`** page.
-
-It keeps your exact dark, high-performance aesthetic (using the deep midnight `#050510` background and your signature `#FF7A59` orange accents). It displays your **9-part masterclass in a professional, responsive 3x3 grid**.
-
-I have structured the video embeds dynamically:
-
-* **YouTube Videos:** Uses clean, standard unlisted embed links.
-* **Wistia Videos:** Configured using clean, responsive Wistia iFrame links.
-* **Pricing Hook:** The bottom of the page features a heavy structural card designed to lock down a high-value conversion. If you decide to pull down the free videos later and turn this into a paid product, the backend infrastructure is already wired in.
-
-Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** directory.
-
----
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +13,10 @@ Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** d
   <title>80XPower15: Outbound & Closing Playbook – Seamless Outbound</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Wistia External Script (Required for Wistia embeds to run correctly) -->
+  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -65,11 +54,11 @@ Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** d
         <span class="text-hubOrange">Closing Playbook</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-        This program was forged in the absolute collapse of my life to solve my own biological output limits. I work with founders and VPs to eliminate the human friction of sales execution. Below is the raw, 9-video tactical pipeline program to scale your team's cold outreach capacity.
+        This program was forged in the absolute collapse of my life to solve my own biological output limits. I work with founders and VPs to eliminate the human friction of sales execution. Below is the raw, 10-video tactical pipeline program to scale your team's cold outreach capacity.
       </p>
     </div>
 
-    <!-- Video Grid (3x3 Layout) -->
+    <!-- Video Grid (Balanced Grid Layout) -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- STEP 1 -->
@@ -120,11 +109,15 @@ Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** d
         </div>
       </div>
 
-      <!-- STEP 5 (Wistia Integration) -->
+      <!-- STEP 5 -->
       <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
         <div>
-          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
-            <iframe src="https://fast.wistia.net/embed/iframe/ayycxwpu1b" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="w-full h-full" name="wistia_embed"></iframe>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative">
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0; position:relative; height:100%; width:100%;">
+              <div class="wistia_responsive_wrapper" style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                <iframe src="https://fast.wistia.net/embed/iframe/ayycxwpu1b?videoFoam=true" title="Step 05 Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen width="100%" height="100%"></iframe>
+              </div>
+            </div>
           </div>
           <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 05 • Negotiation</span>
           <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Handling Subconscious Resistance</h3>
@@ -132,11 +125,15 @@ Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** d
         </div>
       </div>
 
-      <!-- STEP 6 (Wistia Integration) -->
+      <!-- STEP 6 -->
       <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between">
         <div>
-          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
-            <iframe src="https://fast.wistia.net/embed/iframe/90146hx6h5" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="w-full h-full" name="wistia_embed"></iframe>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10 relative">
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0; position:relative; height:100%; width:100%;">
+              <div class="wistia_responsive_wrapper" style="height:100%; left:0; position:absolute; top:0; width:100%;">
+                <iframe src="https://fast.wistia.net/embed/iframe/90146hx6h5?videoFoam=true" title="Step 06 Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen width="100%" height="100%"></iframe>
+              </div>
+            </div>
           </div>
           <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 06 • Technical Setup</span>
           <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">HubSpot & Close CRM Layouts</h3>
@@ -180,10 +177,19 @@ Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** d
         </div>
       </div>
 
-    </div>
+      <!-- STEP 10 -->
+      <div class="glass rounded-3xl p-6 border border-white/5 hover:border-hubOrange/30 transition flex flex-col justify-between md:col-span-2 lg:col-span-1">
+        <div>
+          <div class="aspect-video w-full mb-4 rounded-xl overflow-hidden border border-white/10">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Wd_kuL_gROk" allowfullscreen></iframe>
+          </div>
+          <span class="text-hubOrange text-[10px] font-black uppercase tracking-widest block mb-2">Step 10 • Optimization</span>
+          <h3 class="text-lg font-bold uppercase tracking-tight text-white mb-2">Closing the Loop</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">The final performance standardizing protocol to ensure your team's pipeline conversion remains consistent week over week.</p>
+        </div>
+      </div>
 
-    <!-- Extra Video URL (Optional Reference Container) -->
-    <!-- Note: Wd_kuL_gROk has been kept secure in backup if you ever need to split paths. -->
+    </div>
 
     <!-- Call To Action / Future Monetization Section -->
     <section class="mt-24 max-w-4xl mx-auto text-center">
@@ -222,5 +228,3 @@ Save this file as **`80xpower15-playbook.html`** inside your **`blog-posts/`** d
 
 </body>
 </html>
-
-```
