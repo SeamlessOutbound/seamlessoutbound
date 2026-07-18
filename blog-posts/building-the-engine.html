@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Building the Engine: A Secure Proxy for Stagnant Deals – Seamless Outbound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#3DA9FC",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-soDark text-white font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <a href="../index.html"><img src="../logo.png" alt="logo" class="h-16 md:h-24 w-auto object-contain" /></a>
+      <a href="../blog.html" class="text-sm text-gray-300 hover:text-hubOrange">← Back to Insights</a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-6">Building the Engine: A Secure Proxy for Stagnant Deals</h1>
+
+    <!-- PLACE YOUR IMAGE HERE -->
+    <div class="mb-8 rounded-xl overflow-hidden border border-white/10">
+      <img src="YOUR_IMAGE_FILENAME_HERE.png" alt="Pipeline Audit Dashboard" class="w-full h-auto" />
+    </div>
+    
+    <div class="prose prose-invert prose-p:text-gray-300 prose-headings:text-hubOrange">
+      <p>In the world of B2B sales, speed and precision are everything. At Seamless Outbound, we don't believe in waiting for leads to nurture themselves—we believe in building systems that do the heavy lifting for you. That is why we started building a HubSpot landing page to track stagnant deals and ensure no opportunity slips through the cracks.</p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-3">The "No-Environment-Variable" Dilemma</h3>
+      <p>When I started building this landing page, I quickly hit a wall. HubSpot’s platform is powerful, but it does not natively provide a secure way to store private environment variables like API tokens. If you put your credentials directly into a HubSpot module, you are effectively leaving the keys to your CRM in the front door for anyone to find.</p>
+
+      <p>I realized that to keep our sales data secure, I needed a way to bridge HubSpot’s frontend with a backend that could hold secrets. That is why setting up a serverless function with Netlify became the essential solution. By hosting our proxy on Netlify, we gain access to a secure environment where we can hide our <code>HUBSPOT_ACCESS_TOKEN</code> while still allowing our HubSpot landing page to pull the data it needs.</p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-3">How It Works: Automated Auditing</h3>
+      <ul class="list-disc ml-5 space-y-2 mb-6">
+        <li><strong>Secure Token Handling:</strong> Our HubSpot access token lives strictly on the server and is never exposed in the browser.</li>
+        <li><strong>Intelligent Filtering:</strong> Our backend automatically filters for deals that haven't been touched in over seven days.</li>
+        <li><strong>Controlled Access:</strong> We configured CORS headers to ensure that only our specific landing page can request this data.</li>
+      </ul>
+
+      <p>This is just the first step in our mission to turn outbound sales lambs into lions. We are building the infrastructure that makes high-volume, high-margin sales repeatable.</p>
+    </div>
+
+    <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="inline-block mt-8 px-8 py-3 bg-hubOrange text-black font-bold rounded-full hover:bg-orange-600 transition">
+      Book a Pipeline Audit
+    </a>
+  </main>
+</body>
+</html>
