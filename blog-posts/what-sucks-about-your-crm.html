@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -150,7 +151,7 @@
         <li><strong>Intelligent Filtering:</strong> Our backend automatically filters for deals that haven't been touched in over seven days.</li>        
         <li><strong>Controlled Access:</strong> We configured CORS headers to ensure that only our specific landing page can request this data.</li>      </ul>
       
-      <p>This is just the first step in our mission to turn outbound sales lambs into lions. We are building the infrastructure that makes high-volume, high-margin sales repeatable.</p>
+      <p>This is just the first step in our mission to turn outbound sales into lions. We are building the infrastructure that makes high-volume, high-margin sales repeatable.</p>
     </div>
 
     <!-- Default Call to Action -->
@@ -160,13 +161,12 @@
   </main>
 
   <script>
-    // Read URL Parameters for Prospect Customization (with robust general fallbacks if params are empty)
+    // Read URL Parameters for Prospect Customization
     const urlParams = new URLSearchParams(window.location.search);
     const firstName = urlParams.get('name') || '';
     const companyName = urlParams.get('company') || '';
     const customPain = urlParams.get('pain') || '';
 
-    // Dynamic text tailoring based on whether parameters exist or general traffic hits
     const displayName = firstName ? `${firstName}` : "there";
     const displayCompany = companyName ? `at ${companyName}` : "in your pipeline";
 
@@ -285,10 +285,13 @@
       const summaryText = collectedAnswers.join(" ");
       const companyRef = companyName ? `at ${companyName}` : "in your outbound stack";
       const nameRef = firstName ? `${firstName},` : "";
+      
+      const painPointInsert = customPain ? `<br><br>You originally noted your core bottleneck as: <strong>"${customPain}"</strong>.` : "";
 
       document.getElementById('result-diagnosis').innerHTML = `
         <strong>Pipeline Audit Summary ${companyRef}:</strong><br><br>
-        ${summaryText}<br><br>
+        ${summaryText}
+        ${painPointInsert}<br><br>
         ${nameRef} when administrative friction scales to this level, reps spend more time maintaining records than interacting with live prospects. Solving this isn't about working harder; it's an architecture fix to streamline data flow.
       `;
     }
@@ -296,19 +299,9 @@
     // Initialize tool
     renderActiveQuestion();
 
-    // Robot Thought Bubble Cycling Animation (...watching your pipeline disappear...)
+    // Robot Thought Bubble Set to static "watching your pipeline disappear..."
     const bubbleText = document.getElementById('robot-bubble-text');
-    const phases = [
-      companyName ? `watching ${companyName}'s pipeline disappear...` : "watching your pipeline disappear...",
-      "analyzing data drag...",
-      companyName ? `optimizing ${companyName}...` : "checking CRM health...",
-      "watching your pipeline..."
-    ];
-    let phaseIdx = 0;
-    setInterval(() => {
-      phaseIdx = (phaseIdx + 1) % phases.length;
-      bubbleText.innerText = phases[phaseIdx];
-    }, 4000);
+    bubbleText.innerText = "watching your pipeline disappear...";
 
     // Advanced Robot Head & Eye Cursor Tracking
     const robotHead = document.getElementById('robot-head');
@@ -329,32 +322,18 @@
       pupil1.style.transform = `translate(${pX}px, ${pY}px)`;
       pupil2.style.transform = `translate(${pX}px, ${pY}px)`;
       
-      // Smooth left/right head turning and tilt following cursor across screen width
       const xPos = e.clientX / window.innerWidth;
       const tilt = (xPos - 0.5) * 14; 
       const floatBob = Math.sin(Date.now() / 350) * 2;
       robotHead.style.transform = `rotate(${tilt}deg) translateY(${floatBob}px)`;
     });
 
-    // Handle URL parameters for direct outbound email campaigns (?name=Joe&company=Acme&pain=...)
+    // Handle URL parameters to customize title
     if (firstName && companyName) {
       document.getElementById('blog-title').innerHTML = `${firstName}, here is what’s quietly slowing down <span class="text-hubOrange">${companyName}</span>'s pipeline.`;
-      document.getElementById('blog-body-content').classList.add('hidden');
-      document.getElementById('hero-image-container').classList.add('hidden');
-      document.getElementById('default-cta').classList.add('hidden');
-      
-      document.getElementById('diagnostic-question-container').classList.add('hidden');
-      document.getElementById('diagnostic-result-container').classList.remove('hidden');
-      document.getElementById('widget-status-label').innerText = 'Custom Portrait Generated';
-      document.getElementById('step-counter').innerText = 'Personalized View';
-      document.getElementById('retake-btn').classList.add('hidden');
-
-      if (customPain) {
-        document.getElementById('result-diagnosis').innerHTML = `You noted your core bottleneck as: <strong>"${customPain}"</strong>.<br><br>${firstName}, when tools operate in silos at ${companyName}, reps end up compensating with manual updates rather than focusing on pipeline generation. It's an architecture problem, not a discipline problem.`;
-      } else {
-        document.getElementById('result-diagnosis').innerHTML = `<strong>Pipeline Audit Summary for ${companyName}:</strong><br><br>${firstName}, your team's workflow setup is introducing friction between data layers. When tools operate in silos, reps end up compensating with manual updates rather than focusing on outbound generation.`;
-      }
     }
   </script>
 </body>
 </html>
+
+```
