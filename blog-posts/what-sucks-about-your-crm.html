@@ -1,22 +1,16 @@
-* **System Update Notice:** You just updated the system guidelines regarding the headline copy and CRM data targeting strategy.
 
-### 1. Data Strategy: HubSpot vs. Close vs. General Pipeline
-
-If you are running Apollo campaigns, **you can (and should) enrich or segment your data** so you know what CRM they use. However, keeping the headline slightly flexible or dynamically swapping it based on their CRM data gives you the highest conversion.
-
-Here is how to structure it:
-
-* **If you know their CRM (HubSpot or Close):** Pull it dynamically into the headline (e.g., *"[Name], what sucks most about your HubSpot CRM?"*). It creates instant hyper-personalization.
-* **If you don't know or want a universal fallback:** Use *"[Name], what sucks most about your CRM?"* or *"[Name], what sucks most about your pipeline?"*.
-
-### 2. Updated HTML Code
-
-Here is the updated code with the headline set to dynamically detect their CRM (via `?crm=hubspot` or `?crm=close`), defaulting to **CRM** if no specific tool is passed in the URL.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3P9VLM00VS');
+</script>
   <meta charset="UTF-8" />
   <title>Building the Engine: A Secure Proxy for Stagnant Deals – Seamless Outbound</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
