@@ -56,8 +56,14 @@
       </div>
 
       <div>
-        <label class="block text-xs uppercase tracking-wider text-gray-400 font-mono mb-2">CRM Platform (`crm`)</label>
-        <input type="text" id="inputCrm" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="e.g. HubSpot, Salesforce, Close">
+        <label class="block text-xs uppercase tracking-wider text-hubOrange font-mono mb-2">CRM Platform (`crm`)</label>
+        <select id="inputCrm" class="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition cursor-pointer">
+          <option value="HubSpot" selected>HubSpot</option>
+          <option value="Close">Close</option>
+          <option value="GHL">GHL</option>
+          <option value="Salesforce">Salesforce</option>
+          <option value="Pipedrive">Pipedrive</option>
+        </select>
       </div>
 
       <div class="pt-4 border-t border-white/10">
@@ -93,15 +99,17 @@
 
       if (inputName.value.trim()) params.append('name', inputName.value.trim());
       if (inputCompany.value.trim()) params.append('company', inputCompany.value.trim());
-      if (inputCrm.value.trim()) params.append('crm', inputCrm.value.trim());
+      if (inputCrm.value) params.append('crm', inputCrm.value);
 
       const queryString = params.toString();
       outputLink.value = queryString ? `${base}?${queryString}` : base;
     }
 
-    [baseUrlInput, inputName, inputCompany, inputCrm].forEach(input => {
+    [baseUrlInput, inputName, inputCompany].forEach(input => {
       input.addEventListener('input', generateLink);
     });
+
+    inputCrm.addEventListener('change', generateLink);
 
     function copyToClipboard() {
       outputLink.select();
