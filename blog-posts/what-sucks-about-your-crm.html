@@ -1,3 +1,19 @@
+* **System Update Notice:** You just updated the system guidelines regarding the headline copy and CRM data targeting strategy.
+
+### 1. Data Strategy: HubSpot vs. Close vs. General Pipeline
+
+If you are running Apollo campaigns, **you can (and should) enrich or segment your data** so you know what CRM they use. However, keeping the headline slightly flexible or dynamically swapping it based on their CRM data gives you the highest conversion.
+
+Here is how to structure it:
+
+* **If you know their CRM (HubSpot or Close):** Pull it dynamically into the headline (e.g., *"[Name], what sucks most about your HubSpot CRM?"*). It creates instant hyper-personalization.
+* **If you don't know or want a universal fallback:** Use *"[Name], what sucks most about your CRM?"* or *"[Name], what sucks most about your pipeline?"*.
+
+### 2. Updated HTML Code
+
+Here is the updated code with the headline set to dynamically detect their CRM (via `?crm=hubspot` or `?crm=close`), defaulting to **CRM** if no specific tool is passed in the URL.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +47,10 @@
 
   <main class="max-w-3xl mx-auto px-4 py-12">
 
-    <!-- Big Prominent Section Title (Short & Punchy without company name) -->
+    <!-- Big Prominent Section Title (Dynamic CRM/Pipeline Customization) -->
     <h2 id="main-section-title" class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-6 flex items-center gap-3">
       <span class="w-3 h-3 bg-hubOrange rounded-full inline-block animate-pulse shrink-0"></span>
-      <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">There</span>, what sucks about your pipeline</span>
+      <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">There</span>, what sucks most about your CRM</span>
     </h2>
 
     <!-- Centered Standalone Robot Block with Big MetaMask-style Fox Eyes -->
@@ -128,19 +144,27 @@
       </div>
     </div>
 
-    <!-- Cold Calling Live Link Generator Widget (Built right into the page for instant copy/pasting) -->
+    <!-- Cold Calling Live Link Generator Widget -->
     <div id="cold-call-generator" class="bg-black/90 border-2 border-hubOrange/60 rounded-2xl p-6 md:p-8 mb-16 shadow-2xl">
       <h3 class="text-lg font-bold uppercase tracking-wider text-hubOrange mb-2">⚡ Live Cold Call Link Generator</h3>
-      <p class="text-xs text-gray-300 mb-4">Type the prospect's details below while on the phone. It automatically formats multi-word company names and generates a clean link to copy instantly.</p>
+      <p class="text-xs text-gray-300 mb-4">Type prospect details below. Select their CRM to automatically inject it into the title and questions.</p>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
         <div>
-          <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-mono mb-1">Prospect First Name</label>
+          <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-mono mb-1">First Name</label>
           <input type="text" id="gen-name" placeholder="e.g. John" class="w-full bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-sm text-white focus:border-hubOrange outline-none" oninput="updateGeneratedLink()" />
         </div>
         <div>
-          <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-mono mb-1">Company Name (Spaces allowed)</label>
-          <input type="text" id="gen-company" placeholder="e.g. Acme Corp Inc" class="w-full bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-sm text-white focus:border-hubOrange outline-none" oninput="updateGeneratedLink()" />
+          <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-mono mb-1">Company Name</label>
+          <input type="text" id="gen-company" placeholder="e.g. Acme Corp" class="w-full bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-sm text-white focus:border-hubOrange outline-none" oninput="updateGeneratedLink()" />
+        </div>
+        <div>
+          <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-mono mb-1">CRM Platform</label>
+          <select id="gen-crm" class="w-full bg-black border border-white/20 rounded-lg px-3 py-2 text-sm text-white focus:border-hubOrange outline-none" onchange="updateGeneratedLink()">
+            <option value="">General CRM</option>
+            <option value="HubSpot">HubSpot</option>
+            <option value="Close">Close</option>
+          </select>
         </div>
       </div>
 
@@ -168,21 +192,25 @@
     const urlParams = new URLSearchParams(window.location.search);
     const firstName = urlParams.get('name') || '';
     const companyName = urlParams.get('company') || '';
+    const crmPlatform = urlParams.get('crm') || '';
 
-    // Clean up multi-word company names coming from URL (replaces plus signs or encoded spaces with clean spaces)
     const formattedCompanyName = companyName ? decodeURIComponent(companyName).replace(/\+/g, ' ') : '';
+    const formattedCrm = crmPlatform ? decodeURIComponent(crmPlatform) : '';
 
-    const displayName = firstName ? `${firstName}` : "there";
-    const displayCompany = formattedCompanyName ? `at ${formattedCompanyName}` : "in your pipeline";
+    const displayName = firstName ? `${firstName}` : "There";
+    const displayCrm = formattedCrm ? `${formattedCrm} CRM` : "CRM";
 
-    // Set prospect name on top title
-    if (firstName) {
-      document.getElementById('prospect-name-display').innerText = firstName;
-    }
+    // Set prospect name and CRM in top title
+    document.getElementById('prospect-name-display').innerText = displayName;
+    
+    const topTitleText = formattedCrm 
+      ? `what sucks most about your <span class="text-hubOrange">${formattedCrm}</span> CRM`
+      : `what sucks most about your CRM`;
+    document.getElementById('custom-top-title').innerHTML = topTitleText;
 
     const diagnosticQuestions = [
       {
-        question: `Hey ${displayName}, what is the single biggest bottleneck slowing down growth ${displayCompany}?`,
+        question: `Hey ${displayName}, what is the single biggest bottleneck slowing down growth ${formattedCompanyName ? 'at ' + formattedCompanyName : 'in your pipeline'}?`,
         options: [
           { text: "Systems not talking to each other (sync failures & broken webhooks)", weight: 4.5, impact: `Integration mismatches force constant manual corrections across ${formattedCompanyName || 'your'} data layers.` },
           { text: "Reps drowning in manual data entry & click fatigue (the 5-tab shuffle)", weight: 5.5, impact: `Excessive window switching destroys active selling time and ramps up administrative fatigue for ${displayName}.` },
@@ -190,7 +218,7 @@
         ]
       },
       {
-        question: `How many hours a week do reps ${formattedCompanyName ? 'at ' + formattedCompanyName : ''} spend updating CRM records manually?`,
+        question: `How many hours a week do reps ${formattedCompanyName ? 'at ' + formattedCompanyName : ''} spend updating ${displayCrm} manually?`,
         options: [
           { text: "Under 5 hours — Mostly automated workflows", weight: 2.0, impact: `Your tracking baseline is relatively clean, though minor workflow leaks still exist.` },
           { text: "5 to 15 hours — Moderate administrative drag", weight: 4.0, impact: `Significant time is diverted away from outbound prospecting into routine data maintenance.` },
@@ -346,12 +374,14 @@
     function updateGeneratedLink() {
       const nameVal = document.getElementById('gen-name').value.trim();
       const compVal = document.getElementById('gen-company').value.trim();
+      const crmVal = document.getElementById('gen-crm').value;
       
       let baseUrl = "https://seamlessoutbound.com/blog-posts/what-sucks-about-your-crm.html";
       let params = [];
       
       if (nameVal) params.push(`name=${encodeURIComponent(nameVal)}`);
       if (compVal) params.push(`company=${encodeURIComponent(compVal)}`);
+      if (crmVal) params.push(`crm=${encodeURIComponent(crmVal)}`);
       
       if (params.length > 0) {
         baseUrl += "?" + params.join("&");
@@ -375,3 +405,5 @@
   </script>
 </body>
 </html>
+
+```
