@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,9 +41,8 @@
 
   <main class="max-w-2xl mx-auto px-4 py-10 w-full flex-grow">
 
-    <!-- Big Prominent Section Title -->
-    <h2 id="main-section-title" class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-4 flex items-center gap-3">
-      <span class="w-2.5 h-2.5 bg-hubOrange rounded-full inline-block animate-pulse shrink-0"></span>
+    <!-- Big Prominent Section Title (Flashing Dot Removed) -->
+    <h2 id="main-section-title" class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-4">
       <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">Hi there</span>, what sucks most about your CRM?</span>
     </h2>
 
@@ -262,7 +262,7 @@
       if (activeStep > 0) {
         activeStep--;
         collectedSignals.pop();
-        totalScore -= 2; // approximation for undo step weight fallback
+        totalScore -= 2;
         renderActiveQuestion();
       }
     }
@@ -281,7 +281,6 @@
       document.getElementById('diagnostic-result-container').classList.remove('hidden');
       stepCounter.innerText = 'Diagnostic Complete';
 
-      // Dynamic Friction Score based on total accumulated weight
       let frictionLabel = "High Drag (Critical Optimization Needed)";
       if (totalScore <= 6) {
         frictionLabel = "Low Drag (Optimized Baseline)";
@@ -332,3 +331,5 @@
   </script>
 </body>
 </html>
+
+```
