@@ -1,207 +1,356 @@
+*Note: As requested in your system preferences, I am letting you know that I have updated the system/code for this response.*
+
+---
+
+Here is the updated diagnostic tool code. Now, when a prospect fills out their name and company, the text right above the audit button dynamically personalizes to: **"[Name], let's improve [Company]'s CRM..."** while falling back gracefully to the general version if no name or company is provided.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHYCN9WWRX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-3P9VLM00VS');
-  </script>   
-  
-  <meta charset="UTF-8" />  
-  <title>Seamless Outbound – HubSpot Sales Engineering</title>  
-  <meta name="viewport" content="width=device-width, initial-scale=1" />  
-  <script src="https://cdn.tailwindcss.com"></script>  
-  
-  <script>    
-    tailwind.config = {      
-      theme: {        
-        extend: {          
-          colors: {            
-            soDark: "#050510",            
-            hubOrange: "#FF7A59",            
-            soBlue: "#3DA9FC",          
-          },          
-          fontFamily: {            
-            sans: ["Inter", "system-ui", "sans-serif"],          
-          },        
-        },      
-      },    
-    };  
-  </script>  
-  
-  <style>
-    html { 
-      scroll-behavior: smooth; 
-    }
-  </style>
+    gtag('config', 'G-LHYCN9WWRX');
+  </script>
+
+  <meta charset="UTF-8" />
+  <title>What Sucks Most About Your CRM? – Seamless Outbound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#3DA9FC",
+          },
+        },
+      },
+    };
+  </script>
 </head>
+<body class="bg-soDark text-white font-sans selection:bg-hubOrange selection:text-black overflow-x-hidden">
 
-<body class="bg-soDark text-white font-sans">
-  
-  <!-- Background Gradient Layer -->
-  <div class="fixed inset-0 -z-20 bg-gradient-to-br from-hubOrange/20 via-soDark to-soBlue/20"></div>
-
-  <!-- Header Navigation -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">    
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">      
-      <img src="/photos/logo.png" alt="logo" class="h-16 md:h-24 w-auto object-contain" />      
-      
-      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">        
-        <a href="#how" class="hover:text-hubOrange">How it works</a>        
-        <a href="#differentiators" class="hover:text-hubOrange">Our Edge</a>        
-        <a href="#who" class="hover:text-hubOrange">Target Fit</a>        
-        <a href="#team" class="hover:text-hubOrange">Team</a>        
-        <a href="blog.html" class="hover:text-hubOrange">Seamless Insights Blog</a>      
-      </nav>      
-      
-      <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="hidden md:inline-flex px-4 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-medium">
-        Book a call
-      </a>    
-    </div>  
+  <!-- Header -->  
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <a href="../index.html"><img src="/photos/logo.png" alt="logo" class="h-16 md:h-24 w-auto object-contain" /></a>
+      <a href="../blog.html" class="text-sm text-gray-300 hover:text-hubOrange transition">← Back to Insights</a>
+    </div>
   </header>
 
-  <!-- Main Content Container -->
-  <main class="max-w-6xl mx-auto px-4">        
+  <main class="max-w-3xl mx-auto px-4 py-12">
+
+    <!-- Big Prominent Section Title with Question Mark -->
+    <h2 id="main-section-title" class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-6 flex items-center gap-3">
+      <span class="w-3 h-3 bg-hubOrange rounded-full inline-block animate-pulse shrink-0"></span>
+      <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">Hi there</span>, what sucks most about your CRM?</span>
+    </h2>
+
+    <!-- Centered Standalone Big Human-Like Oval Glasses & Eyes Block Watching Cursor (Outer Box Removed) -->
+    <div class="flex flex-col items-center justify-center my-8 z-30" id="eyes-wrapper">
+      <!-- Animated Looping Thought/Speech Bubble -->
+      <div class="mb-3 bg-hubOrange/10 border border-hubOrange/50 px-4 py-1.5 rounded-xl shadow-lg backdrop-blur-md">
+        <p id="robot-bubble-text" class="text-xs font-mono text-hubOrange font-bold tracking-wide animate-pulse">
+          watching your pipeline
+        </p>
+      </div>
+
+      <!-- Glasses Frame Container with Side Temples (No Outer Box) -->
+      <div class="flex items-center justify-center p-2 relative group" id="eyes-container">
+        
+        <!-- Left Glasses Temple (Side Line) -->
+        <div class="w-6 h-1 bg-hubOrange rounded-l-full -mr-1 z-10"></div>
+
+        <!-- Left Eye Frame -->
+        <div class="w-24 h-16 bg-black border-2 border-hubOrange rounded-[50%_50%_45%_45%] flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
+          <div class="w-10 h-12 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute flex items-center justify-center overflow-hidden" id="pupil-1">
+            <div class="w-4 h-5 bg-black rounded-full flex items-center justify-center relative">
+              <div class="w-1.5 h-1.5 bg-white rounded-full absolute transition-all duration-75" id="catchlight-1" style="top: 25%; left: 30%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Bridge connecting the glasses frames -->
+        <div class="w-4 h-1 bg-hubOrange"></div>
+
+        <!-- Right Eye Frame -->
+        <div class="w-24 h-16 bg-black border-2 border-hubOrange rounded-[50%_50%_45%_45%] flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
+          <div class="w-10 h-12 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute flex items-center justify-center overflow-hidden" id="pupil-2">
+            <div class="w-4 h-5 bg-black rounded-full flex items-center justify-center relative">
+              <div class="w-1.5 h-1.5 bg-white rounded-full absolute transition-all duration-75" id="catchlight-2" style="top: 25%; left: 30%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Glasses Temple (Side Line) -->
+        <div class="w-6 h-1 bg-hubOrange rounded-r-full -ml-1 z-10"></div>
+
+      </div>
+    </div>
     
-    <!-- Hero Section -->
-    <section class="pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">      
-      <div>        
-        <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4 text-white">          
-          HubSpot & Close CRM Architecture          
-          <span class="text-hubOrange block mt-1">            
-            to remove pipeline sales friction.        
-          </span>        
-        </h1>        
-        
-        <p class="text-gray-300 text-base mb-6">          
-          Stop fighting your tech stack. We engineer HubSpot and Close CRM environments that automate your data integrity, eliminate manual pipeline drag, and accelerate deal velocity from first touch to closed-won.        
-        </p>        
-        
-        <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="px-5 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-medium">          
-          Book a Pipeline Audit        
-        </a>      
-      </div>      
+    <!-- Diagnostic Tool App Widget -->
+    <div class="bg-black/90 border border-hubOrange/40 rounded-2xl p-6 md:p-10 mb-16 shadow-2xl shadow-hubOrange/10 relative overflow-visible">
       
-      <div class="relative">        
-        <div class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-soBlue/30 blur-3xl opacity-50"></div>        
-        <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">          
-          <img src="/photos/seamlessoutboundpic.png" alt="HubSpot Integration Architecture" class="rounded-lg w-full h-auto" />        
-        </div>      
-      </div>    
-    </section>
+      <!-- Top Status Bar -->
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-hubOrange animate-pulse"></div>
+          <span id="widget-status-label" class="text-xs uppercase tracking-widest text-hubOrange font-bold">Pipeline Friction Diagnostic</span>
+        </div>
+        <div id="step-counter" class="text-xs text-gray-400 font-mono tracking-wider">Question 1 of 4</div>
+      </div>
 
-    <!-- The Edge Section -->    
-    <section id="differentiators" class="py-16 border-t border-white/10">      
-      <h2 class="text-2xl font-semibold mb-8">The Seamless Edge</h2>      
-      
-      <div class="grid md:grid-cols-3 gap-8">        
-        <div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">          
-          <h3 class="text-lg font-medium mb-2 text-hubOrange">Systems Engineering</h3>          
-          <p class="text-sm text-gray-400">Custom webhooks and advanced API integrations that extend HubSpot beyond its native limits.</p>        </div>        
-        
-        <div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">          
-          <h3 class="text-lg font-medium mb-2 text-hubOrange">Pipeline Engineering</h3>          
-          <p class="text-sm text-gray-400">Engineering automated deal movement and lead scoring that forces your team to focus on revenue.</p>        </div>        
-        
-        <div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">          
-          <h3 class="text-lg font-medium mb-2 text-hubOrange">Frictionless Data</h3>          
-          <p class="text-sm text-gray-400">Automated cleaning and mapping logic that turns a data graveyard into a single source of truth.</p>        </div>      
-      </div>    
-    </section>
+      <!-- Question View -->
+      <div id="diagnostic-question-container">
+        <h3 id="question-title" class="text-xl md:text-2xl font-bold text-white mb-6 leading-snug"></h3>
+        <div id="options-grid" class="space-y-3">
+          <!-- Dynamically injected options -->
+        </div>
 
-    <!-- How It Works Section -->    
-    <section id="how" class="py-16 border-t border-white/10">      
-      <h2 class="text-2xl font-semibold mb-4">How We Engineer Your HubSpot Environment</h2>      
-      
-      <ul class="space-y-4 text-gray-300 text-sm">        
-        <li class="flex gap-2"> 
-          <span class="text-hubOrange">✔</span> 
-          <strong>AI-Driven Response:</strong> Integration of intelligent agents that monitor leads and draft context-aware replies automatically.
-        </li>        
-        <li class="flex gap-2"> 
-          <span class="text-hubOrange">✔</span> 
-          <strong>Auto-Data Hygiene:</strong> Custom scripts that deduplicate, scrub, and map incoming data in real-time.
-        </li>        
-        <li class="flex gap-2"> 
-          <span class="text-hubOrange">✔</span> 
-          <strong>Pipeline Velocity:</strong> Logic-based triggers that advance deals based on prospect behavior, removing manual bottlenecks.
-        </li>      
-      </ul>    
-    </section>
+        <div class="flex justify-between items-center mt-8 pt-4 border-t border-white/5">
+          <button id="back-btn" onclick="prevQuestion()" class="text-xs uppercase tracking-wider text-gray-400 hover:text-white transition hidden flex items-center gap-1">
+            ← Previous Question
+          </button>
+          <div id="progress-pips" class="flex space-x-1.5 mx-auto">
+            <div class="w-6 h-1.5 bg-hubOrange rounded-full transition-all duration-300" data-pip="0"></div>
+            <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="1"></div>
+            <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="2"></div>
+            <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="3"></div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Target Fit Section -->    
-    <section id="who" class="py-16 border-t border-white/10">      
-      <h2 class="text-2xl font-semibold mb-4">Who We Partner With</h2>      
-      <p class="text-gray-300 max-w-2xl mb-6">We partner with growth-focused marketing agencies and high-volume sales teams.</p>      
-      
-      <ul class="space-y-2 text-sm text-gray-300">        
-        <li>• Teams that have outgrown standard HubSpot or Close configurations.</li>        
-        <li>• Growing companies whose sales data is scattered across disconnected spreadsheets and tools.</li>        
-        <li>• Agencies ready to transform their CRM into a high-performance, automated sales factory.</li> 
-        <li>•Businesses dealing with broken data paths that let good leads slip through the cracks.</li>
-      </ul>    
-    </section>
+      <!-- Result Portrait State -->
+      <div id="diagnostic-result-container" class="hidden">
+        <div class="mb-6">
+          <div id="dynamic-metric" class="text-4xl md:text-5xl font-black text-hubOrange mb-1">11.0 hrs</div>
+          <div class="text-xs uppercase tracking-widest text-gray-400 font-mono">Estimated Administrative Drag / Rep / Week</div>
+        </div>
+        
+        <p id="result-diagnosis" class="text-gray-300 leading-relaxed mb-8 text-base">
+          Based on your workflow inputs, your stack is introducing friction between data layers. When tools operate in silos, reps end up compensating with manual updates rather than focusing on pipeline generation.
+        </p>
 
-    <!-- Team Section -->    
-    <section id="team" class="py-16 border-t border-white/10">      
-      <h2 class="text-2xl font-semibold mb-4">The Mechanics</h2>      
-      
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mt-10">        
-        <!-- Floyd -->        
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">          
-          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Floyd&skinColor=654321" alt="Floyd" class="w-16 h-16 rounded-full mb-3 bg-hubOrange/20">          
-          <h3 class="font-medium text-white text-base">Floyd</h3>          
-          <p class="text-xs text-hubOrange font-semibold mt-1">CEO & Systems Architect</p>          
-          <p class="text-[10px] text-gray-400 mt-2 italic">Applied engineering logic to resolve complex sales infrastructure failures.</p>          
-          <a href="https://www.linkedin.com/in/floydorr" target="_blank" class="text-[10px] text-soBlue hover:underline mt-2">LinkedIn</a>        
-        </div>        
-        
-        <!-- Leo -->        
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">          
-          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Leo&skinColor=f3d3b7" alt="Leo" class="w-16 h-16 rounded-full mb-3 bg-gray-500/20">          
-          <h3 class="font-medium text-white text-base">Leo</h3>          
-          <p class="text-xs text-gray-300 font-semibold mt-1">Sr. Software Engineer</p>          
-          <p class="text-[10px] text-gray-400 mt-2 italic">Building robust technical solutions through rigorous software engineering principles.</p>          
-          <a href="https://www.linkedin.com/in/odran037/" target="_blank" class="text-[10px] text-soBlue hover:underline mt-2">LinkedIn</a>        
-        </div>        
-        
-        <!-- Adam -->        
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">          
-          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Adam&skinColor=654321" alt="Adam" class="w-16 h-16 rounded-full mb-3 bg-gray-500/20">          
-          <h3 class="font-medium text-white text-base">Adam</h3>          
-          <p class="text-xs text-gray-300 font-semibold mt-1">Sr. Software Engineer</p>          
-          <p class="text-[10px] text-gray-400 mt-2 italic">Expert in high-complexity data systems and algorithmic problem solving.</p>          
-          <a href="https://www.linkedin.com/in/adam-o-a290a8143/" target="_blank" class="text-[10px] text-soBlue hover:underline mt-2">LinkedIn</a>        
-        </div>        
-        
-        <!-- Abdullah -->        
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">          
-          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Abdullah&skinColor=654321" alt="Abdullah" class="w-16 h-16 rounded-full mb-3 bg-gray-500/20">          
-          <h3 class="font-medium text-white text-base">Abdullah</h3>          
-          <p class="text-xs text-gray-300 font-semibold mt-1">UX Designer & Systems Thinker</p>          
-          <p class="text-[10px] text-gray-400 mt-2 italic">Optimizing user journeys and system efficiency through clean design principles.</p>          
-          <a href="https://www.linkedin.com/in/abdullah-orr-0471462aa" target="_blank" class="text-[10px] text-soBlue hover:underline mt-2">LinkedIn</a>        
-        </div>      
-      </div>    
-    </section>
+        <div class="border-t border-white/10 pt-6">
+          <p id="result-cta-text" class="text-sm text-gray-300 leading-relaxed mb-6">
+            If you are open to a better way of doing things, let's look at your pipeline.
+          </p>
+        </div>
+        <button id="retake-btn" onclick="resetDiagnostic()" class="text-xs text-hubOrange hover:underline uppercase tracking-wider font-mono">↺ Retake Diagnostic</button>
+      </div>
+    </div>
 
-    <!-- Final Call to Action -->    
-    <section class="py-16 text-center border-t border-white/10">      
-      <h2 class="text-2xl font-semibold mb-6">Ready to Scale Your Sales Pipeline?</h2>      
-      <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="inline-block px-8 py-4 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-md font-bold">        
-        Schedule Your Discovery Call      
-      </a>    
-    </section>
+    <!-- Customizable Bottom Title Element -->
+    <h1 id="blog-title" class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-6 text-gray-200">Building the Engine: A Secure Proxy for Stagnant Deals</h1>
+    
+    <!-- Default Call to Action -->
+    <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" id="default-cta" class="inline-block mt-12 px-8 py-3 bg-hubOrange text-black font-bold rounded-full hover:bg-orange-600 transition">      
+      Book a Pipeline Audit    
+    </a>  
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-white/10 py-6 text-xs text-gray-400 text-center">    
-    © <script>document.write(new Date().getFullYear());</script> Seamless Outbound — Full-Stack Sales Engineering  
-  </footer>
+  <script>
+    // Read URL Parameters for Prospect Customization
+    const urlParams = new URLSearchParams(window.location.search);
+    const firstName = urlParams.get('name') || '';
+    const companyName = urlParams.get('company') || '';
+    const crmPlatform = urlParams.get('crm') || '';
 
+    const formattedCompanyName = companyName ? decodeURIComponent(companyName).replace(/\+/g, ' ') : '';
+    const formattedCrm = crmPlatform ? decodeURIComponent(crmPlatform) : '';
+
+    const displayName = firstName ? `${firstName}` : "Hi there";
+    const displayCrm = formattedCrm ? `${formattedCrm} CRM` : "CRM";
+
+    // Set prospect name in orange on top title and regular CRM text
+    document.getElementById('prospect-name-display').innerText = displayName;
+    
+    const topTitleText = formattedCrm 
+      ? `what sucks most about your ${formattedCrm} CRM?`
+      : `what sucks most about your CRM?`;
+    document.getElementById('custom-top-title').innerHTML = `<span id="prospect-name-display" class="text-hubOrange">${displayName}</span>, ${topTitleText}`;
+
+    // Dynamically set result CTA text based on whether prospect info is present
+    const resultCtaText = document.getElementById('result-cta-text');
+    if (firstName && formattedCompanyName) {
+      resultCtaText.innerHTML = `<span class="text-hubOrange font-semibold">${firstName}</span>, let's improve <span class="text-hubOrange font-semibold">${formattedCompanyName}</span>'s CRM...`;
+    } else if (firstName) {
+      resultCtaText.innerHTML = `<span class="text-hubOrange font-semibold">${firstName}</span>, let's improve your CRM...`;
+    } else if (formattedCompanyName) {
+      resultCtaText.innerHTML = `Let's improve <span class="text-hubOrange font-semibold">${formattedCompanyName}</span>'s CRM...`;
+    } else {
+      resultCtaText.innerHTML = "If you are open to a better way of doing things, let's look at your pipeline.";
+    }
+
+    const diagnosticQuestions = [
+      {
+        question: `Hey ${displayName}, what is the single biggest bottleneck slowing down growth ${formattedCompanyName ? 'at ' + formattedCompanyName : 'in your pipeline'}?`,
+        options: [
+          { text: "Systems not talking to each other (sync failures & broken webhooks)", weight: 4.5, impact: `Integration mismatches force constant manual corrections across ${formattedCompanyName || 'your'} data layers.` },
+          { text: "Reps drowning in manual data entry & click fatigue (the 5-tab shuffle)", weight: 5.5, impact: `Excessive window switching destroys active selling time and ramps up administrative fatigue for ${displayName}.` },
+          { text: "A bloated pipeline full of ghost data nobody trusts", weight: 3.5, impact: `Stale records distort forecasting accuracy and hide active revenue opportunities for ${formattedCompanyName || 'your team'}.` }
+        ]
+      },
+      {
+        question: `How many hours a week do reps ${formattedCompanyName ? 'at ' + formattedCompanyName : ''} spend updating ${displayCrm} manually?`,
+        options: [
+          { text: "Under 5 hours — Mostly automated workflows", weight: 2.0, impact: `Your tracking baseline is relatively clean, though minor workflow leaks still exist.` },
+          { text: "5 to 15 hours — Moderate administrative drag", weight: 4.0, impact: `Significant time is diverted away from outbound prospecting into routine data maintenance.` },
+          { text: "Over 15 hours — The machine is eating our week", weight: 6.0, impact: `Severe operational friction is consuming a large percentage of weekly sales capacity.` }
+        ]
+      },
+      {
+        question: `When scaling outbound campaigns for ${formattedCompanyName || 'your business'}, how clean is the cross-platform data sync?`,
+        options: [
+          { text: "Seamless automated integration across tools", weight: 2.5, impact: `Data flows smoothly, though keeping external APIs synchronized requires constant oversight.` },
+          { text: "Constant manual copy-pasting between separate tabs", weight: 4.5, impact: `Manual data bridging between platforms introduces predictable human error and delay.` },
+          { text: "Total chaos — data constantly drops or duplicates", weight: 5.5, impact: `Broken pipeline pathways create duplicate records and lost prospect context.` }
+        ]
+      },
+      {
+        question: `What does your Friday afternoon pipeline review actually feel like ${formattedCompanyName ? 'at ' + formattedCompanyName : ''}?`,
+        options: [
+          { text: "Predictable, calm, and accurate pipeline forecasts", weight: 1.5, impact: `Forecasting is reliable due to disciplined data hygiene and transparent reporting.` },
+          { text: "A guessing game of outdated deal stages", weight: 4.0, impact: `Incomplete pipeline updates make accurate weekly forecasting nearly impossible.` },
+          { text: "A graveyard of dead or neglected deals", weight: 5.0, impact: `Neglected deal records clutter visibility into actual pipeline velocity.` }
+        ]
+      }
+    ];
+
+    let activeStep = 0;
+    const collectedAnswers = [];
+    let totalScore = 0;
+
+    const questionTitle = document.getElementById('question-title');
+    const optionsGrid = document.getElementById('options-grid');
+    const stepCounter = document.getElementById('step-counter');
+    const backBtn = document.getElementById('back-btn');
+    const progressPips = document.querySelectorAll('[data-pip]');
+
+    function renderActiveQuestion() {
+      const currentQ = diagnosticQuestions[activeStep];
+      questionTitle.innerText = currentQ.question;
+      stepCounter.innerText = `Question ${activeStep + 1} of 4`;
+
+      if (activeStep > 0) {
+        backBtn.classList.remove('hidden');
+      } else {
+        backBtn.classList.add('hidden');
+      }
+
+      progressPips.forEach((pip, idx) => {
+        if (idx === activeStep) {
+          pip.className = "w-6 h-1.5 bg-hubOrange rounded-full transition-all duration-300";
+        } else if (idx < activeStep) {
+          pip.className = "w-1.5 h-1.5 bg-hubOrange/60 rounded-full transition-all duration-300";
+        } else {
+          pip.className = "w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300";
+        }
+      });
+
+      optionsGrid.innerHTML = '';
+      currentQ.options.forEach((opt) => {
+        const optionButton = document.createElement('button');
+        optionButton.className = "w-full text-left p-4 rounded-xl border border-white/10 bg-white/5 hover:border-hubOrange hover:bg-hubOrange/10 transition-all duration-200 text-sm text-gray-200 flex items-center justify-between group cursor-pointer";
+        optionButton.innerHTML = `<span class="font-medium leading-relaxed pr-4">${opt.text}</span> <span class="text-hubOrange opacity-0 group-hover:opacity-100 transition-opacity text-xs font-mono">Select →</span>`;
+        optionButton.onclick = () => submitAnswer(opt.weight, opt.impact);
+        optionsGrid.appendChild(optionButton);
+      });
+    }
+
+    function submitAnswer(weight, impactText) {
+      totalScore += weight;
+      collectedAnswers.push(impactText);
+      if (activeStep < diagnosticQuestions.length - 1) {
+        activeStep++;
+        renderActiveQuestion();
+      } else {
+        renderResults();
+      }
+    }
+
+    function prevQuestion() {
+      if (activeStep > 0) {
+        activeStep--;
+        collectedAnswers.pop();
+        renderActiveQuestion();
+      }
+    }
+
+    function resetDiagnostic() {
+      activeStep = 0;
+      totalScore = 0;
+      collectedAnswers.length = 0;
+      document.getElementById('diagnostic-result-container').classList.add('hidden');
+      document.getElementById('diagnostic-question-container').classList.remove('hidden');
+      renderActiveQuestion();
+    }
+
+    function renderResults() {
+      document.getElementById('diagnostic-question-container').classList.add('hidden');
+      document.getElementById('diagnostic-result-container').classList.remove('hidden');
+      stepCounter.innerText = 'Diagnostic Complete';
+
+      const calculatedHours = (totalScore * 0.95).toFixed(1);
+      document.getElementById('dynamic-metric').innerText = `${calculatedHours} hrs`;
+
+      const summaryText = collectedAnswers.join(" ");
+      const companyRef = formattedCompanyName ? `at ${formattedCompanyName}` : "in your outbound stack";
+      const nameRef = firstName ? `${firstName},` : "";
+
+      document.getElementById('result-diagnosis').innerHTML = `
+        <strong>Pipeline Audit Summary ${companyRef}:</strong><br><br>
+        ${summaryText}<br><br>
+        ${nameRef} when administrative friction scales to this level, reps spend more time maintaining records than interacting with live prospects. Solving this isn't about working harder; it's an architecture fix to streamline data flow.
+      `;
+    }
+
+    // Initialize tool
+    renderActiveQuestion();
+
+    // Eye Tracking Cursor Logic for Pupils & Dynamic Catchlights
+    const eyesContainer = document.getElementById('eyes-container');
+    const pupil1 = document.getElementById('pupil-1');
+    const pupil2 = document.getElementById('pupil-2');
+    const catchlight1 = document.getElementById('catchlight-1');
+    const catchlight2 = document.getElementById('catchlight-2');
+
+    document.addEventListener('mousemove', (e) => {
+      const rect = eyesContainer.getBoundingClientRect();
+      const rX = rect.left + rect.width / 2;
+      const rY = rect.top + rect.height / 2;
+      
+      const angle = Math.atan2(e.clientY - rY, e.clientX - rX);
+      const distance = Math.min(5, Math.hypot(e.clientX - rX, e.clientY - rY) / 35);
+      
+      const pX = Math.cos(angle) * distance;
+      const pY = Math.sin(angle) * distance;
+
+      // Move pupils
+      pupil1.style.transform = `translate(${pX}px, ${pY}px)`;
+      pupil2.style.transform = `translate(${pX}px, ${pY}px)`;
+
+      // Slightly shift catchlights in the same direction for realistic reflection physics
+      const cX = pX * 0.35;
+      const cY = pY * 0.35;
+      catchlight1.style.transform = `translate(${cX}px, ${cY}px)`;
+      catchlight2.style.transform = `translate(${cX}px, ${cY}px)`;
+    });
+
+    // Handle URL parameters for bottom title
+    if (firstName && formattedCompanyName) {
+      document.getElementById('blog-title').innerHTML = `${firstName}, here is what’s quietly slowing down <span class="text-hubOrange">${formattedCompanyName}</span>'s pipeline.`;
+    } else if (formattedCompanyName) {
+      document.getElementById('blog-title').innerHTML = `Here is what’s quietly slowing down <span class="text-hubOrange">${formattedCompanyName}</span>'s pipeline.`;
+    }
+  </script>
 </body>
 </html>
 
