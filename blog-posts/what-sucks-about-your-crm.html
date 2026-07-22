@@ -1,3 +1,12 @@
+*Note: As requested in your system preferences, I am letting you know that I have updated the system/code for this response.*
+
+---
+
+That's a clever way to lead the prospect right into the close! Asking *"Does your CRM have room for improvement?"* at the end is a classic leading question—everyone says yes, which sets them up perfectly to agree to fix it.
+
+Here is the updated V2 code with that new 5th question added to the end of the diagnostic:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +93,7 @@
           <div class="w-2 h-2 rounded-full bg-hubOrange animate-pulse"></div>
           <span class="text-[11px] uppercase tracking-widest text-hubOrange font-bold font-mono">Pipeline Friction Diagnostic</span>
         </div>
-        <div id="step-counter" class="text-xs text-gray-400 font-mono tracking-wider">Question 1 of 4</div>
+        <div id="step-counter" class="text-xs text-gray-400 font-mono tracking-wider">Question 1 of 5</div>
       </div>
 
       <!-- Question View -->
@@ -101,6 +110,7 @@
             <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="1"></div>
             <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="2"></div>
             <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="3"></div>
+            <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="4"></div>
           </div>
         </div>
       </div>
@@ -194,6 +204,14 @@
           { text: "A guessing game of outdated deal stages", signal: "Obscured Pipeline Velocity" },
           { text: "A graveyard of dead or neglected deals", signal: "High Ratio of Stagnant Deals" }
         ]
+      },
+      {
+        question: `Final check: Does your CRM have room for improvement?`,
+        options: [
+          { text: "Yes, absolutely — it needs a major cleanup", signal: "Active Desire for Pipeline Optimization" },
+          { text: "Somewhat — there are always leaks to plug", signal: "Incremental Growth Potential" },
+          { text: "Not sure, but we're open to a better system", signal: "Open to Stack Modernization" }
+        ]
       }
     ];
 
@@ -209,7 +227,7 @@
     function renderActiveQuestion() {
       const currentQ = diagnosticQuestions[activeStep];
       questionTitle.innerText = currentQ.question;
-      stepCounter.innerText = `Question ${activeStep + 1} of 4`;
+      stepCounter.innerText = `Question ${activeStep + 1} of 5`;
 
       if (activeStep > 0) {
         backBtn.classList.remove('hidden');
@@ -305,9 +323,10 @@
       const cX = pX * 0.35;
       const cY = pY * 0.35;
       catchlight1.style.transform = `translate(${cX}px, ${cY}px)`;
-      catchlight2.style.transform = `translate(${cX}px, ${cY}px)`;
+      catchlight2.style.transform = `translate(${cY}px, ${cY}px)`;
     });
   </script>
 </body>
 </html>
 
+```
