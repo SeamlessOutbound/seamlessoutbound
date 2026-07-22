@@ -47,7 +47,7 @@
       <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">Hi there</span>, what sucks most about your CRM?</span>
     </h2>
 
-    <!-- Centered Standalone Big Human-Like Oval Eyes Block Watching Cursor -->
+    <!-- Centered Standalone Big Human-Like Oval Glasses & Eyes Block Watching Cursor -->
     <div class="flex flex-col items-center justify-center my-8 z-30" id="eyes-wrapper">
       <!-- Animated Looping Thought/Speech Bubble -->
       <div class="mb-3 bg-hubOrange/10 border border-hubOrange/50 px-4 py-1.5 rounded-xl shadow-lg backdrop-blur-md">
@@ -56,24 +56,36 @@
         </p>
       </div>
 
-      <!-- Two Big Human-Like Oval Eyes with Expanded Iris and Light Reflection Catchlight -->
-      <div class="flex space-x-6 items-center justify-center p-4 bg-soDark/80 border border-hubOrange/40 rounded-3xl shadow-2xl shadow-hubOrange/30 relative group" id="eyes-container">
-        <!-- Left Eye (Larger Oval Shape) -->
+      <!-- Glasses Frame Container with Side Temples -->
+      <div class="flex items-center justify-center p-4 bg-soDark/80 border border-hubOrange/40 rounded-3xl shadow-2xl shadow-hubOrange/30 relative group" id="eyes-container">
+        
+        <!-- Left Glasses Temple (Side Line) -->
+        <div class="w-6 h-1 bg-hubOrange rounded-l-full -mr-1 z-10"></div>
+
+        <!-- Left Eye Frame -->
         <div class="w-24 h-16 bg-black border-2 border-hubOrange rounded-[50%_50%_45%_45%] flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
           <div class="w-10 h-12 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute flex items-center justify-center overflow-hidden" id="pupil-1">
-            <div class="w-4 h-5 bg-black rounded-full flex items-start justify-end p-0.5">
+            <div class="w-4 h-5 bg-black rounded-full flex items-center justify-center">
               <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
             </div>
           </div>
         </div>
-        <!-- Right Eye (Larger Oval Shape) -->
+
+        <!-- Center Bridge connecting the glasses frames -->
+        <div class="w-4 h-1 bg-hubOrange"></div>
+
+        <!-- Right Eye Frame -->
         <div class="w-24 h-16 bg-black border-2 border-hubOrange rounded-[50%_50%_45%_45%] flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
           <div class="w-10 h-12 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute flex items-center justify-center overflow-hidden" id="pupil-2">
-            <div class="w-4 h-5 bg-black rounded-full flex items-start justify-end p-0.5">
+            <div class="w-4 h-5 bg-black rounded-full flex items-center justify-center">
               <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
             </div>
           </div>
         </div>
+
+        <!-- Right Glasses Temple (Side Line) -->
+        <div class="w-6 h-1 bg-hubOrange rounded-r-full -ml-1 z-10"></div>
+
       </div>
     </div>
     
@@ -122,7 +134,7 @@
 
         <div class="border-t border-white/10 pt-6">
           <p class="text-sm text-gray-300 leading-relaxed mb-6">
-            I built this tool to surface where that friction lives. If you want to review the underlying architecture blueprint used to clean this up, text your timezone directly to <span class="text-hubOrange font-semibold">[Your Phone Number]</span>.
+            If you are open to new ideas lets look at your pipeline.
           </p>
         </div>
         <button id="retake-btn" onclick="resetDiagnostic()" class="text-xs text-hubOrange hover:underline uppercase tracking-wider font-mono">↺ Retake Diagnostic</button>
@@ -257,7 +269,7 @@
     function resetDiagnostic() {
       activeStep = 0;
       totalScore = 0;
-      collectedAnswers.length = 0;
+      collectedAnswers.length =.0;
       document.getElementById('diagnostic-result-container').classList.add('hidden');
       document.getElementById('diagnostic-question-container').classList.remove('hidden');
       renderActiveQuestion();
@@ -285,7 +297,7 @@
     // Initialize tool
     renderActiveQuestion();
 
-    // Eye Tracking Cursor Logic for Expanded Eyes with Realistic Light Reflections
+    // Eye Tracking Cursor Logic for Centered Catchlight Pupils & Glasses Frames
     const eyesContainer = document.getElementById('eyes-container');
     const pupil1 = document.getElementById('pupil-1');
     const pupil2 = document.getElementById('pupil-2');
@@ -296,7 +308,7 @@
       const rY = rect.top + rect.height / 2;
       
       const angle = Math.atan2(e.clientY - rY, e.clientX - rX);
-      const distance = Math.min(6, Math.hypot(e.clientX - rX, e.clientY - rY) / 30);
+      const distance = Math.min(5, Math.hypot(e.clientX - rX, e.clientY - rY) / 35);
       
       const pX = Math.cos(angle) * distance;
       const pY = Math.sin(angle) * distance;
