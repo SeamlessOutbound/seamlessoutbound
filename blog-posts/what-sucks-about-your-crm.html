@@ -132,7 +132,7 @@
         </p>
 
         <div class="border-t border-white/10 pt-6">
-          <p class="text-sm text-gray-300 leading-relaxed mb-6">
+          <p id="result-cta-text" class="text-sm text-gray-300 leading-relaxed mb-6">
             If you are open to a better way of doing things, let's look at your pipeline.
           </p>
         </div>
@@ -141,7 +141,7 @@
     </div>
 
     <!-- Customizable Bottom Title Element -->
-    <h1 id="blog-title" class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-6 text-gray-200">Are You Open To A Better Way Of Doing Things?</h1>
+    <h1 id="blog-title" class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-6 text-gray-200">Building the Engine: A Secure Proxy for Stagnant Deals</h1>
     
     <!-- Default Call to Action -->
     <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" id="default-cta" class="inline-block mt-12 px-8 py-3 bg-hubOrange text-black font-bold rounded-full hover:bg-orange-600 transition">      
@@ -169,6 +169,18 @@
       ? `what sucks most about your ${formattedCrm} CRM?`
       : `what sucks most about your CRM?`;
     document.getElementById('custom-top-title').innerHTML = `<span id="prospect-name-display" class="text-hubOrange">${displayName}</span>, ${topTitleText}`;
+
+    // Dynamically set result CTA text based on whether prospect info is present
+    const resultCtaText = document.getElementById('result-cta-text');
+    if (firstName && formattedCompanyName) {
+      resultCtaText.innerHTML = `<span class="text-hubOrange font-semibold">${firstName}</span>, let's improve <span class="text-hubOrange font-semibold">${formattedCompanyName}</span>'s CRM...`;
+    } else if (firstName) {
+      resultCtaText.innerHTML = `<span class="text-hubOrange font-semibold">${firstName}</span>, let's improve your CRM...`;
+    } else if (formattedCompanyName) {
+      resultCtaText.innerHTML = `Let's improve <span class="text-hubOrange font-semibold">${formattedCompanyName}</span>'s CRM...`;
+    } else {
+      resultCtaText.innerHTML = "If you are open to a better way of doing things, let's look at your pipeline.";
+    }
 
     const diagnosticQuestions = [
       {
