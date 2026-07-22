@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,13 +41,13 @@
 
   <main class="max-w-3xl mx-auto px-4 py-12">
 
-    <!-- Big Prominent Section Title (First Name in Orange, CRM name normal text) -->
+    <!-- Big Prominent Section Title -->
     <h2 id="main-section-title" class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-6 flex items-center gap-3">
       <span class="w-3 h-3 bg-hubOrange rounded-full inline-block animate-pulse shrink-0"></span>
-      <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">There</span>, what sucks most about your CRM</span>
+      <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">Hi there</span>, what sucks most about your CRM</span>
     </h2>
 
-    <!-- Centered Standalone Big Eyes Block with Prominent Pupils Watching Cursor -->
+    <!-- Centered Standalone Big Human-Like Oval Eyes Block Watching Cursor -->
     <div class="flex flex-col items-center justify-center my-8 z-30" id="eyes-wrapper">
       <!-- Animated Looping Thought/Speech Bubble -->
       <div class="mb-3 bg-hubOrange/10 border border-hubOrange/50 px-4 py-1.5 rounded-xl shadow-lg backdrop-blur-md">
@@ -55,15 +56,19 @@
         </p>
       </div>
 
-      <!-- Two Big Hypnotic Cyber Eyes -->
-      <div class="flex space-x-6 items-center justify-center p-4 bg-soDark/80 border border-hubOrange/40 rounded-2xl shadow-2xl shadow-hubOrange/30 relative group" id="eyes-container">
-        <!-- Left Eye -->
-        <div class="w-16 h-20 bg-black border-2 border-hubOrange rounded-xl flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
-          <div class="w-7 h-10 bg-soBlue rounded-md transition-all duration-75 shadow-inner absolute" id="pupil-1"></div>
+      <!-- Two Big Human-Like Oval Eyes with Eyelids & Natural Pupils -->
+      <div class="flex space-x-6 items-center justify-center p-4 bg-soDark/80 border border-hubOrange/40 rounded-3xl shadow-2xl shadow-hubOrange/30 relative group" id="eyes-container">
+        <!-- Left Eye (Oval Shape with Eyelid Contour) -->
+        <div class="w-20 h-14 bg-black border-2 border-hubOrange rounded-[50%_50%_40%_40%] flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
+          <div class="w-6 h-9 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute flex items-center justify-center" id="pupil-1">
+            <div class="w-2 h-4 bg-black rounded-full"></div>
+          </div>
         </div>
-        <!-- Right Eye -->
-        <div class="w-16 h-20 bg-black border-2 border-hubOrange rounded-xl flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
-          <div class="w-7 h-10 bg-soBlue rounded-md transition-all duration-75 shadow-inner absolute" id="pupil-2"></div>
+        <!-- Right Eye (Oval Shape with Eyelid Contour) -->
+        <div class="w-20 h-14 bg-black border-2 border-hubOrange rounded-[50%_50%_40%_40%] flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
+          <div class="w-6 h-9 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute flex items-center justify-center" id="pupil-2">
+            <div class="w-2 h-4 bg-black rounded-full"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -139,7 +144,7 @@
     const formattedCompanyName = companyName ? decodeURIComponent(companyName).replace(/\+/g, ' ') : '';
     const formattedCrm = crmPlatform ? decodeURIComponent(crmPlatform) : '';
 
-    const displayName = firstName ? `${firstName}` : "There";
+    const displayName = firstName ? `${firstName}` : "Hi there";
     const displayCrm = formattedCrm ? `${formattedCrm} CRM` : "CRM";
 
     // Set prospect name in orange on top title and regular CRM text
@@ -276,7 +281,7 @@
     // Initialize tool
     renderActiveQuestion();
 
-    // Eye Tracking Cursor Logic
+    // Eye Tracking Cursor Logic for Oval Human-Like Eyes with Pupils
     const eyesContainer = document.getElementById('eyes-container');
     const pupil1 = document.getElementById('pupil-1');
     const pupil2 = document.getElementById('pupil-2');
@@ -287,7 +292,7 @@
       const rY = rect.top + rect.height / 2;
       
       const angle = Math.atan2(e.clientY - rY, e.clientX - rX);
-      const distance = Math.min(6, Math.hypot(e.clientX - rX, e.clientY - rY) / 25);
+      const distance = Math.min(4, Math.hypot(e.clientX - rX, e.clientY - rY) / 35);
       
       const pX = Math.cos(angle) * distance;
       const pY = Math.sin(angle) * distance;
@@ -305,3 +310,5 @@
   </script>
 </body>
 </html>
+
+```
