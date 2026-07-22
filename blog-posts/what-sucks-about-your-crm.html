@@ -167,47 +167,48 @@
       {
         question: `Hey ${displayName}, what is the single biggest bottleneck slowing down growth ${formattedCompanyName ? 'at ' + formattedCompanyName : 'in your pipeline'}?`,
         options: [
-          { text: "Systems not talking to each other (sync failures & broken webhooks)", signal: "Broken Data Sync Layer" },
-          { text: "Reps drowning in manual data entry & click fatigue (the 5-tab shuffle)", signal: "High Rep Administrative Drag" },
-          { text: "A bloated pipeline full of ghost data nobody trusts", signal: "Stale Pipeline / Ghost Records" }
+          { text: "Systems not talking to each other (sync failures & broken webhooks)", signal: "Broken Data Sync Layer", weight: 3 },
+          { text: "Reps drowning in manual data entry & click fatigue (the 5-tab shuffle)", signal: "High Rep Administrative Drag", weight: 3 },
+          { text: "A bloated pipeline full of ghost data nobody trusts", signal: "Stale Pipeline / Ghost Records", weight: 2 }
         ]
       },
       {
         question: `How many hours a week do reps ${formattedCompanyName ? 'at ' + formattedCompanyName : ''} spend updating ${displayCrm} manually?`,
         options: [
-          { text: "Under 5 hours — Mostly automated workflows", signal: "Healthy Automation Baseline" },
-          { text: "5 to 15 hours — Moderate administrative drag", signal: "Moderate Time Drain on Reps" },
-          { text: "Over 15 hours — The machine is eating our week", signal: "Severe Capacity Bottleneck" }
+          { text: "Under 5 hours — Mostly automated workflows", signal: "Healthy Automation Baseline", weight: 1 },
+          { text: "5 to 15 hours — Moderate administrative drag", signal: "Moderate Time Drain on Reps", weight: 2 },
+          { text: "Over 15 hours — The machine is eating our week", signal: "Severe Capacity Bottleneck", weight: 3 }
         ]
       },
       {
         question: `When scaling outbound campaigns for ${formattedCompanyName || 'your business'}, how clean is the cross-platform data sync?`,
         options: [
-          { text: "Seamless automated integration across tools", signal: "Stable API Layer" },
-          { text: "Constant manual copy-pasting between separate tabs", signal: "Manual Bridging Friction" },
-          { text: "Total chaos — data constantly drops or duplicates", signal: "Critical Webhook Failures" }
+          { text: "Seamless automated integration across tools", signal: "Stable API Layer", weight: 1 },
+          { text: "Constant manual copy-pasting between separate tabs", signal: "Manual Bridging Friction", weight: 2 },
+          { text: "Total chaos — data constantly drops or duplicates", signal: "Critical Webhook Failures", weight: 3 }
         ]
       },
       {
         question: `What does your Friday afternoon pipeline review actually feel like ${formattedCompanyName ? 'at ' + formattedCompanyName : ''}?`,
         options: [
-          { text: "Predictable, calm, and accurate pipeline forecasts", signal: "Reliable Deal Visibility" },
-          { text: "A guessing game of outdated deal stages", signal: "Obscured Pipeline Velocity" },
-          { text: "A graveyard of dead or neglected deals", signal: "High Ratio of Stagnant Deals" }
+          { text: "Predictable, calm, and accurate pipeline forecasts", signal: "Reliable Deal Visibility", weight: 1 },
+          { text: "A guessing game of outdated deal stages", signal: "Obscured Pipeline Velocity", weight: 2 },
+          { text: "A graveyard of dead or neglected deals", signal: "High Ratio of Stagnant Deals", weight: 3 }
         ]
       },
       {
         question: `Final check: Does your CRM have room for improvement?`,
         options: [
-          { text: "Yes, absolutely — it needs a major cleanup", signal: "Active Desire for Pipeline Optimization" },
-          { text: "Somewhat — there are always leaks to plug", signal: "Incremental Growth Potential" },
-          { text: "Not sure, but we're open to a better system", signal: "Open to Stack Modernization" }
+          { text: "Yes, absolutely — it needs a major cleanup", signal: "Active Desire for Pipeline Optimization", weight: 3 },
+          { text: "Somewhat — there are always leaks to plug", signal: "Incremental Growth Potential", weight: 2 },
+          { text: "Not sure, but we're open to a better system", signal: "Open to Stack Modernization", weight: 1 }
         ]
       }
     ];
 
     let activeStep = 0;
     const collectedSignals = [];
+    let totalScore = 0;
 
     const questionTitle = document.getElementById('question-title');
     const optionsGrid = document.getElementById('options-grid');
@@ -241,13 +242,14 @@
         const optionButton = document.createElement('button');
         optionButton.className = "w-full text-left p-3.5 rounded-xl border border-white/10 bg-white/5 hover:border-hubOrange hover:bg-hubOrange/10 transition-all duration-200 text-xs md:text-sm text-gray-200 flex items-center justify-between group cursor-pointer";
         optionButton.innerHTML = `<span class="font-medium leading-relaxed pr-4">${opt.text}</span> <span class="text-hubOrange opacity-0 group-hover:opacity-100 transition-opacity text-xs font-mono shrink-0">Select →</span>`;
-        optionButton.onclick = () => submitAnswer(opt.signal);
+        optionButton.onclick = () => submitAnswer(opt.signal, opt.weight);
         optionsGrid.appendChild(optionButton);
       });
     }
 
-    function submitAnswer(signalText) {
+    function submitAnswer(signalText, weight) {
       collectedSignals.push(signalText);
+      totalScore += weight;
       if (activeStep < diagnosticQuestions.length - 1) {
         activeStep++;
         renderActiveQuestion();
@@ -260,12 +262,14 @@
       if (activeStep > 0) {
         activeStep--;
         collectedSignals.pop();
+        totalScore -= 2; // approximation for undo step weight fallback
         renderActiveQuestion();
       }
     }
 
     function resetDiagnostic() {
       activeStep = 0;
+      totalScore = 0;
       collectedSignals.length = 0;
       document.getElementById('diagnostic-result-container').classList.add('hidden');
       document.getElementById('diagnostic-question-container').classList.remove('hidden');
@@ -276,6 +280,15 @@
       document.getElementById('diagnostic-question-container').classList.add('hidden');
       document.getElementById('diagnostic-result-container').classList.remove('hidden');
       stepCounter.innerText = 'Diagnostic Complete';
+
+      // Dynamic Friction Score based on total accumulated weight
+      let frictionLabel = "High Drag (Critical Optimization Needed)";
+      if (totalScore <= 6) {
+        frictionLabel = "Low Drag (Optimized Baseline)";
+      } else if (totalScore <= 10) {
+        frictionLabel = "Moderate Drag (Friction Detected)";
+      }
+      document.getElementById('friction-score').innerText = frictionLabel;
 
       const companyRef = formattedCompanyName ? `at ${formattedCompanyName}` : "in your outbound stack";
       
@@ -314,7 +327,7 @@
       const cX = pX * 0.35;
       const cY = pY * 0.35;
       catchlight1.style.transform = `translate(${cX}px, ${cY}px)`;
-      catchlight2.style.transform = `translate(${cY}px, ${cY}px)`;
+      catchlight2.style.transform = `translate(${cX}px, ${cY}px)`;
     });
   </script>
 </body>
