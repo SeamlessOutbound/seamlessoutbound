@@ -1,3 +1,10 @@
+*Note: As requested in your system preferences, I am letting you know that I have updated the system/code for this response.*
+
+---
+
+Here is the updated diagnostic tool code. Now, when a prospect fills out their name, the text right above the audit button dynamically reads: **"[Name], let's fix these issues with your pipeline!"**, while falling back to your default phrase: **"Are you open to having a better Sales pipeline?"** when no name is provided.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,7 +140,7 @@
 
         <div class="border-t border-white/10 pt-6">
           <p id="result-cta-text" class="text-sm text-gray-300 leading-relaxed mb-6">
-            If you are open to a better way of doing things, let's look at your pipeline.
+            Are you open to having a better Sales pipeline?
           </p>
         </div>
         <button id="retake-btn" onclick="resetDiagnostic()" class="text-xs text-hubOrange hover:underline uppercase tracking-wider font-mono">↺ Retake Diagnostic</button>
@@ -170,16 +177,12 @@
       : `what sucks most about your CRM?`;
     document.getElementById('custom-top-title').innerHTML = `<span id="prospect-name-display" class="text-hubOrange">${displayName}</span>, ${topTitleText}`;
 
-    // Dynamically set result CTA text based on whether prospect info is present
+    // Dynamically set result CTA text based on whether prospect name is present
     const resultCtaText = document.getElementById('result-cta-text');
-    if (firstName && formattedCompanyName) {
-      resultCtaText.innerHTML = `<span class="text-hubOrange font-semibold">${firstName}</span>, let's improve <span class="text-hubOrange font-semibold">${formattedCompanyName}</span>'s CRM...`;
-    } else if (firstName) {
-      resultCtaText.innerHTML = `<span class="text-hubOrange font-semibold">${firstName}</span>, let's improve your CRM...`;
-    } else if (formattedCompanyName) {
-      resultCtaText.innerHTML = `Let's improve <span class="text-hubOrange font-semibold">${formattedCompanyName}</span>'s CRM...`;
+    if (firstName) {
+      resultCtaText.innerHTML = `<span class="text-hubOrange font-semibold">${firstName}</span>, let's fix these issues with your pipeline!`;
     } else {
-      resultCtaText.innerHTML = "If you are open to a better way of doing things, let's look at your pipeline.";
+      resultCtaText.innerHTML = "Are you open to having a better Sales pipeline?";
     }
 
     const diagnosticQuestions = [
@@ -346,3 +349,5 @@
   </script>
 </body>
 </html>
+
+```
