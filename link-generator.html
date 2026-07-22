@@ -1,18 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHYCN9WWRX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LHYCN9WWRX');
-  </script>
-
   <meta charset="UTF-8" />
-  <title>What Sucks Most About Your CRM – Seamless Outbound</title>
+  <title>Outbound URL Parameter Generator – Seamless Outbound</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -29,282 +19,102 @@
     };
   </script>
 </head>
-<body class="bg-soDark text-white font-sans selection:bg-hubOrange selection:text-black overflow-x-hidden">
+<body class="bg-soDark text-white font-sans selection:bg-hubOrange selection:text-black min-h-screen flex flex-col justify-between">
 
   <!-- Header -->  
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-      <a href="../index.html"><img src="/photos/logo.png" alt="logo" class="h-16 md:h-24 w-auto object-contain" /></a>
-      <a href="../blog.html" class="text-sm text-gray-300 hover:text-hubOrange transition">← Back to Insights</a>
+  <header class="border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+      <span class="text-hubOrange font-black tracking-wider uppercase">Seamless Outbound // Link Tool</span>
+      <span class="text-xs text-gray-400 font-mono">Dynamic Personalization Builder</span>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-4 py-12">
-
-    <!-- Big Prominent Section Title (First Name in Orange, CRM name normal text) -->
-    <h2 id="main-section-title" class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-6 flex items-center gap-3">
-      <span class="w-3 h-3 bg-hubOrange rounded-full inline-block animate-pulse shrink-0"></span>
-      <span id="custom-top-title"><span id="prospect-name-display" class="text-hubOrange">Hi There</span>, what sucks most about your CRM</span>
-    </h2>
-
-    <!-- Centered Standalone Big Human-Like Oval Eyes Block Watching Cursor -->
-    <div class="flex flex-col items-center justify-center my-8 z-30" id="eyes-wrapper">
-      <!-- Animated Looping Thought/Speech Bubble -->
-      <div class="mb-3 bg-hubOrange/10 border border-hubOrange/50 px-4 py-1.5 rounded-xl shadow-lg backdrop-blur-md">
-        <p id="robot-bubble-text" class="text-xs font-mono text-hubOrange font-bold tracking-wide animate-pulse">
-          watching your pipeline disappear...
-        </p>
-      </div>
-
-      <!-- Two Big Human-Like Oval Eyes -->
-      <div class="flex space-x-6 items-center justify-center p-4 bg-soDark/80 border border-hubOrange/40 rounded-3xl shadow-2xl shadow-hubOrange/30 relative group" id="eyes-container">
-        <!-- Left Eye (Oval Shape) -->
-        <div class="w-20 h-14 bg-black border-2 border-hubOrange rounded-full flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
-          <div class="w-6 h-8 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute" id="pupil-1"></div>
-        </div>
-        <!-- Right Eye (Oval Shape) -->
-        <div class="w-20 h-14 bg-black border-2 border-hubOrange rounded-full flex items-center justify-center overflow-hidden relative shadow-lg shadow-soBlue/40">
-          <div class="w-6 h-8 bg-soBlue rounded-full transition-all duration-75 shadow-inner absolute" id="pupil-2"></div>
-        </div>
-      </div>
-    </div>
+  <main class="max-w-2xl mx-auto px-4 py-12 w-full">
     
-    <!-- Diagnostic Tool App Widget -->
-    <div class="bg-black/90 border border-hubOrange/40 rounded-2xl p-6 md:p-10 mb-16 shadow-2xl shadow-hubOrange/10 relative overflow-visible">
+    <div class="mb-8">
+      <h1 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-2">Outbound Link Generator</h1>
+      <p class="text-sm text-gray-400">Generate customized links with prospect parameters (`name`, `company`, `crm`) to inject live tracking and personalization into your cold campaigns.</p>
+    </div>
+
+    <!-- Generator Form Box -->
+    <div class="bg-black/90 border border-hubOrange/40 rounded-2xl p-6 md:p-8 shadow-2xl shadow-hubOrange/10 space-y-5">
       
-      <!-- Top Status Bar -->
-      <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
-        <div class="flex items-center gap-2">
-          <div class="w-2.5 h-2.5 rounded-full bg-hubOrange animate-pulse"></div>
-          <span id="widget-status-label" class="text-xs uppercase tracking-widest text-hubOrange font-bold">Pipeline Friction Diagnostic</span>
-        </div>
-        <div id="step-counter" class="text-xs text-gray-400 font-mono tracking-wider">Question 1 of 4</div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-hubOrange font-mono mb-2">Target Landing Page URL</label>
+        <input type="text" id="baseUrl" value="https://seamlessoutbound.com/posts/crm-friction-diagnostic.html" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="https://yourwebsite.com/post.html">
       </div>
 
-      <!-- Question View -->
-      <div id="diagnostic-question-container">
-        <h3 id="question-title" class="text-xl md:text-2xl font-bold text-white mb-6 leading-snug"></h3>
-        <div id="options-grid" class="space-y-3">
-          <!-- Dynamically injected options -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gray-400 font-mono mb-2">Prospect First Name (`name`)</label>
+          <input type="text" id="inputName" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="e.g. Sarah">
         </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gray-400 font-mono mb-2">Company Name (`company`)</label>
+          <input type="text" id="inputCompany" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="e.g. Acme Corp">
+        </div>
+      </div>
 
-        <div class="flex justify-between items-center mt-8 pt-4 border-t border-white/5">
-          <button id="back-btn" onclick="prevQuestion()" class="text-xs uppercase tracking-wider text-gray-400 hover:text-white transition hidden flex items-center gap-1">
-            ← Previous Question
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-gray-400 font-mono mb-2">CRM Platform (`crm`)</label>
+        <input type="text" id="inputCrm" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="e.g. HubSpot, Salesforce, Close">
+      </div>
+
+      <div class="pt-4 border-t border-white/10">
+        <label class="block text-xs uppercase tracking-wider text-hubOrange font-mono mb-2">Generated Personalized Link</label>
+        <div class="flex gap-2">
+          <input type="text" id="outputLink" readonly class="w-full bg-black border border-hubOrange/50 rounded-xl px-4 py-3 text-xs text-hubOrange font-mono focus:outline-none">
+          <button onclick="copyToClipboard()" class="bg-hubOrange text-black font-bold px-6 py-3 rounded-xl hover:bg-orange-600 transition text-xs uppercase tracking-wider shrink-0 cursor-pointer">
+            Copy
           </button>
-          <div id="progress-pips" class="flex space-x-1.5 mx-auto">
-            <div class="w-6 h-1.5 bg-hubOrange rounded-full transition-all duration-300" data-pip="0"></div>
-            <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="1"></div>
-            <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="2"></div>
-            <div class="w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300" data-pip="3"></div>
-          </div>
         </div>
+        <p id="copy-feedback" class="text-xs text-green-400 mt-2 hidden font-mono">✓ Copied to clipboard successfully!</p>
       </div>
 
-      <!-- Result Portrait State -->
-      <div id="diagnostic-result-container" class="hidden">
-        <div class="mb-6">
-          <div id="dynamic-metric" class="text-4xl md:text-5xl font-black text-hubOrange mb-1">11.0 hrs</div>
-          <div class="text-xs uppercase tracking-widest text-gray-400 font-mono">Estimated Administrative Drag / Rep / Week</div>
-        </div>
-        
-        <p id="result-diagnosis" class="text-gray-300 leading-relaxed mb-8 text-base">
-          Based on your workflow inputs, your stack is introducing friction between data layers. When tools operate in silos, reps end up compensating with manual updates rather than focusing on pipeline generation.
-        </p>
-
-        <div class="border-t border-white/10 pt-6">
-          <p class="text-sm text-gray-300 leading-relaxed mb-6">
-            I built this tool to surface where that friction lives. If you want to review the underlying architecture blueprint used to clean this up, text your timezone directly to <span class="text-hubOrange font-semibold">[Your Phone Number]</span>.
-          </p>
-        </div>
-        <button id="retake-btn" onclick="resetDiagnostic()" class="text-xs text-hubOrange hover:underline uppercase tracking-wider font-mono">↺ Retake Diagnostic</button>
-      </div>
     </div>
 
-    <!-- Customizable Bottom Title Element -->
-    <h1 id="blog-title" class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-6 text-gray-200">Building the Engine: A Secure Proxy for Stagnant Deals</h1>
-    
-    <!-- Default Call to Action -->
-    <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" id="default-cta" class="inline-block mt-12 px-8 py-3 bg-hubOrange text-black font-bold rounded-full hover:bg-orange-600 transition">      
-      Book a Pipeline Audit    
-    </a>  
   </main>
 
+  <footer class="border-t border-white/10 py-6 text-center text-xs text-gray-500 font-mono">
+    Seamless Outbound &copy; 2026 – Turn Outbound Sales Lambs Into Lions
+  </footer>
+
   <script>
-    // Read URL Parameters for Prospect Customization
-    const urlParams = new URLSearchParams(window.location.search);
-    const firstName = urlParams.get('name') || '';
-    const companyName = urlParams.get('company') || '';
-    const crmPlatform = urlParams.get('crm') || '';
+    const baseUrlInput = document.getElementById('baseUrl');
+    const inputName = document.getElementById('inputName');
+    const inputCompany = document.getElementById('inputCompany');
+    const inputCrm = document.getElementById('inputCrm');
+    const outputLink = document.getElementById('outputLink');
+    const copyFeedback = document.getElementById('copy-feedback');
 
-    const formattedCompanyName = companyName ? decodeURIComponent(companyName).replace(/\+/g, ' ') : '';
-    const formattedCrm = crmPlatform ? decodeURIComponent(crmPlatform) : '';
+    function generateLink() {
+      const base = baseUrlInput.value.trim().split('?')[0];
+      const params = new URLSearchParams();
 
-    const displayName = firstName ? `${firstName}` : "Hi There";
-    const displayCrm = formattedCrm ? `${formattedCrm} CRM` : "CRM";
+      if (inputName.value.trim()) params.append('name', inputName.value.trim());
+      if (inputCompany.value.trim()) params.append('company', inputCompany.value.trim());
+      if (inputCrm.value.trim()) params.append('crm', inputCrm.value.trim());
 
-    // Set prospect name in orange on top title and regular CRM text
-    document.getElementById('prospect-name-display').innerText = displayName;
-    
-    const topTitleText = formattedCrm 
-      ? `what sucks most about your ${formattedCrm} CRM`
-      : `what sucks most about your CRM`;
-    document.getElementById('custom-top-title').innerHTML = `<span id="prospect-name-display" class="text-hubOrange">${displayName}</span>, ${topTitleText}`;
-
-    const diagnosticQuestions = [
-      {
-        question: `Hey ${displayName}, what is the single biggest bottleneck slowing down growth ${formattedCompanyName ? 'at ' + formattedCompanyName : 'in your pipeline'}?`,
-        options: [
-          { text: "Systems not talking to each other (sync failures & broken webhooks)", weight: 4.5, impact: `Integration mismatches force constant manual corrections across ${formattedCompanyName || 'your'} data layers.` },
-          { text: "Reps drowning in manual data entry & click fatigue (the 5-tab shuffle)", weight: 5.5, impact: `Excessive window switching destroys active selling time and ramps up administrative fatigue for ${displayName}.` },
-          { text: "A bloated pipeline full of ghost data nobody trusts", weight: 3.5, impact: `Stale records distort forecasting accuracy and hide active revenue opportunities for ${formattedCompanyName || 'your team'}.` }
-        ]
-      },
-      {
-        question: `How many hours a week do reps ${formattedCompanyName ? 'at ' + formattedCompanyName : ''} spend updating ${displayCrm} manually?`,
-        options: [
-          { text: "Under 5 hours — Mostly automated workflows", weight: 2.0, impact: `Your tracking baseline is relatively clean, though minor workflow leaks still exist.` },
-          { text: "5 to 15 hours — Moderate administrative drag", weight: 4.0, impact: `Significant time is diverted away from outbound prospecting into routine data maintenance.` },
-          { text: "Over 15 hours — The machine is eating our week", weight: 6.0, impact: `Severe operational friction is consuming a large percentage of weekly sales capacity.` }
-        ]
-      },
-      {
-        question: `When scaling outbound campaigns for ${formattedCompanyName || 'your business'}, how clean is the cross-platform data sync?`,
-        options: [
-          { text: "Seamless automated integration across tools", weight: 2.5, impact: `Data flows smoothly, though keeping external APIs synchronized requires constant oversight.` },
-          { text: "Constant manual copy-pasting between separate tabs", weight: 4.5, impact: `Manual data bridging between platforms introduces predictable human error and delay.` },
-          { text: "Total chaos — data constantly drops or duplicates", weight: 5.5, impact: `Broken pipeline pathways create duplicate records and lost prospect context.` }
-        ]
-      },
-      {
-        question: `What does your Friday afternoon pipeline review actually feel like ${formattedCompanyName ? 'at ' + formattedCompanyName : ''}?`,
-        options: [
-          { text: "Predictable, calm, and accurate pipeline forecasts", weight: 1.5, impact: `Forecasting is reliable due to disciplined data hygiene and transparent reporting.` },
-          { text: "A guessing game of outdated deal stages", weight: 4.0, impact: `Incomplete pipeline updates make accurate weekly forecasting nearly impossible.` },
-          { text: "A graveyard of dead or neglected deals", weight: 5.0, impact: `Neglected deal records clutter visibility into actual pipeline velocity.` }
-        ]
-      }
-    ];
-
-    let activeStep = 0;
-    const collectedAnswers = [];
-    let totalScore = 0;
-
-    const questionTitle = document.getElementById('question-title');
-    const optionsGrid = document.getElementById('options-grid');
-    const stepCounter = document.getElementById('step-counter');
-    const backBtn = document.getElementById('back-btn');
-    const progressPips = document.querySelectorAll('[data-pip]');
-
-    function renderActiveQuestion() {
-      const currentQ = diagnosticQuestions[activeStep];
-      questionTitle.innerText = currentQ.question;
-      stepCounter.innerText = `Question ${activeStep + 1} of 4`;
-
-      if (activeStep > 0) {
-        backBtn.classList.remove('hidden');
-      } else {
-        backBtn.classList.add('hidden');
-      }
-
-      progressPips.forEach((pip, idx) => {
-        if (idx === activeStep) {
-          pip.className = "w-6 h-1.5 bg-hubOrange rounded-full transition-all duration-300";
-        } else if (idx < activeStep) {
-          pip.className = "w-1.5 h-1.5 bg-hubOrange/60 rounded-full transition-all duration-300";
-        } else {
-          pip.className = "w-1.5 h-1.5 bg-white/20 rounded-full transition-all duration-300";
-        }
-      });
-
-      optionsGrid.innerHTML = '';
-      currentQ.options.forEach((opt) => {
-        const optionButton = document.createElement('button');
-        optionButton.className = "w-full text-left p-4 rounded-xl border border-white/10 bg-white/5 hover:border-hubOrange hover:bg-hubOrange/10 transition-all duration-200 text-sm text-gray-200 flex items-center justify-between group cursor-pointer";
-        optionButton.innerHTML = `<span class="font-medium leading-relaxed pr-4">${opt.text}</span> <span class="text-hubOrange opacity-0 group-hover:opacity-100 transition-opacity text-xs font-mono">Select →</span>`;
-        optionButton.onclick = () => submitAnswer(opt.weight, opt.impact);
-        optionsGrid.appendChild(optionButton);
-      });
+      const queryString = params.toString();
+      outputLink.value = queryString ? `${base}?${queryString}` : base;
     }
 
-    function submitAnswer(weight, impactText) {
-      totalScore += weight;
-      collectedAnswers.push(impactText);
-      if (activeStep < diagnosticQuestions.length - 1) {
-        activeStep++;
-        renderActiveQuestion();
-      } else {
-        renderResults();
-      }
-    }
-
-    function prevQuestion() {
-      if (activeStep > 0) {
-        activeStep--;
-        collectedAnswers.pop();
-        renderActiveQuestion();
-      }
-    }
-
-    function resetDiagnostic() {
-      activeStep = 0;
-      totalScore = 0;
-      collectedAnswers.length = 0;
-      document.getElementById('diagnostic-result-container').classList.add('hidden');
-      document.getElementById('diagnostic-question-container').classList.remove('hidden');
-      renderActiveQuestion();
-    }
-
-    function renderResults() {
-      document.getElementById('diagnostic-question-container').classList.add('hidden');
-      document.getElementById('diagnostic-result-container').classList.remove('hidden');
-      stepCounter.innerText = 'Diagnostic Complete';
-
-      const calculatedHours = (totalScore * 0.95).toFixed(1);
-      document.getElementById('dynamic-metric').innerText = `${calculatedHours} hrs`;
-
-      const summaryText = collectedAnswers.join(" ");
-      const companyRef = formattedCompanyName ? `at ${formattedCompanyName}` : "in your outbound stack";
-      const nameRef = firstName ? `${firstName},` : "";
-
-      document.getElementById('result-diagnosis').innerHTML = `
-        <strong>Pipeline Audit Summary ${companyRef}:</strong><br><br>
-        ${summaryText}<br><br>
-        ${nameRef} when administrative friction scales to this level, reps spend more time maintaining records than interacting with live prospects. Solving this isn't about working harder; it's an architecture fix to streamline data flow.
-      `;
-    }
-
-    // Initialize tool
-    renderActiveQuestion();
-
-    // Eye Tracking Cursor Logic for Oval Human-Like Eyes
-    const eyesContainer = document.getElementById('eyes-container');
-    const pupil1 = document.getElementById('pupil-1');
-    const pupil2 = document.getElementById('pupil-2');
-
-    document.addEventListener('mousemove', (e) => {
-      const rect = eyesContainer.getBoundingClientRect();
-      const rX = rect.left + rect.width / 2;
-      const rY = rect.top + rect.height / 2;
-      
-      const angle = Math.atan2(e.clientY - rY, e.clientX - rX);
-      const distance = Math.min(5, Math.hypot(e.clientX - rX, e.clientY - rY) / 30);
-      
-      const pX = Math.cos(angle) * distance;
-      const pY = Math.sin(angle) * distance;
-
-      pupil1.style.transform = `translate(${pX}px, ${pY}px)`;
-      pupil2.style.transform = `translate(${pX}px, ${pY}px)`;
+    [baseUrlInput, inputName, inputCompany, inputCrm].forEach(input => {
+      input.addEventListener('input', generateLink);
     });
 
-    // Handle URL parameters for bottom title
-    if (firstName && formattedCompanyName) {
-      document.getElementById('blog-title').innerHTML = `${firstName}, here is what’s quietly slowing down <span class="text-hubOrange">${formattedCompanyName}</span>'s pipeline.`;
-    } else if (formattedCompanyName) {
-      document.getElementById('blog-title').innerHTML = `Here is what’s quietly slowing down <span class="text-hubOrange">${formattedCompanyName}</span>'s pipeline.`;
+    function copyToClipboard() {
+      outputLink.select();
+      outputLink.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(outputLink.value);
+      copyFeedback.classList.remove('hidden');
+      setTimeout(() => {
+        copyFeedback.classList.add('hidden');
+      }, 2000);
     }
+
+    // Initialize on load
+    generateLink();
   </script>
 </body>
 </html>
-
-```
