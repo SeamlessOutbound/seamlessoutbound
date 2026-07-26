@@ -1,183 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHYCN9WWRX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-3P9VLM00VS');
-  </script>  
-  <meta charset="UTF-8" />  
-  <title>Seamless Outbound – Outbound Sales Engineering &amp; CRM Pipeline Optimization</title>  
-  <meta name="viewport" content="width=device-width, initial-scale=1" />  
-  <script src="https://cdn.tailwindcss.com"></script>  
-  <script>    
-    tailwind.config = {      
-      theme: {        
-        extend: {          
-          colors: {            
-            soDark: "#050510",            
-            hubOrange: "#FF7A59",            
-            soBlue: "#3DA9FC",          
-          },        
-      },      
-    },    
-  };  
+    gtag('config', 'G-LHYCN9WWRX');
+  </script>
+  <meta charset="UTF-8" />
+  <title>Blog – Seamless Outbound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#3DA9FC",
+          },
+        },
+      },
+    };
   </script>
 </head>
-<body class="bg-soDark text-white font-sans selection:bg-hubOrange selection:text-black flex flex-col min-h-screen">
+<body class="bg-soDark text-white font-sans">
 
-  <!-- Header -->  
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-soDark/80 backdrop-blur py-4">    
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">      
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
       <a href="index.html">
-        <img src="photos/logo.png" alt="Seamless Outbound Logo" class="h-12 md:h-16 w-auto object-contain" />
-      </a>      
-      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">        
-        <a href="#how" class="hover:text-hubOrange transition">How it works</a>        
-        <a href="#differentiators" class="hover:text-hubOrange transition">Our Edge</a>        
-        <a href="blog.html" class="hover:text-hubOrange transition">Seamless Insights Blog</a>      
-      </nav>      
-      <div class="flex items-center gap-4">
-        <a href="blog.html" class="md:hidden text-sm text-gray-300 hover:text-hubOrange">Blog</a>
-        <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="text-xs uppercase tracking-widest font-bold bg-hubOrange text-black px-4 py-2 rounded-full hover:bg-orange-600 transition">Get Audited</a>
-      </div>
-    </div>  
+        <img src="/photos/logo.png" alt="logo" class="h-16 md:h-24 w-auto object-contain" />
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="index.html" class="hover:text-hubOrange">Home</a>
+        <a href="index.html#how" class="hover:text-hubOrange">How it works</a>
+        <a href="index.html#differentiators" class="hover:text-hubOrange">Our Edge</a>
+        <a href="blog.html" class="text-hubOrange font-medium">Seamless Insights Blog</a>
+      </nav>
+      <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="hidden md:inline-flex px-4 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-medium">Book a call</a>
+    </div>
   </header>
 
-  <!-- Main Content Flow -->  
-  <main class="flex-grow">
+  <!-- Main Blog Feed -->
+  <main class="max-w-4xl mx-auto px-4 py-16 space-y-8">
     
-    <!-- Hero Section -->
-    <section class="max-w-5xl mx-auto px-4 pt-20 pb-16 text-center">
-      <div class="inline-block bg-hubOrange/10 border border-hubOrange/30 text-hubOrange text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
-        Outbound Sales Engineering &amp; CRM Architecture
-      </div>
-      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight uppercase">
-        Turn Outbound Sales Lambs Into <span class="text-hubOrange">Lions</span>
-      </h1>
-      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Stop letting administrative drag, sync failures, and manual entry bottlenecks kill your pipeline. We engineer custom HubSpot and Close CRM systems that scale response velocity.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="w-full sm:w-auto bg-hubOrange text-black font-bold px-8 py-4 rounded-full hover:bg-orange-600 transition tracking-wide text-sm uppercase">
-          Book a Pipeline Audit
-        </a>
-        <a href="blog.html" class="w-full sm:w-auto bg-black/40 border border-white/10 text-white font-bold px-8 py-4 rounded-full hover:border-hubOrange/40 transition tracking-wide text-sm uppercase">
-          Read Seamless Insights
-        </a>
-      </div>
-    </section>
+    <div class="mb-12">
+      <p class="text-hubOrange font-black uppercase tracking-[0.2em] text-[10px] mb-2">Systems &amp; Biohacking Insights</p>
+      <h1 class="text-4xl font-black uppercase tracking-tighter">Seamless Insights</h1>
+      <p class="text-gray-400 mt-2">Tactical breakdowns on pipeline engineering, CRM architecture, and outbound execution.</p>
+    </div>
 
-    <!-- How It Works Section -->
-    <section id="how" class="max-w-5xl mx-auto px-4 py-16 border-t border-white/10">
-      <div class="text-center mb-12">
-        <h2 class="text-xs text-hubOrange font-bold uppercase tracking-widest mb-2">Execution Flow</h2>
-        <h3 class="text-3xl font-black tracking-tight text-white">How We Fix Your Pipeline</h3>
-      </div>
+    <!-- New Post Card: Who Steps In Philosophy -->
+    <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
+      <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Core Philosophy</div>
+      <h2 class="text-2xl font-semibold mb-3">
+        <a href="blog-posts/who-steps-in-crm-philosophy.html" class="hover:text-hubOrange transition">Who Steps In? The Philosophy Behind Fixing Your Broken Sales System</a>
+      </h2>
+      <p class="text-gray-300 mb-4">Most companies have a CRM. Very few have someone who truly steps in to own it. Explore the W-H-O S-T-E-P-S I-N framework designed to uncover hidden friction and deal killers.</p>
+      <a href="blog-posts/who-steps-in-crm-philosophy.html" class="text-sm font-medium text-hubOrange hover:underline">Read Article →</a>
+    </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-black/40 border border-white/10 p-8 rounded-2xl">
-          <div class="text-hubOrange font-black text-3xl mb-4">01</div>
-          <h4 class="text-xl font-bold text-white mb-3">Diagnostic Audit</h4>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            We uncover hidden friction, shadow spreadsheets, and workflow bottlenecks using our rigorous W-H-O S-T-E-P-S I-N framework.
-          </p>
-        </div>
-        <div class="bg-black/40 border border-white/10 p-8 rounded-2xl">
-          <div class="text-hubOrange font-black text-3xl mb-4">02</div>
-          <h4 class="text-xl font-bold text-white mb-3">Custom Engineering</h4>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            We architect robust HubSpot and Close CRM environments with serverless proxies and self-auditing alerts to eliminate orphaned deals.
-          </p>
-        </div>
-        <div class="bg-black/40 border border-white/10 p-8 rounded-2xl">
-          <div class="text-hubOrange font-black text-3xl mb-4">03</div>
-          <h4 class="text-xl font-bold text-white mb-3">Response Velocity</h4>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Equip your team to handle double the lead volume with pristine data integrity, automated routing, and zero administrative drag.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- New Post Card: What Sucks About Your CRM Diagnostic -->
+    <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
+      <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Pipeline Diagnostics</div>
+      <h2 class="text-2xl font-semibold mb-3">
+        <a href="blog-posts/what-sucks-about-your-crm.html" class="hover:text-hubOrange transition">What Sucks Most About Your CRM</a>
+      </h2>
+      <p class="text-gray-300 mb-4">Interactive pipeline friction diagnostic designed for live outbound campaigns. Instantly surface administrative drag, sync failures, and manual entry bottlenecks tailored directly to your prospect's stack.</p>
+      <a href="blog-posts/what-sucks-about-your-crm.html" class="text-sm font-medium text-hubOrange hover:underline">Launch Diagnostic Tool →</a>
+    </div>
 
-    <!-- Our Edge Section -->
-    <section id="differentiators" class="max-w-5xl mx-auto px-4 py-16 border-t border-white/10">
-      <div class="text-center mb-12">
-        <h2 class="text-xs text-hubOrange font-bold uppercase tracking-widest mb-2">Our Advantage</h2>
-        <h3 class="text-3xl font-black tracking-tight text-white">Why Outbound Teams Choose Us</h3>
-      </div>
+    <!-- New Post Card: Pipeline Engineering -->
+    <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
+      <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • CRM Architecture</div>
+      <h2 class="text-2xl font-semibold mb-3">
+        <a href="blog-posts/building-the-engine.html" class="hover:text-hubOrange transition">Building the Engine: A Secure Proxy for Stagnant Deals</a>
+      </h2>
+      <p class="text-gray-300 mb-4">How we bridged the gap between HubSpot landing pages and secure serverless functions. Learn how to audit stagnant deals in real-time without ever exposing your private API tokens to the browser.</p>
+      <a href="blog-posts/building-the-engine.html" class="text-sm font-medium text-hubOrange hover:underline">Read the Build Log →</a>
+    </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-black/40 border border-white/10 p-8 rounded-2xl">
-          <h4 class="text-xl font-bold text-white mb-3">Front-Line Reality vs. Theory</h4>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Built from real-world execution and scaling through heavy industry experience—including Yelp and fast-moving startup environments—we focus entirely on what works in the trenches.
-          </p>
-        </div>
-        <div class="bg-black/40 border border-white/10 p-8 rounded-2xl">
-          <h4 class="text-xl font-bold text-white mb-3">Proprietary Playbooks</h4>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Gain direct access to advanced frameworks like the 80XPower15™ system, merging modern CRM mechanics with sustainable high-output operational routines.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- 80XPower15 Playbook Portal Link -->
+    <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
+      <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Program Release</div>
+      <h2 class="text-2xl font-semibold mb-3">
+        <a href="blog-posts/80xpower15.html" class="hover:text-hubOrange transition">80XPower15™ Outbound &amp; Closing Playbook</a>
+      </h2>
+      <p class="text-gray-300 mb-4">Increase your sales team's call output by 30% using the most innovative, modern outbound system. Engineered by Floyd Orr, this portal covers sleep science, neuro-regulation, stress reduction, and modern CRM mechanics.</p>
+      <a href="blog-posts/80xpower15.html" class="text-sm font-medium text-hubOrange hover:underline">Access the 10-Video Portal →</a>
+    </div>
 
-    <!-- Latest Insights Section -->
-    <section class="max-w-5xl mx-auto px-4 py-16 border-t border-white/10">
-      <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12">
-        <div>
-          <h2 class="text-xs text-hubOrange font-bold uppercase tracking-widest mb-2">Seamless Insights Blog</h2>
-          <h3 class="text-3xl font-black tracking-tight text-white">Latest Tactical Breakdowns</h3>
-        </div>
-        <a href="blog.html" class="text-hubOrange text-sm font-medium hover:underline mt-4 sm:mt-0">View All Articles →</a>
-      </div>
+    <!-- Post Card 1 -->
+    <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
+      <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Sales Engineering</div>
+      <h2 class="text-2xl font-semibold mb-3">
+        <a href="blog-posts/orphaned-deals.html" class="hover:text-hubOrange transition">The Silent Killer in Your HubSpot Pipeline</a>
+      </h2>
+      <p class="text-gray-300 mb-4">Are "orphaned" deals leaking revenue from your CRM? Stop manual auditing and start engineering a self-auditing pipeline that flags stalled deals instantly.</p>
+      <a href="blog-posts/orphaned-deals.html" class="text-sm font-medium text-hubOrange hover:underline">Watch the Workflow →</a>
+    </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="border border-white/10 rounded-2xl p-6 bg-black/40 hover:border-hubOrange/40 transition group flex flex-col justify-between">
-          <div>
-            <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Core Philosophy</div>
-            <h4 class="text-xl font-semibold mb-3">
-              <a href="blog-posts/who-steps-in-crm-philosophy.html" class="hover:text-hubOrange transition">Who Steps In? The Philosophy Behind Fixing Your Broken Sales System</a>
-            </h4>
-            <p class="text-gray-300 text-sm mb-4">Explore the 10-part W-H-O S-T-E-P-S I-N diagnostic framework designed to uncover hidden friction and deal killers.</p>
-          </div>
-          <a href="blog-posts/who-steps-in-crm-philosophy.html" class="text-xs font-medium text-hubOrange hover:underline">Read Article →</a>
-        </div>
-
-        <div class="border border-white/10 rounded-2xl p-6 bg-black/40 hover:border-hubOrange/40 transition group flex flex-col justify-between">
-          <div>
-            <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Pipeline Diagnostics</div>
-            <h4 class="text-xl font-semibold mb-3">
-              <a href="blog-posts/what-sucks-about-your-crm.html" class="hover:text-hubOrange transition">What Sucks Most About Your CRM</a>
-            </h4>
-            <p class="text-gray-300 text-sm mb-4">Interactive pipeline friction diagnostic designed to surface administrative drag and sync failures.</p>
-          </div>
-          <a href="blog-posts/what-sucks-about-your-crm.html" class="text-xs font-medium text-hubOrange hover:underline">Launch Diagnostic Tool →</a>
-        </div>
-
-        <div class="border border-white/10 rounded-2xl p-6 bg-black/40 hover:border-hubOrange/40 transition group flex flex-col justify-between">
-          <div>
-            <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • CRM Architecture</div>
-            <h4 class="text-xl font-semibold mb-3">
-              <a href="blog-posts/building-the-engine.html" class="hover:text-hubOrange transition">Building the Engine: A Secure Proxy for Stagnant Deals</a>
-            </h4>
-            <p class="text-gray-300 text-sm mb-4">Learn how to audit stagnant deals in real-time without exposing private API tokens to the browser.</p>
-          </div>
-          <a href="blog-posts/building-the-engine.html" class="text-xs font-medium text-hubOrange hover:underline">Read the Build Log →</a>
-        </div>
-      </div>
-    </section>
+    <!-- Post Card 2 -->
+    <div class="border border-white/10 rounded-2xl p-8 bg-black/40 backdrop-blur hover:border-hubOrange/40 transition group">
+      <div class="text-xs text-hubOrange mb-3 font-medium">July 2026 • Sales Engineering</div>
+      <h2 class="text-2xl font-semibold mb-3">
+        <a href="blog-posts/custom-ai.html" class="hover:text-hubOrange transition">Instantly/Copilot vs. Custom AI: Why Off-the-Shelf Tools Slow Your Responses</a>
+      </h2>
+      <p class="text-gray-300 mb-4">Generic AI agents create bottlenecks. I tested Instantly and Microsoft Copilot against my custom-engineered HubSpot AI to prove why off-the-shelf logic is killing your response velocity.</p>
+      <a href="blog-posts/custom-ai.html" class="text-sm font-medium text-hubOrange hover:underline">Watch the Test →</a>
+    </div>
 
   </main>
-
-  <!-- Footer -->  
-  <footer class="border-t border-white/10 py-8 text-center text-xs text-gray-500 bg-soDark">    
-    <p>&copy; 2026 Seamless Outbound. All rights reserved.</p>  
-  </footer>
 
 </body>
 </html>
