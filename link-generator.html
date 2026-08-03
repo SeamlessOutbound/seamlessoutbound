@@ -58,7 +58,136 @@
       <div>
         <label class="block text-xs uppercase tracking-wider text-hubOrange font-mono mb-2">CRM Platform (`crm`)</label>
         <select id="inputCrm" class="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition cursor-pointer">
-          <option value="HubSpot" selected>HubSpot</option>
+          <option value="" selected>-- None / Unknown CRM (Omit CRM Parameter) --</option>
+          <option value="HubSpot">HubSpot</option>
+          <option value="Close">Close</option>
+          <option value="GHL">GHL</option>
+          <option value="Salesforce">Salesforce</option>
+          <option value="Pipedrive">Pipedrive</option>
+        </select>
+      </div>
+
+      <div class="pt-4 border-t border-white/10">
+        <label class="block text-xs uppercase tracking-wider text-hubOrange font-mono mb-2">Generated Personalized Link</label>
+        <div class="flex gap-2">
+          <input type="text" id="outputLink" readonly class="w-full bg-black border border-hubOrange/50 rounded-xl px-4 py-3 text-xs text-hubOrange font-mono focus:outline-none">
+          <button onclick="copyToClipboard()" class="bg-hubOrange text-black font-bold px-6 py-3 rounded-xl hover:bg-orange-600 transition text-xs uppercase tracking-wider shrink-0 cursor-pointer">
+            Copy
+          </button>
+        </div>
+        <p id="copy-feedback" class="text-xs text-green-400 mt-2 hidden font-mono">✓ Copied to clipboard successfully!</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="border-t border-white/10 py-6 text-center text-xs text-gray-500 font-mono">
+    Seamless Outbound &copy; 2026 – Turn Outbound Sales Lambs Into Lions
+  </footer>
+
+  <script>
+    const baseUrlInput = document.getElementById('baseUrl');
+    const inputName = document.getElementById('inputName');
+    const inputCompany = document.getElementById('inputCompany');
+    const inputCrm = document.getElementById('inputCrm');
+    const outputLink = document.getElementById('outputLink');
+    const copyFeedback = document.getElementById('copy-feedback');
+
+    function generateLink() {
+      const base = baseUrlInput.value.trim().split('?')[0];
+      const params = new URLSearchParams();
+
+      if (inputName.value.trim()) params.append('name', inputName.value.trim());
+      if (inputCompany.value.trim()) params.append('company', inputCompany.value.trim());
+      if (inputCrm.value) params.append('crm', inputCrm.value);
+
+      const queryString = params.toString();
+      outputLink.value = queryString ? `${base}?${queryString}` : base;
+    }
+
+    [baseUrlInput, inputName, inputCompany].forEach(input => {
+      input.addEventListener('input', generateLink);
+    });
+
+    inputCrm.addEventListener('change', generateLink);
+
+    function copyToClipboard() {
+      outputLink.select();
+      outputLink.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(outputLink.value);
+      copyFeedback.classList.remove('hidden');
+      setTimeout(() => {
+        copyFeedback.classList.add('hidden');
+      }, 2000);
+    }
+
+    // Initialize on load
+    generateLink();
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outbound URL Parameter Generator – Seamless Outbound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#3DA9FC",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-soDark text-white font-sans selection:bg-hubOrange selection:text-black min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->  
+  <header class="border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+      <span class="text-hubOrange font-black tracking-wider uppercase">Seamless Outbound // Link Tool</span>
+      <span class="text-xs text-gray-400 font-mono">Dynamic Personalization Builder</span>
+    </div>
+  </header>
+
+  <main class="max-w-2xl mx-auto px-4 py-12 w-full">
+    
+    <div class="mb-8">
+      <h1 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-2">Outbound Link Generator</h1>
+      <p class="text-sm text-gray-400">Generate customized links with prospect parameters (`name`, `company`, `crm`) to inject live tracking and personalization into your cold campaigns.</p>
+    </div>
+
+    <!-- Generator Form Box -->
+    <div class="bg-black/90 border border-hubOrange/40 rounded-2xl p-6 md:p-8 shadow-2xl shadow-hubOrange/10 space-y-5">
+      
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-hubOrange font-mono mb-2">Target Landing Page URL</label>
+        <input type="text" id="baseUrl" value="https://seamlessoutbound.com/blog-posts/what-sucks-about-your-crm.html" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="https://yourwebsite.com/post.html">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gray-400 font-mono mb-2">Prospect First Name (`name`)</label>
+          <input type="text" id="inputName" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="e.g. Sarah">
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-gray-400 font-mono mb-2">Company Name (`company`)</label>
+          <input type="text" id="inputCompany" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition" placeholder="e.g. Acme Corp">
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-hubOrange font-mono mb-2">CRM Platform (`crm`)</label>
+        <select id="inputCrm" class="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-hubOrange transition cursor-pointer">
+          <option value="" selected>-- None / Unknown CRM (Omit CRM Parameter) --</option>
+          <option value="HubSpot">HubSpot</option>
           <option value="Close">Close</option>
           <option value="GHL">GHL</option>
           <option value="Salesforce">Salesforce</option>
