@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-3P9VLM00VS');
+  </script>
+  <meta charset="UTF-8" />
+  <title>HubSpot Developer Certification: Summary – Seamless Outbound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#3DA9FC",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-soDark text-white font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <a href="../index.html"><img src="../photos/logo.png" alt="logo" class="h-16 md:h-24 w-auto object-contain" /></a>
+      <a href="../index.html" class="text-sm text-gray-300 hover:text-hubOrange">← Back to Home</a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-3xl md:text-4xl font-semibold mb-6">HubSpot Developer Certification: A 2-Minute Breakdown</h1>
+
+    <!-- Video -->
+    <div class="aspect-video w-full mb-8 rounded-xl overflow-hidden border border-white/10">
+      <iframe class="w-full h-full" src="https://www.youtube.com/embed/1BVzqc9AnSQ" allowfullscreen></iframe>
+    </div>
+
+    <div class="prose prose-invert prose-p:text-gray-300 prose-headings:text-hubOrange">
+      <p>I recently wrapped up the HubSpot integration certification course. If you're building in the HubSpot ecosystem, you know there’s a lot of noise—but the core mechanics of connecting applications to the CRM are universal. Here is the 2-minute summary of the architecture every developer needs to master.</p>
+      
+      <h3 class="text-xl font-semibold mt-6 mb-3">The Core Integration Workflow</h3>
+      <p>Most developers overcomplicate the start. This course cuts through the fluff, focusing on three essential pillars of integration engineering:</p>
+      
+      <ul class="list-disc ml-5 space-y-2 mb-6">
+        <li><strong>App Authentication:</strong> Understanding OAuth2 and securely connecting your app to HubSpot portals.</li>
+        <li><strong>Form-to-Data Architecture:</strong> Moving beyond simple form submissions. We looked at capturing lead data and mapping it directly to custom properties or custom objects within the CRM database.</li>
+        <li><strong>Serverless & Storage:</strong> Leveraging HubSpot’s built-in serverless functions for clean, reliable backend logic without needing to host external infrastructure for every small automation.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-3">Why This Matters for Outbound</h3>
+      <p>Whether you're building a custom integration or just optimizing your current HubSpot setup, the goal is always the same: <strong>removing friction.</strong> When your CRM can talk to your external tools without manual intervention, you stop spending time fixing data and start spending time closing deals.</p>
+
+      <p>If you're looking to turn your HubSpot portal into a self-auditing, high-performance engine, it starts with mastering these fundamentals.</p>
+    </div>
+
+    <a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="inline-block mt-8 px-8 py-3 bg-hubOrange text-black font-bold rounded-full hover:bg-orange-600 transition">
+      Book a Pipeline Audit
+    </a>
+  </main>
+
+</body>
+</html>
