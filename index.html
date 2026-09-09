@@ -1,4 +1,8 @@
+* **System Update Notification:** I updated the website code to re-add the professional **Management Team** section featuring your profile and your team members with their respective roles, bios, and LinkedIn links.
 
+Here is the complete website code with the team section fully integrated back in:
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -62,6 +66,8 @@
         <a href="#process" class="hover:text-hubOrange transition">Our process</a>
         <a href="#why-us" class="hover:text-hubOrange transition">Why us</a>
         <a href="#who" class="hover:text-hubOrange transition">Partner fit</a>
+        <a href="#team" class="hover:text-hubOrange transition">Team</a>
+        <a href="blog.html" class="hover:text-hubOrange transition">Seamless Insights Blog</a>
       </nav>
 
       <!-- Desktop CTA -->
@@ -92,8 +98,10 @@
     >
       <a href="#how" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">How it works</a>
       <a href="#process" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Our process</a>
-      <a href="#why-us" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Why us</a>
-      <a href="#who" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Partner fit</a>
+      <a href="#why-us" class="block text-base text-hubOrange transition" onclick="toggleMenu()">Why us</a>
+      <a href="#who" class="block text-base text-hubOrange transition" onclick="toggleMenu()">Partner fit</a>
+      <a href="#team" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Team</a>
+      <a href="blog.html" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Seamless Insights Blog</a>
 
       <div class="pt-2">
         <a
@@ -281,7 +289,7 @@
       </div>
     </section>
 
-    <!-- Operational Alignment (Streamlined Post-Agreement Section) -->
+    <!-- Operational Alignment -->
     <section class="py-16 border-t border-white/10">
       <h2 class="text-2xl font-semibold mb-4">Operational Alignment</h2>
       <p class="text-gray-300 text-sm mb-6 max-w-2xl">
@@ -357,25 +365,49 @@
       </ul>
     </section>
 
-    <!-- Founder -->
-    <section class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-4">About the Founder</h2>
+    <!-- Team Section -->
+    <section id="team" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-2">Meet the Management Team</h2>
+      <p class="text-gray-300 text-sm mb-8">The engineering and sales architecture team behind Seamless Outbound.</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <!-- Floyd -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
+          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Floyd&skinColor=654321" alt="Floyd" class="w-16 h-16 rounded-full mb-3 bg-hubOrange/20">
+          <h3 class="font-medium text-white text-base">Floyd Orr</h3>
+          <p class="text-xs text-hubOrange font-semibold mt-1">CEO & Sales Systems Architect</p>
+          <p class="text-[10px] text-gray-400 mt-2 italic">Applied sales engineering logic and outbound outreach to build high-performance partnerships for commercial cleaning operators.</p>
+          <a href="https://www.linkedin.com/in/floydorr" target="_blank" rel="noopener noreferrer" class="text-[10px] text-soBlue hover:underline mt-3">LinkedIn</a>
+        </div>
 
-      <div class="max-w-2xl mx-auto text-center">
-        <p class="text-gray-300 text-sm mb-6">
-          Floyd Orr founded Seamless Outbound to help commercial cleaning companies create a more consistent
-          commercial pipeline without the fixed overhead of building an in-house outbound team.
-          The model is simple: aligned incentives, clear approvals, and a professional remote sales process.
-        </p>
+        <!-- Rashidah -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
+          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Leo&skinColor=f3d3b7" alt="Rashidah" class="w-16 h-16 rounded-full mb-3 bg-gray-500/20">
+          <h3 class="font-medium text-white text-base">Rashidah</h3>
+          <p class="text-xs text-gray-300 font-semibold mt-1">Fractional CTO</p>
+          <p class="text-[10px] text-gray-400 mt-2 italic">History of running software engineering and content teams, architecture, software development, and enterprise integrations.</p>
+          <a href="#" class="text-[10px] text-soBlue hover:underline mt-3">LinkedIn</a>
+        </div>
 
-        <a
-          href="https://www.linkedin.com/in/floydorr"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block text-hubOrange hover:underline text-sm"
-        >
-          Connect on LinkedIn
-        </a>
+        <!-- Adam -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
+          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Adam&skinColor=654321" alt="Adam" class="w-16 h-16 rounded-full mb-3 bg-gray-500/20">
+          <h3 class="text-white font-medium text-base">Adam</h3>
+          <p class="text-xs text-gray-300 font-semibold mt-1">Sr. Software Engineer</p>
+          <p class="text-[10px] text-gray-400 mt-2 italic">Expert in high-complexity data systems and algorithmic problem solving.</p>
+          <a href="https://www.linkedin.com/in/adam-o-a290a8143/" target="_blank" rel="noopener noreferrer" class="text-[10px] text-soBlue hover:underline mt-3">LinkedIn</a>
+        </div>
+
+        <!-- Abdullah -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 backdrop-blur flex flex-col items-center">
+          <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Abdullah&skinColor=654321" alt="Abdullah" class="w-16 h-16 rounded-full mb-3 bg-gray-500/20">
+          <h3 class="font-medium text-white text-base">Abdullah</h3>
+          <p class="text-xs text-gray-300 font-semibold mt-1">UX Designer & Systems Thinker</p>
+          <p class="text-[10px] text-gray-400 mt-2 italic">Optimizing user journeys and system efficiency through clean design principles.</p>
+          <a href="https://www.linkedin.com/in/abdullah-orr-0471462aa" target="_blank" rel="noopener noreferrer" class="text-[10px] text-soBlue hover:underline mt-3">LinkedIn</a>
+        </div>
+
       </div>
     </section>
 
