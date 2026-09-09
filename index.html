@@ -1,223 +1,427 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-3P9VLM00VS');
-</script>
-<meta charset="UTF-8" />
-<title>Seamless Outbound – Performance-Based Sales for Commercial Cleaning</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="We close commercial cleaning deals on performance. Virtual walkthroughs, 50/50 split on months 1–2, paid only when you collect. After month 2, you keep 100%." />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-soDark: "#050510",
-hubOrange: "#FF7A59",
-soBlue: "#3DA9FC",
-},
-fontFamily: {
-sans: ["Inter", "system-ui", "sans-serif"],
-},
-},
-},
-};
-</script>
-<style>
-html {
-scroll-behavior: smooth;
-}
-</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3P9VLM00VS');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Performance-based outbound sales and virtual discovery for established commercial cleaning companies." />
+  <title>Seamless Outbound – Performance-Based Sales for Commercial Cleaning</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#3DA9FC",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body class="bg-soDark text-white font-sans">
-<!-- Background Gradient Layer -->
-<div class="fixed inset-0 -z-20 bg-gradient-to-br from-hubOrange/20 via-soDark to-soBlue/20"></div>
 
-<!-- Header Navigation -->
-<header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur py-4">
-<div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-<img src="/photos/logo.jpg" alt="Seamless Outbound Logo" class="h-12 md:h-20 w-auto object-contain" />
+  <!-- Background -->
+  <div class="fixed inset-0 -z-20 bg-gradient-to-br from-hubOrange/20 via-soDark to-soBlue/20"></div>
 
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
-<a href="#how" class="hover:text-hubOrange transition">How it works</a>
-<a href="#process" class="hover:text-hubOrange transition">Our process</a>
-<a href="#differentiators" class="hover:text-hubOrange transition">Why us</a>
-<a href="#who" class="hover:text-hubOrange transition">Partner fit</a>
-</nav>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
 
-<!-- Desktop CTA -->
-<a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="hidden md:inline-flex px-4 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-medium">
-Book a call
-</a>
+      <img
+        src="/photos/logo.jpg"
+        alt="Seamless Outbound logo"
+        class="h-12 md:h-20 w-auto object-contain"
+      />
 
-<!-- Mobile Menu Button -->
-<button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-</svg>
-</button>
-</div>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#how" class="hover:text-hubOrange transition">How it works</a>
+        <a href="#process" class="hover:text-hubOrange transition">Our process</a>
+        <a href="#why-us" class="hover:text-hubOrange transition">Why us</a>
+        <a href="#who" class="hover:text-hubOrange transition">Partner fit</a>
+      </nav>
 
-<!-- Mobile Dropdown Menu -->
-<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-soDark/95 border-b border-white/10 backdrop-blur px-6 py-6 space-y-4 shadow-2xl">
-<a href="#how" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">How it works</a>
-<a href="#process" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Our process</a>
-<a href="#differentiators" class="block text-base text-hubOrange transition" onclick="toggleMenu()">Why us</a>
-<a href="#who" class="block text-base text-hubOrange transition" onclick="toggleMenu()">Partner fit</a>
-<div class="pt-2">
-<a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="block w-full text-center px-4 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-medium">
-Book a call
-</a>
-</div>
-</div>
-</header>
+      <!-- Desktop CTA -->
+      <a
+        href="https://calendly.com/seamlessoutbound/30-minute-meeting"
+        class="hidden md:inline-flex px-4 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-medium"
+      >
+        Book a call
+      </a>
 
-<!-- Mobile Menu Toggle Script -->
-<script>
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-function toggleMenu() {
-mobileMenu.classList.toggle('hidden');
-}
-menuBtn.addEventListener('click', toggleMenu);
-</script>
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-btn"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        class="md:hidden text-gray-300 hover:text-white focus:outline-none"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
 
-<!-- Main Content Container -->
-<main class="max-w-6xl mx-auto px-4">
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden absolute top-full left-0 w-full bg-soDark/95 border-b border-white/10 backdrop-blur px-6 py-6 space-y-4 shadow-2xl"
+    >
+      <a href="#how" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">How it works</a>
+      <a href="#process" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Our process</a>
+      <a href="#why-us" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Why us</a>
+      <a href="#who" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Partner fit</a>
 
-<!-- Hero Section -->
-<section class="pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
-<div>
-<h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4 text-white">
-Performance-Based Sales for Commercial Cleaning Companies.
-<span class="text-hubOrange block mt-1">
-We Close Deals. You Pay Only When You Get Paid.
-</span>
-</h1>
-<p class="text-gray-300 text-base mb-6">
-We partner with established commercial cleaning companies to <strong class="text-white font-semibold underline decoration-hubOrange decoration-2 underline-offset-4">close qualified deals on a 50/50 split for months 1–2</strong>. We run virtual walkthroughs, qualify prospects, and send DocuSign—paid only when the client pays you. After month 2, you keep 100%.
-</p>
-<a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="inline-block px-5 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-medium">
-Schedule Your Partnership Call
-</a>
-</div>
-<div class="relative">
-<div class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-soBlue/30 blur-3xl opacity-50"></div>
-<div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">
-<img src="/photos/seamlessoutboundpic.png" alt="Virtual walkthrough and deal closing process" class="rounded-lg w-full h-auto" />
-</div>
-</div>
-</section>
+      <div class="pt-2">
+        <a
+          href="https://calendly.com/seamlessoutbound/30-minute-meeting"
+          class="block w-full text-center px-4 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-medium"
+        >
+          Book a call
+        </a>
+      </div>
+    </div>
+  </header>
 
-<!-- How We Partner Section -->
-<section id="process" class="py-16 border-t border-white/10">
-<h2 class="text-2xl font-semibold mb-2">How We Partner</h2>
-<p class="text-gray-300 text-sm mb-8">One clear model: performance-based sales partnership for commercial cleaning companies.</p>
-<div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
-<span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-2 block">Performance Partnership</span>
-<h3 class="text-xl font-medium mb-3 text-white">Closed Deals on 50/50 Split</h3>
-<p class="text-sm text-gray-300 mb-4">
-We run full-cycle sales for commercial cleaners: outbound prospecting, virtual walkthroughs, qualification, and DocuSign close. All selling is done for you—building trust and answering basic questions. You pay us 50% of month 1 and 50% of month 2—only when you collect from the client. After month 2, you keep 100% of all future payments.
-</p>
-<ul class="space-y-2 text-sm text-gray-400">
-<li class="flex gap-2"><span class="text-hubOrange">✔</span> Targeted commercial building prospecting & list-building</li>
-<li class="flex gap-2"><span class="text-hubOrange">✔</span> Virtual walkthroughs via Whereby (recorded for qualification)</li>
-<li class="flex gap-2"><span class="text-hubOrange">✔</span> DocuSign close & handoff to your team for onboarding</li>
-<li class="flex gap-2"><span class="text-hubOrange">✔</span> 50/50 split on months 1–2, paid only when you collect from client</li>
-<li class="flex gap-2"><span class="text-hubOrange">✔</span> No recurring commission—months 3–12 are 100% yours</li>
-</ul>
-</div>
-</section>
+  <main class="max-w-6xl mx-auto px-4">
 
-<!-- Why Partner With Us Section -->
-<section id="differentiators" class="py-16 border-t border-white/10">
-<h2 class="text-2xl font-semibold mb-8">Why Partner With Us</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
-<h3 class="text-lg font-medium mb-2 text-hubOrange">Paid on Collections, Not Signatures</h3>
-<p class="text-sm text-gray-400">We only get paid when you collect from the client. If they don't pay month 2, we don't get that second 50%. Fully aligned incentives.</p>
-</div>
-<div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
-<h3 class="text-lg font-medium mb-2 text-hubOrange">Virtual Walkthroughs, Not Cold Meetings</h3>
-<p class="text-sm text-gray-400">Recorded Whereby sessions qualify prospects before you ever send a quote. Higher close rates, less wasted time on bad fits.</p>
-</div>
-<div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
-<h3 class="text-lg font-medium mb-2 text-hubOrange">You Keep 100% After Month 2</h3>
-<p class="text-sm text-gray-400">We split months 1–2 at 50/50. Months 3–12? All yours. No recurring commission, no long-term obligations.</p>
-</div>
-</div>
-</section>
+    <!-- Hero -->
+    <section class="pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4">
+          Performance-Based Sales for Commercial Cleaning Companies.
+          <span class="text-hubOrange block mt-1">
+            We Build and Advance Qualified Deals Remotely.
+          </span>
+        </h1>
 
-<!-- How It Works Section -->
-<section id="how" class="py-16 border-t border-white/10">
-<h2 class="text-2xl font-semibold mb-4">How Our Partnership Works</h2>
-<ul class="space-y-4 text-gray-300 text-sm">
-<li class="flex gap-2">
-<span class="text-hubOrange">✔</span>
-<strong>Partner Vetting:</strong> We work with established commercial cleaners with $1M+ insurance, active staff, and proven close rates.
-</li>
-<li class="flex gap-2">
-<span class="text-hubOrange">✔</span>
-<strong>Targeted Outbound & Selling:</strong> We handle all prospecting, cold outreach, virtual qualification, and answer basic facility questions so all selling is done for you.
-</li>
-<li class="flex gap-2">
-<span class="text-hubOrange">✔</span>
-<strong>Optional On-Site Handshake:</strong> We only ask you or your team to go on-site if the client wants to meet someone to verify you're legit and to hand over keys.
-</li>
-<li class="flex gap-2">
-<span class="text-hubOrange">✔</span>
-<strong>Close & Split:</strong> We send DocuSign, track to signature, and split months 1–2 at 50/50—paid only when you collect from the client. After month 2, you keep 100%.
-</li>
-</ul>
-</section>
+        <p class="text-gray-300 text-base mb-6">
+          We partner with established commercial cleaning companies to
+          <strong class="text-white font-semibold underline decoration-hubOrange decoration-2 underline-offset-4">
+            create and advance qualified commercial cleaning opportunities on a 50/50 split for months 1–2
+          </strong>.
+          We handle outbound outreach, virtual discovery, qualification, proposal coordination, and digital contract follow-up.
+          You approve final scope and pricing; we are paid only when the client pays you.
+          After month 2, you keep 100%.
+        </p>
 
-<!-- Target Fit Section -->
-<section id="who" class="py-16 border-t border-white/10">
-<h2 class="text-2xl font-semibold mb-4">Who We Partner With</h2>
-<p class="text-gray-300 max-w-2xl mb-6">We maintain high standards to ensure a successful, high-integrity long-term alliance.</p>
-<ul class="space-y-2 text-sm text-gray-300">
-<li>• Established commercial cleaning contractors with at least 3 staff members and $1M+ liability insurance.</li>
-<li>• Cleaning business owners who have personally closed at least 2 commercial deals and understand facility bidding.</li>
-<li>• Operators open to a 50/50 split on months 1–2, paid only when client payments are collected.</li>
-</ul>
-</section>
+        <a
+          href="https://calendly.com/seamlessoutbound/30-minute-meeting"
+          class="inline-block px-5 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-medium"
+        >
+          Schedule a Partnership Call
+        </a>
+      </div>
 
-<!-- About the Founder Section -->
-<section class="py-16 border-t border-white/10">
-<h2 class="text-2xl font-semibold mb-4">About the Founder</h2>
-<div class="max-w-2xl mx-auto text-center">
-<p class="text-gray-300 text-sm mb-6">
-Floyd Orr founded Seamless Outbound to help commercial cleaning companies close more deals without the overhead of in-house sales teams. After years of outbound prospecting and sales system design, Floyd developed a performance-based model that aligns incentives: we only win when you win.
-</p>
-<a href="https://www.linkedin.com/in/floydorr" target="_blank" class="inline-block text-hubOrange hover:underline text-sm">Connect on LinkedIn</a>
-</div>
-</section>
+      <div class="relative">
+        <div class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-soBlue/30 blur-3xl opacity-50"></div>
 
-<!-- Final Call to Action -->
-<section class="py-16 text-center border-t border-white/10">
-<h2 class="text-2xl font-semibold mb-6">Ready to Close More Commercial Cleaning Deals?</h2>
-<p class="text-gray-300 max-w-xl mx-auto mb-8">
-We're currently accepting 2 new cleaning partners this quarter. If you have $1M+ insurance, a proven close rate, and want performance-based growth, let's talk.
-</p>
-<a href="https://calendly.com/seamlessoutbound/30-minute-meeting" class="inline-block px-8 py-4 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-md font-bold">
-Schedule Your Partnership Call
-</a>
-</section>
+        <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 shadow-2xl">
+          <img
+            src="/photos/seamlessoutboundpic.png"
+            alt="Commercial cleaning sales process"
+            class="rounded-lg w-full h-auto"
+          />
+        </div>
+      </div>
+    </section>
 
-</main>
+    <!-- Visual 1-2-3-4 Process Section -->
+    <section id="how" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-2 text-center">How Seamless Outbound Works</h2>
+      <p class="text-gray-300 text-sm mb-12 text-center max-w-xl mx-auto">
+        A streamlined, performance-based partnership designed to put qualified commercial opportunities on your radar without the guesswork.
+      </p>
 
-<!-- Footer -->
-<footer class="border-t border-white/10 py-6 text-xs text-gray-400 text-center">
-© <script>document.write(new Date().getFullYear());</script> Seamless Outbound — Performance-Based Sales for Commercial Cleaning
-</footer>
+      <div class="grid md:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-hubOrange/20 text-hubOrange font-bold flex items-center justify-center text-lg mb-4">1</div>
+          <h3 class="font-medium text-white text-base mb-2">Targeted Outbound</h3>
+          <p class="text-xs text-gray-400">We prospect commercial facilities in your target service area and initiate direct outreach.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-hubOrange/20 text-hubOrange font-bold flex items-center justify-center text-lg mb-4">2</div>
+          <h3 class="font-medium text-white text-base mb-2">Virtual Discovery</h3>
+          <p class="text-xs text-gray-400">We conduct remote discovery sessions, qualify decision-makers, and document exact facility needs.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-soBlue/20 text-soBlue font-bold flex items-center justify-center text-lg mb-4">3</div>
+          <h3 class="font-medium text-white text-base mb-2">Local Handoff & Review</h3>
+          <p class="text-xs text-gray-400">Your team approves pricing, and handles any required on-site walkthroughs or key handoffs.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-soBlue/20 text-soBlue font-bold flex items-center justify-center text-lg mb-4">4</div>
+          <h3 class="font-medium text-white text-base mb-2">Close & Split</h3>
+          <p class="text-xs text-gray-400">Deals close, we split months 1–2 only when collected, and months 3+ are 100% yours.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- What We Handle -->
+    <section id="process" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-2">What We Handle</h2>
+
+      <p class="text-gray-300 text-sm mb-8">
+        A remote sales process built for commercial cleaning companies that want qualified opportunities without an upfront retainer.
+      </p>
+
+      <div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
+        <span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-2 block">
+          Performance Partnership
+        </span>
+
+        <h3 class="text-xl font-medium mb-3">Remote Sales and Deal Coordination</h3>
+
+        <p class="text-sm text-gray-300 mb-4">
+          We prospect commercial facilities, conduct virtual discovery, qualify decision-makers, gather scope information,
+          follow up, and coordinate proposals and contract signing. Your local team remains responsible for final pricing,
+          operational approval, and service delivery.
+        </p>
+
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li class="flex gap-2">
+            <span class="text-hubOrange">✔</span>
+            Targeted commercial-building prospecting and list building
+          </li>
+
+          <li class="flex gap-2">
+            <span class="text-hubOrange">✔</span>
+            Cold calling, cold email, and multi-touch follow-up
+          </li>
+
+          <li class="flex gap-2">
+            <span class="text-hubOrange">✔</span>
+            Virtual discovery sessions with recorded notes and facility details for quote review
+          </li>
+
+          <li class="flex gap-2">
+            <span class="text-hubOrange">✔</span>
+            Proposal coordination, digital agreement follow-up, and a clean handoff for onboarding
+          </li>
+
+          <li class="flex gap-2">
+            <span class="text-hubOrange">✔</span>
+            50/50 split on client payments collected in months 1 and 2; no recurring commission after month 2
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Partner -->
+    <section id="why-us" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-8">Why Partner With Us</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
+          <h3 class="text-lg font-medium mb-2 text-hubOrange">
+            Paid on Client Collections
+          </h3>
+
+          <p class="text-sm text-gray-400">
+            Our compensation is tied to client payments your company receives during the first two months.
+            If a client does not pay, no commission is due on that unpaid amount.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
+          <h3 class="text-lg font-medium mb-2 text-hubOrange">
+            Virtual Discovery, Not Just Meetings
+          </h3>
+
+          <p class="text-sm text-gray-400">
+            We do more than put a cold appointment on your calendar. We conduct remote discovery,
+            qualify decision-makers, document facility needs, and advance qualified opportunities toward a proposal.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-hubOrange/30 bg-black/20">
+          <h3 class="text-lg font-medium mb-2 text-hubOrange">
+            You Keep 100% After Month 2
+          </h3>
+
+          <p class="text-sm text-gray-400">
+            We share only the first two collected monthly payments. From month 3 forward,
+            all revenue from the account belongs to you.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Operational Alignment (Streamlined Post-Agreement Section) -->
+    <section class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">Operational Alignment</h2>
+      <p class="text-gray-300 text-sm mb-6 max-w-2xl">
+        Before launching outreach, we sync with your team to ensure every account we tee up fits your exact capabilities and workflow.
+      </p>
+
+      <ul class="space-y-4 text-gray-300 text-sm max-w-3xl">
+
+        <li class="flex gap-3">
+          <span class="text-hubOrange font-bold">✓</span>
+          <span>
+            <strong>Capacity & Guardrails:</strong>
+            We document your service boundaries, minimum job size, crew availability, insurance parameters, and pricing model so we never pitch mismatched accounts.
+          </span>
+        </li>
+
+        <li class="flex gap-3">
+          <span class="text-hubOrange font-bold">✓</span>
+          <span>
+            <strong>Seamless Local Handoffs:</strong>
+            When an on-site walkthrough, key exchange, or final inspection is required, your local team handles that physical touchpoint while we coordinate the paperwork remotely.
+          </span>
+        </li>
+
+        <li class="flex gap-3">
+          <span class="text-hubOrange font-bold">✓</span>
+          <span>
+            <strong>Transparent Split:</strong>
+            We share a 50/50 split on revenue collected in months 1 and 2 only after your company receives payment. Months 3 and onward belong 100% to you.
+          </span>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Partner Criteria -->
+    <section id="who" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">Who We Partner With</h2>
+
+      <p class="text-gray-300 max-w-2xl mb-6">
+        We work best with established operators that can respond quickly, approve quotes promptly,
+        and deliver consistently once a new account is signed.
+      </p>
+
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>
+          • Established commercial cleaning contractors with at least 3 staff members and $1M+ general liability insurance
+        </li>
+
+        <li>
+          • Owners or sales leaders who have personally closed at least 3 commercial cleaning accounts face-to-face
+        </li>
+
+        <li>
+          • A documented sales process your team follows during in-person walkthroughs, scope reviews, pricing, proposal delivery, and client onboarding
+        </li>
+
+        <li>
+          • Owners or sales leaders who can approve scope, pricing, and capacity promptly
+        </li>
+
+        <li>
+          • Teams able to perform on-site verification, client meetings, key handoffs, and final inspections when required
+        </li>
+
+        <li>
+          • A professional, current website that clearly represents your company, commercial cleaning services, service area, insurance, and contact information
+        </li>
+
+        <li>
+          • Operators open to a 50/50 split on client payments collected in months 1 and 2
+        </li>
+      </ul>
+    </section>
+
+    <!-- Founder -->
+    <section class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">About the Founder</h2>
+
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-gray-300 text-sm mb-6">
+          Floyd Orr founded Seamless Outbound to help commercial cleaning companies create a more consistent
+          commercial pipeline without the fixed overhead of building an in-house outbound team.
+          The model is simple: aligned incentives, clear approvals, and a professional remote sales process.
+        </p>
+
+        <a
+          href="https://www.linkedin.com/in/floydorr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block text-hubOrange hover:underline text-sm"
+        >
+          Connect on LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 text-center border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-4">
+        Ready for a More Predictable Commercial Pipeline?
+      </h2>
+
+      <p class="text-gray-300 max-w-xl mx-auto mb-8">
+        If you have the staff, insurance, service capacity, a professional website,
+        an in-person sales process, and willingness to approve qualified opportunities quickly,
+        let’s discuss a performance-based partnership.
+      </p>
+
+      <a
+        href="https://calendly.com/seamlessoutbound/30-minute-meeting"
+        class="inline-block px-8 py-4 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-md font-bold"
+      >
+        Schedule a Partnership Call
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-6 text-xs text-gray-400 text-center">
+    © <script>document.write(new Date().getFullYear());</script>
+    Seamless Outbound — Performance-Based Sales for Commercial Cleaning
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute(
+        'aria-expanded',
+        String(!mobileMenu.classList.contains('hidden'))
+      );
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+  </script>
+
 </body>
 </html>
 
