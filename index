@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9VLM00VS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3P9VLM00VS');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Built by a commercial cleaning sales person for commercial cleaners. Get everything you need out of the box to win walkthroughs, close recurring accounts, and scale outbound sales." />
+  <title>Seamless Outbound – Built by Commercial Cleaning Sales Pros for Commercial Cleaners</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#2563eb",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-soDark text-white font-sans">
+
+  <!-- Background -->
+  <div class="fixed inset-0 -z-20 bg-gradient-to-br from-hubOrange/20 via-soDark to-blue-600/20"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+
+      <!-- Orange-Themed Website Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 128 128" style="flex-shrink: 0;">
+          <rect x="8" y="8" width="112" height="112" rx="24" fill="#0f172a" stroke="#334155" stroke-width="6"/>
+          <path d="M 32 84 C 32 50, 56 40, 60 56 C 64 72, 38 78, 48 92 C 58 102, 96 98, 96 64 C 60 90, 96 90, 96 32" fill="none" stroke="#FF7A59" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div style="font-weight: 900; font-size: 15px; letter-spacing: -0.2px; white-space: nowrap;" class="hidden sm:block">
+          <span style="color: #ffffff;">SEAMLESS</span><span style="color: #FF7A59;">OUTBOUND</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#demo" class="hover:text-hubOrange transition">Watch Demo</a>
+        <a href="#features" class="hover:text-hubOrange transition">Features</a>
+        <a href="#pricing" class="hover:text-hubOrange transition">Pricing</a>
+        <a href="#resources" class="hover:text-hubOrange transition">Resources & Coaching</a>
+        <a href="blog.html" class="hover:text-hubOrange transition">Blog</a>
+        <!-- <a href="agency.html" class="hover:text-hubOrange transition text-gray-400">Done-For-You Agency</a> -->
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a
+        href="https://your-lemonsqueezy-checkout-link.lemonsqueezy.com/checkout" 
+        class="hidden md:inline-flex px-5 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-bold"
+      >
+        Get App ($49/mo)
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-btn"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        class="md:hidden text-gray-300 hover:text-white focus:outline-none"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden absolute top-full left-0 w-full bg-soDark/95 border-b border-white/10 backdrop-blur px-6 py-6 space-y-4 shadow-2xl"
+    >
+      <a href="#demo" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Watch Demo</a>
+      <a href="#features" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Features</a>
+      <a href="#pricing" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Pricing</a>
+      <a href="#resources" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Resources & Coaching</a>
+      <a href="blog.html" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Blog</a>
+      <a href="agency.html" class="block text-base text-gray-400 hover:text-white transition" onclick="toggleMenu()">Done-For-You Agency</a>
+
+      <div class="pt-2">
+        <a
+          href="https://your-lemonsqueezy-checkout-link.lemonsqueezy.com/checkout"
+          class="block w-full text-center px-4 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold"
+        >
+          Get App ($49/mo)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4">
+
+    <!-- Hero Section -->
+    <section class="pt-16 pb-12 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-hubOrange/10 border border-hubOrange/30 text-xs text-hubOrange font-bold mb-4">
+          Built by a commercial cleaning sales person for commercial cleaners
+        </span>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4">
+          The Walkthrough Prospecting Engine Built to 
+          <span class="text-hubOrange block mt-1">
+            Win Commercial Cleaning Deals.
+          </span>
+        </h1>
+
+        <p class="text-gray-300 text-base mb-6">
+          Everything you need out of the box to win. Stop wasting hours typing phone numbers and guessing who to call. Instantly pull decision-maker details directly off <strong>Google Maps, Yelp, and BBB</strong> into your side-panel dialer, quote square footage in seconds, and land 3–5 new commercial walkthroughs every week.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://your-lemonsqueezy-checkout-link.lemonsqueezy.com/checkout"
+            class="px-6 py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-bold text-center"
+          >
+            Start Booking Walkthroughs — $49/mo
+          </a>
+          <a
+            href="#demo"
+            class="px-6 py-3 rounded-full border border-white/20 hover:bg-white/5 transition text-sm font-medium text-center"
+          >
+            Watch Demo & Live Call
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-blue-600/30 blur-3xl opacity-50"></div>
+
+        <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-2 shadow-2xl">
+          <img
+            src="photo/heropic.png"
+            alt="Seamless Outbound CRM Chrome Extension in action on Google Maps"
+            class="rounded-lg w-full h-auto shadow-inner"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Demonstration Section -->
+    <section id="demo" class="py-16 border-t border-white/10 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-3">See How Easy It Is to Book Commercial Deals</h2>
+      <p class="text-gray-300 text-sm mb-8 max-w-xl mx-auto">
+        Watch a full walkthrough of the workspace, followed by a live cold call off Google Maps using our proven commercial pitch scripts.
+      </p>
+
+      <div class="max-w-4xl mx-auto rounded-2xl border border-hubOrange/30 bg-black/40 backdrop-blur p-3 shadow-2xl">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+          <iframe 
+            src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" 
+            title="Seamless Outbound Commercial Prospecting Demo"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0.75rem;"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features & Benefits Section -->
+    <section id="features" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-2 text-center">Engineered for Commercial Cleaning Owners</h2>
+      <p class="text-gray-300 text-sm mb-12 text-center max-w-xl mx-auto">
+        Built by a commercial cleaning sales person for commercial cleaners—giving you everything you need out of the box to win walkthroughs without bloated software.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20">
+          <div class="text-hubOrange font-bold text-xl mb-3">🎯</div>
+          <h3 class="font-medium text-white text-base mb-2">Fill Your Calendar with High-Value Walkthroughs</h3>
+          <p class="text-xs text-gray-400">Scrape business names, phone numbers, and addresses straight into your form with zero manual typing. Dial faster and get more quotes out the door.</p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20">
+          <div class="text-hubOrange font-bold text-xl mb-3">⚡</div>
+          <h3 class="font-medium text-white text-base mb-2">Double Your Daily Dial Volume</h3>
+          <p class="text-xs text-gray-400">Built-in 30-minute sprint timers and dial counters keep you accountable so you stop procrastinating and start winning recurring cleaning accounts.</p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20">
+          <div class="text-hubOrange font-bold text-xl mb-3">⏰</div>
+          <h3 class="font-medium text-white text-base mb-2">Never Let a Hot Contract Slip Away</h3>
+          <p class="text-xs text-gray-400">Set instant callback reminders for office managers who say "our contract is up in 3 months." Follow up at the exact right time to win the bid.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 border-t border-white/10 max-w-xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-2">Simple, High-ROI Pricing</h2>
+      <p class="text-gray-300 text-sm mb-8">One commercial account pays for the tool for years to come. Cancel anytime.</p>
+
+      <div class="p-8 rounded-2xl border border-hubOrange/40 bg-black/40 backdrop-blur shadow-2xl">
+        <span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-2 block">Monthly Outbound License</span>
+        <div class="text-4xl font-bold mb-4">$49<span class="text-sm font-normal text-gray-400">/mo</span></div>
+        <p class="text-xs text-gray-300 mb-6">Full access to the Seamless Outbound Chrome Extension, directory scraper, pricing calculator, and master sales video training.</p>
+        <a
+          href="https://your-lemonsqueezy-checkout-link.lemonsqueezy.com/checkout"
+          class="block w-full py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold shadow-lg shadow-hubOrange/20"
+        >
+          Get Started Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Resources & Coaching Section -->
+    <section id="resources" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl font-semibold mb-2 text-center">Resources & Sales Training</h2>
+      <p class="text-gray-300 text-sm mb-12 text-center max-w-xl mx-auto">
+        Need help setting up your app or want to sharpen your phone script to close more walkthroughs? We've got you covered.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-medium mb-2 text-hubOrange">Free 15-Minute Onboarding</h3>
+            <p class="text-xs text-gray-400 mb-4">Have questions about how the app works or need help getting set up? Book a free 1-on-1 onboarding session.</p>
+          </div>
+          <a
+            href="https://calendly.com/seamlessoutbound" 
+            class="inline-block text-center py-2.5 px-4 rounded-full border border-white/20 hover:bg-white/10 transition text-xs font-medium"
+          >
+            🎓 Book Free 15-Min Onboarding Call
+          </a>
+        </div>
+
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-medium mb-2 text-hubOrange">Paid 1-on-1 Sales Training</h3>
+            <p class="text-xs text-gray-400 mb-4">Master cold calling, permission-based introductions, objection handling, and pitching Proof of Service with 1-on-1 coaching.</p>
+          </div>
+          <a
+            href="https://calendly.com/seamlessoutbound" 
+            class="inline-block text-center py-2.5 px-4 rounded-full bg-hubOrange hover:bg-orange-600 text-white transition text-xs font-bold shadow-lg shadow-hubOrange/20"
+          >
+            🚀 Book 1-on-1 Sales Coaching
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-6 text-xs text-gray-400 text-center">
+    © <script>document.write(new Date().getFullYear());</script>
+    Seamless Outbound — Built for Commercial Cleaning Outbound Sales
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute(
+        'aria-expanded',
+        String(!mobileMenu.classList.contains('hidden'))
+      );
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+  </script>
+
+</body>
+</html>
