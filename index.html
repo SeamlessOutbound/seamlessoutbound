@@ -67,7 +67,6 @@
         <a href="#pricing" class="hover:text-hubOrange transition">Pricing</a>
         <a href="#resources" class="hover:text-hubOrange transition">Resources & Coaching</a>
         <a href="blog.html" class="hover:text-hubOrange transition">Blog</a>
-        <!-- <a href="agency.html" class="hover:text-hubOrange transition text-gray-400">Done-For-You Agency</a> -->
       </nav>
 
       <!-- Desktop CTA -->
@@ -101,7 +100,6 @@
       <a href="#pricing" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Pricing</a>
       <a href="#resources" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Resources & Coaching</a>
       <a href="blog.html" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Blog</a>
-      <a href="agency.html" class="block text-base text-gray-400 hover:text-white transition" onclick="toggleMenu()">Done-For-You Agency</a>
 
       <div class="pt-2">
         <a
@@ -163,7 +161,6 @@
     </section>
 
     <!-- Video Demonstration Section -->
-    <!-- Video Demonstration Section -->
     <section id="demo" class="py-16 border-t border-white/10 text-center">
       <h2 class="text-2xl md:text-3xl font-semibold mb-3">See How Easy It Is to Book Commercial Deals</h2>
       <p class="text-gray-300 text-sm mb-8 max-w-xl mx-auto">
@@ -215,14 +212,23 @@
       </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing Section (Updated with Strikethrough Price) -->
     <section id="pricing" class="py-16 border-t border-white/10 max-w-xl mx-auto text-center">
       <h2 class="text-2xl font-semibold mb-2">Simple, High-ROI Pricing</h2>
       <p class="text-gray-300 text-sm mb-8">One commercial account pays for the tool for years to come. Cancel anytime.</p>
 
-      <div class="p-8 rounded-2xl border border-hubOrange/40 bg-black/40 backdrop-blur shadow-2xl">
+      <div class="p-8 rounded-2xl border border-hubOrange/40 bg-black/40 backdrop-blur shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-hubOrange text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-lg">
+          Limited Founder Offer
+        </div>
+        
         <span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-2 block">Monthly Outbound License</span>
-        <div class="text-4xl font-bold mb-4">$49<span class="text-sm font-normal text-gray-400">/mo</span></div>
+        
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="text-2xl font-semibold text-gray-500 line-through">$97</span>
+          <div class="text-4xl font-bold text-white">$49<span class="text-sm font-normal text-gray-400">/mo</span></div>
+        </div>
+
         <p class="text-xs text-gray-300 mb-6">Full access to the Seamless Outbound Chrome Extension, directory scraper, pricing calculator, and master sales video training.</p>
         <a
           href="https://your-lemonsqueezy-checkout-link.lemonsqueezy.com/checkout"
