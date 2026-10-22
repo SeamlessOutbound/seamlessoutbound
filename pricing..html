@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing – Seamless Outbound</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soDark: "#050510",
+            hubOrange: "#FF7A59",
+            soBlue: "#2563eb",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-soDark text-white font-sans flex flex-col min-h-screen">
+  <div class="fixed inset-0 -z-20 bg-gradient-to-br from-hubOrange/20 via-soDark to-blue-600/20"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 128 128" style="flex-shrink: 0;">
+          <rect x="8" y="8" width="112" height="112" rx="24" fill="#0f172a" stroke="#334155" stroke-width="6"/>
+          <path d="M 32 84 C 32 50, 56 40, 60 56 C 64 72, 38 78, 48 92 C 58 102, 96 98, 96 64 C 60 90, 96 90, 96 32" fill="none" stroke="#FF7A59" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div style="font-weight: 900; font-size: 15px; letter-spacing: -0.2px; white-space: nowrap;" class="hidden sm:block">
+          <span style="color: #ffffff;">SEAMLESS</span><span style="color: #FF7A59;">OUTBOUND</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="index.html#demo" class="hover:text-hubOrange transition">Watch Demo</a>
+        <a href="index.html#features" class="hover:text-hubOrange transition">Features</a>
+        <a href="pricing.html" class="text-hubOrange font-semibold transition">Pricing</a>
+        <a href="index.html#resources" class="hover:text-hubOrange transition">Resources & Coaching</a>
+      </nav>
+      <a href="https://calendly.com/seamlessoutbound" class="px-5 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold shadow-lg shadow-hubOrange/20">
+        Talk to Us ($49/mo)
+      </a>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 py-16 flex-grow text-center">
+    <h1 class="text-4xl font-bold mb-4">Simple, High-ROI Pricing</h1>
+    <p class="text-gray-300 text-base mb-12 max-w-xl mx-auto">One commercial cleaning account pays for the software for years to come. No hidden setup fees or long-term commitments.</p>
+
+    <div class="grid md:grid-cols-2 gap-8 items-stretch">
+      <!-- Standard License -->
+      <div class="p-8 rounded-2xl border border-hubOrange/40 bg-black/40 backdrop-blur shadow-2xl flex flex-col justify-between relative overflow-hidden text-left">
+        <div class="absolute top-0 right-0 bg-hubOrange text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-lg">
+          Limited Founder Offer
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-2 block">Monthly Outbound License</span>
+          <div class="flex items-baseline gap-2 mb-4">
+            <span class="text-2xl font-semibold text-gray-500 line-through">$97</span>
+            <span class="text-4xl font-bold text-white">$49</span>
+            <span class="text-sm text-gray-400">/ month</span>
+          </div>
+          <ul class="text-xs text-gray-300 space-y-3 mb-8">
+            <li class="flex items-center gap-2">✓ Full Access to Chrome Extension</li>
+            <li class="flex items-center gap-2">✓ Google Maps, Yelp & BBB Lead Scraper</li>
+            <li class="flex items-center gap-2">✓ Integrated Square-Footage Price Estimator</li>
+            <li class="flex items-center gap-2">✓ Built-in Sprint Timers & Dial Counter</li>
+            <li class="flex items-center gap-2">✓ Master Cold Calling Video Training</li>
+          </ul>
+        </div>
+        <a href="https://calendly.com/seamlessoutbound" class="block w-full py-3 text-center rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold shadow-lg shadow-hubOrange/20">
+          Book Founder Onboarding Call
+        </a>
+      </div>
+
+      <!-- Coaching Add-on -->
+      <div class="p-8 rounded-2xl border border-white/10 bg-black/20 backdrop-blur shadow-2xl flex flex-col justify-between text-left">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-blue-400 font-bold mb-2 block">Sales Coaching</span>
+          <div class="flex items-baseline gap-2 mb-4">
+            <span class="text-4xl font-bold text-white">1-on-1</span>
+            <span class="text-sm text-gray-400">Custom Sessions</span>
+          </div>
+          <p class="text-xs text-gray-300 mb-6">Sharpen your cold call delivery, master objection handling, and learn how to position Proof of Service to lock down 3–5 walkthroughs every week.</p>
+        </div>
+        <a href="https://calendly.com/seamlessoutbound" class="block w-full py-3 text-center rounded-full border border-white/20 hover:bg-white/10 transition text-sm font-bold">
+          Book Coaching Session
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8 text-xs text-gray-400 text-center">
+    <p class="mb-2">© 2026 Seamless Outbound LLC — Built for Commercial Cleaning Outbound Sales</p>
+    <p class="mb-4 text-gray-500 max-w-xl mx-auto">Our order process and payment processing are conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders.</p>
+    <div class="flex justify-center items-center gap-6">
+      <a href="pricing.html" class="text-gray-400 hover:text-hubOrange transition underline">Pricing</a>
+      <a href="terms.html" class="text-gray-400 hover:text-hubOrange transition underline">Terms of Service</a>
+      <a href="privacy.html" class="text-gray-400 hover:text-hubOrange transition underline">Privacy Policy</a>
+      <a href="refunds.html" class="text-gray-400 hover:text-hubOrange transition underline">Refund Policy</a>
+    </div>
+  </footer>
+</body>
+</html>
