@@ -27,7 +27,7 @@
       <a href="index.html" class="flex items-center gap-3">
         <svg width="36" height="36" viewBox="0 0 128 128" style="flex-shrink: 0;">
           <rect x="8" y="8" width="112" height="112" rx="24" fill="#0f172a" stroke="#334155" stroke-width="6"/>
-          <path d="M 32 84 C 32 50, 56 40, 60 56 C 64 72, 38 78, 48 92 C 58 102, 96 98, 96 64 C 60 90, 96 90, 96 32" fill="none" stroke="#FF7A59" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 32 84 C 32 50, 56 40, 60 56 C 64 72, 38 78, 48 92 C 58 102, 96 90, 96 64 C 60 90, 96 90, 96 32" fill="none" stroke="#FF7A59" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div style="font-weight: 900; font-size: 15px; letter-spacing: -0.2px; white-space: nowrap;" class="hidden sm:block">
           <span style="color: #ffffff;">SEAMLESS</span><span style="color: #FF7A59;">OUTBOUND</span>
@@ -44,18 +44,13 @@
 
     <div class="space-y-6">
       <section>
-        <h2 class="text-lg font-semibold text-white mb-2">1. Refund Eligibility</h2>
-        <p>All subscription transactions and refund requests are managed directly by Paddle.com, our official Merchant of Record. Refund requests submitted within 14 days of purchase will be honored in accordance with Paddle’s Global Buyer Terms and Refund Policy.</p>
+        <h2 class="text-lg font-semibold text-white mb-2">1. Subscription Cancellation</h2>
+        <p>You may cancel your monthly subscription at any time. To cancel, please submit a request to <a href="mailto:floydcanhelp@gmail.com" class="text-hubOrange underline">floydcanhelp@gmail.com</a> at least 24 hours before your next billing date. Your access will remain active through the end of your current billing period.</p>
       </section>
 
       <section>
-        <h2 class="text-lg font-semibold text-white mb-2">2. Subscription Cancellation</h2>
-        <p>You may cancel your monthly subscription at any time. Canceling prevents future billing renewals. Following cancellation, your software license remains active until the expiration of your current paid billing period.</p>
-      </section>
-
-      <section>
-        <h2 class="text-lg font-semibold text-white mb-2">3. How to Request a Refund</h2>
-        <p>To request a refund or account cancellation, reach out to us at <a href="mailto:floydcanhelp@gmail.com" class="text-hubOrange underline">floydcanhelp@gmail.com</a> or use the support link provided in your receipt email sent by Paddle.</p>
+        <h2 class="text-lg font-semibold text-white mb-2">2. Refund Terms</h2>
+        <p>Because Seamless Outbound provides immediate digital software access, monthly subscriptions are generally non-refundable. However, if you experience technical issues or are dissatisfied with your onboarding during your first 7 days, contact us to request a review for a full refund.</p>
       </section>
     </div>
   </main>
@@ -63,8 +58,7 @@
   <!-- Footer -->
   <footer class="border-t border-white/10 py-8 text-xs text-gray-400 text-center">
     <p class="mb-2">© 2026 Seamless Outbound LLC — Built for Commercial Cleaning Outbound Sales</p>
-    <p class="mb-4 text-gray-500 max-w-xl mx-auto">Our order process and payment processing are conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders.</p>
-    <div class="flex justify-center items-center gap-6">
+    <div class="flex justify-center items-center gap-6 mt-4">
       <a href="pricing.html" class="text-gray-400 hover:text-hubOrange transition underline">Pricing</a>
       <a href="terms.html" class="text-gray-400 hover:text-hubOrange transition underline">Terms of Service</a>
       <a href="privacy.html" class="text-gray-400 hover:text-hubOrange transition underline">Privacy Policy</a>
