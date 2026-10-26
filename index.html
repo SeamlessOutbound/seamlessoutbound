@@ -12,8 +12,12 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Built by a commercial cleaning salesperson for commercial cleaners. Get everything you need out of the box to win walkthroughs, close recurring accounts, and scale outbound sales." />
-  <title>Seamless Outbound – Built by Commercial Cleaning Sales Pros for Commercial Cleaners</title>
+  <meta
+    name="description"
+    content="Find local commercial cleaning prospects without buying separate lead lists. Walkthrough Scout brings prospect information, calling, notes, and callbacks into one workspace. $49/month with free onboarding."
+  />
+
+  <title>Walkthrough Scout by Seamless Outbound | Commercial Cleaning Prospecting — $49/month</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -37,271 +41,668 @@
     html {
       scroll-behavior: smooth;
     }
+
+    section[id] {
+      scroll-margin-top: 110px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid #FF7A59;
+      outline-offset: 4px;
+    }
   </style>
 </head>
 
 <body class="bg-soDark text-white font-sans">
 
   <!-- Background -->
-  <div class="fixed inset-0 -z-20 bg-gradient-to-br from-hubOrange/20 via-soDark to-blue-600/20"></div>
+  <div
+    aria-hidden="true"
+    class="fixed inset-0 -z-20 bg-gradient-to-br from-hubOrange/20 via-soDark to-blue-600/20"
+  ></div>
 
   <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur py-4">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between gap-4">
 
-      <!-- Orange-Themed Website Logo -->
-      <a href="#" class="flex items-center gap-3">
-        <svg width="36" height="36" viewBox="0 0 128 128" style="flex-shrink: 0;">
-          <rect x="8" y="8" width="112" height="112" rx="24" fill="#0f172a" stroke="#334155" stroke-width="6"/>
-          <path d="M 32 84 C 32 50, 56 40, 60 56 C 64 72, 38 78, 48 92 C 58 102, 96 98, 96 64 C 60 90, 96 90, 96 32" fill="none" stroke="#FF7A59" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Logo linking back to main Seamless Outbound home or top -->
+      <a href="index.html" aria-label="Seamless Outbound home" class="flex items-center gap-3">
+        <svg
+          width="36"
+          height="36"
+          viewBox="0 0 128 128"
+          style="flex-shrink: 0;"
+          aria-hidden="true"
+        >
+          <rect
+            x="8" y="8" width="112" height="112" rx="24"
+            fill="#0f172a" stroke="#334155" stroke-width="6"
+          />
+          <path
+            d="M 32 84 C 32 50, 56 40, 60 56 C 64 72, 38 78, 48 92 C 58 102, 96 98, 96 64 C 60 90, 96 90, 96 32"
+            fill="none"
+            stroke="#FF7A59"
+            stroke-width="12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
-        <div style="font-weight: 900; font-size: 15px; letter-spacing: -0.2px; white-space: nowrap;" class="hidden sm:block">
-          <span style="color: #ffffff;">SEAMLESS</span><span style="color: #FF7A59;">OUTBOUND</span>
+
+        <div
+          style="font-weight: 900; font-size: 15px; letter-spacing: -0.2px; white-space: nowrap;"
+          class="hidden sm:block"
+        >
+          <span style="color: #ffffff;">WALKTHROUGH</span><span style="color: #FF7A59;">SCOUT</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+      <!-- Desktop Navigation (Funnel Optimized) -->
+      <nav aria-label="Main navigation" class="hidden md:flex items-center gap-6 text-sm text-gray-300">
         <a href="#demo" class="hover:text-hubOrange transition">Watch Demo</a>
         <a href="#features" class="hover:text-hubOrange transition">Features</a>
         <a href="#pricing" class="hover:text-hubOrange transition">Pricing</a>
-        <a href="#resources" class="hover:text-hubOrange transition">Resources & Coaching</a>
-        <a href="services.html" class="hover:text-hubOrange transition">Services</a>
-        <a href="blog.html" class="hover:text-hubOrange transition">Blog</a>
+        <a href="#resources" class="hover:text-hubOrange transition">Onboarding & Training</a>
+        <a href="#faq" class="hover:text-hubOrange transition">FAQ</a>
       </nav>
 
-      <!-- Desktop CTA -->
       <a
-        href="https://buy.stripe.com/3cIdR9bvQ3A01rk0XF6AM01" 
+        href="https://buy.stripe.com/3cIdR9bvQ3A01rk0XF6AM01"
         target="_blank"
-        class="hidden md:inline-flex px-5 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-bold"
+        rel="noopener noreferrer"
+        class="hidden md:inline-flex shrink-0 px-5 py-2 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-bold"
       >
-        Get Instant Access ($49/mo)
+        Get Access — $49/mo
       </a>
 
       <!-- Mobile Menu Button -->
       <button
         id="menu-btn"
+        type="button"
         aria-label="Toggle menu"
         aria-expanded="false"
-        class="md:hidden text-gray-300 hover:text-white focus:outline-none"
+        aria-controls="mobile-menu"
+        class="md:hidden text-gray-300 hover:text-white"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
         </svg>
       </button>
     </div>
 
     <!-- Mobile Navigation -->
-    <div
+    <nav
       id="mobile-menu"
+      aria-label="Mobile navigation"
       class="hidden md:hidden absolute top-full left-0 w-full bg-soDark/95 border-b border-white/10 backdrop-blur px-6 py-6 space-y-4 shadow-2xl"
     >
-      <a href="#demo" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Watch Demo</a>
-      <a href="#features" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Features</a>
-      <a href="#pricing" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Pricing</a>
-      <a href="#resources" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Resources & Coaching</a>
-      <a href="blog.html" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Blog</a>
-      <a href="services.html" class="block text-base text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">services</a>
+      <a href="#demo" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Watch Demo</a>
+      <a href="#features" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Features</a>
+      <a href="#pricing" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Pricing</a>
+      <a href="#resources" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Onboarding & Training</a>
+      <a href="#faq" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">FAQ</a>
 
       <div class="pt-2">
         <a
           href="https://buy.stripe.com/3cIdR9bvQ3A01rk0XF6AM01"
           target="_blank"
+          rel="noopener noreferrer"
           class="block w-full text-center px-4 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold"
         >
-          Get Instant Access ($49/mo)
+          Get Access — $49/mo
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main class="max-w-6xl mx-auto px-4">
 
-    <!-- Hero Section -->
-    <!-- Hero Section -->
-<section class="pt-16 pb-12 grid md:grid-cols-2 gap-12 items-center">
-  <div>
-    <span class="inline-block px-3 py-1 rounded-full bg-hubOrange/10 border border-hubOrange/30 text-xs text-hubOrange font-bold mb-4">
-      Built by a commercial cleaning salesperson for commercial cleaners
-    </span>
-    
-    <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-4">
-      Consistently Book Commercial Cleaning Walkthroughs  
-      <span class="text-hubOrange block mt-1">
-        Without Paying For Leads Or Wasting Time
-      </span>
-    </h1>
+    <!-- Hero -->
+    <section class="pt-16 pb-12 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-hubOrange/10 border border-hubOrange/30 text-xs text-hubOrange font-bold mb-4">
+          Built by a commercial cleaning salesperson for commercial cleaners
+        </span>
 
-    <p class="text-gray-300 text-base mb-6">
-      <strong>Walkthrough Scout</strong> gives you everything you need out of the box to win. Stop wasting hours typing phone numbers and guessing who to call. Instantly pull decision-maker details directly off <strong>Google Maps, Yelp, and BBB</strong> into your side-panel dialer, capture data in seconds, and maintain high dialing momentum with built-in sprint timers and dial tracking.
-    </p>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-5">
+          Book More Commercial Cleaning Walkthroughs
+          <span class="text-hubOrange block mt-2">
+            Without Buying Lead Lists.
+          </span>
+        </h1>
 
-    <div class="flex flex-col sm:flex-row gap-4">
-      <a
-        href="https://buy.stripe.com/3cIdR9bvQ3A01rk0XF6AM01"
-        target="_blank"
-        class="px-6 py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-bold text-center"
-      >
-        Get Instant Access — $49/mo
-      </a>
-      <a
-        href="https://calendly.com/seamlessoutbound"
-        target="_blank"
-        class="px-6 py-3 rounded-full border border-white/20 hover:bg-white/5 transition text-sm font-medium text-center"
-      >
-        Book Onboarding Call with Floyd
-      </a>
-    </div>
-  </div>
+        <p class="text-gray-300 text-base leading-relaxed mb-4">
+          Finding businesses to call shouldn't mean buying another list,
+          retyping phone numbers, and juggling disconnected tools.
+        </p>
 
-  <div class="relative">
-    <div class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-blue-600/30 blur-3xl opacity-50"></div>
+        <p class="text-gray-300 text-base leading-relaxed mb-6">
+          Walkthrough Scout brings business contact details from Google Maps,
+          Yelp, and BBB into your side-panel workspace—so you can move from
+          finding a prospect to calling, taking notes, and scheduling the next
+          follow-up.
+        </p>
 
-    <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-2 shadow-2xl">
-      <img
-        src="photos/heropic.png"
-        alt="Walkthrough Scout CRM Chrome Extension in action on Google Maps"
-        class="rounded-lg w-full h-auto shadow-inner"
-      />
-    </div>
-  </div>
-</section>
-    <!-- Video Demonstration Section -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://buy.stripe.com/3cIdR9bvQ3A01rk0XF6AM01"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-bold text-center"
+          >
+            Get Access — $49/mo
+          </a>
+
+          <a
+            href="#demo"
+            class="px-6 py-3 rounded-full border border-white/20 hover:bg-white/5 transition text-sm font-medium text-center"
+          >
+            Watch It in Action
+          </a>
+        </div>
+
+        <p class="text-xs text-gray-400 mt-4 leading-relaxed">
+          Free onboarding with Floyd included.
+          No separate lead-list subscription required.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div
+          aria-hidden="true"
+          class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-blue-600/30 blur-3xl opacity-50"
+        ></div>
+
+        <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-2 shadow-2xl">
+          <img
+            src="photos/heropic.png"
+            alt="Walkthrough Scout Chrome extension showing a business prospect alongside Google Maps"
+            class="rounded-lg w-full h-auto shadow-inner"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Video -->
     <section id="demo" class="py-16 border-t border-white/10 text-center">
-      <h2 class="text-2xl md:text-3xl font-semibold mb-3">See How Easy It Is to Book Commercial Deals</h2>
-      <p class="text-gray-300 text-sm mb-8 max-w-xl mx-auto">
-        Watch a full walkthrough of Walkthrough Scout, followed by a live cold call off Google Maps using our proven commercial pitch scripts.
+      <span class="text-xs uppercase tracking-wider text-hubOrange font-bold">
+        See the workflow before you subscribe
+      </span>
+
+      <h2 class="text-2xl md:text-3xl font-semibold mt-3 mb-4">
+        From Finding a Business to Making the Call.
+      </h2>
+
+      <p class="text-gray-300 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+        See how Walkthrough Scout works, then watch a live prospecting call
+        from Google Maps. Get a clear picture of the tool, the calling
+        approach, and how they fit together.
       </p>
 
       <div class="max-w-4xl mx-auto rounded-2xl border border-hubOrange/30 bg-black/40 backdrop-blur p-3 shadow-2xl">
         <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-          <iframe 
-            src="https://www.youtube.com/embed/nMRJacPk384?si=buhFC0vRdjrTX8KV" 
-            title="Seamless Outbound Commercial Prospecting Demo"
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          <iframe
+            src="https://www.youtube.com/embed/nMRJacPk384?si=buhFC0vRdjrTX8KV"
+            title="Walkthrough Scout product demonstration and live prospecting call"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0.75rem;"
+            allowfullscreen
+            loading="lazy"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 0.75rem;"
           ></iframe>
         </div>
       </div>
+
+      <p class="text-sm text-gray-400 mt-6 max-w-2xl mx-auto">
+        Scout supports your outreach. You or your caller make the calls,
+        have the conversations, and book the appointments.
+      </p>
     </section>
 
-    <!-- Features & Benefits Section -->
+    <!-- Founder Story -->
+    <section class="py-16 border-t border-white/10">
+      <div class="max-w-3xl mx-auto">
+        <span class="text-xs uppercase tracking-wider text-hubOrange font-bold">
+          Why I built Walkthrough Scout
+        </span>
+
+        <h2 class="text-2xl md:text-3xl font-semibold mt-3 mb-6">
+          I Needed a Better Calling Workflow.
+          So I Built One.
+        </h2>
+
+        <div class="space-y-5 text-gray-300 text-base leading-relaxed">
+          <p>
+            I'm Floyd—a salesperson and JavaScript developer. I've done the
+            work of finding businesses, picking up the phone, and following up.
+          </p>
+
+          <p>
+            I used Google Maps, Yelp, and BBB to find businesses to contact.
+            But the prospecting process felt like a patchwork: find the
+            information in one place, use another tool to call, record the
+            conversation somewhere else, then keep track of the callback.
+          </p>
+
+          <p>
+            I didn't want another complicated system to manage. I wanted a
+            practical tool that kept those steps together and helped me stay
+            focused on the next conversation.
+          </p>
+
+          <p>
+            That's why I built Walkthrough Scout. It's designed around the
+            day-to-day prospecting work commercial cleaners actually need to
+            do—not around adding more software to their workload.
+          </p>
+
+          <p class="text-white font-medium">
+            You don't need another place to store a list.
+            You need a clearer way to work your prospects.
+          </p>
+        </div>
+
+        <p class="mt-6 text-sm text-hubOrange">
+          — Floyd, founder of Walkthrough Scout
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
     <section id="features" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-2 text-center">Engineered for Commercial Cleaning Owners</h2>
-      <p class="text-gray-300 text-sm mb-12 text-center max-w-xl mx-auto">
-        Built by a commercial cleaning salesperson for commercial cleaners—giving you everything you need out of the box to win walkthroughs without bloated software.
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">
+        Less Tool-Juggling. More Time for Sales Conversations.
+      </h2>
+
+      <p class="text-gray-300 text-base leading-relaxed mb-10 text-center max-w-2xl mx-auto">
+        Find prospects, work through your calls, and keep the next step
+        visible—without building your process around disconnected spreadsheets.
       </p>
 
       <div class="grid md:grid-cols-3 gap-6">
-        
+
         <div class="p-6 rounded-xl border border-white/10 bg-black/20">
-          <div class="text-hubOrange font-bold text-xl mb-3">🎯</div>
-          <h3 class="font-medium text-white text-base mb-2">Fill Your Calendar with High-Value Walkthroughs</h3>
-          <p class="text-xs text-gray-400">Scrape business names, phone numbers, and addresses straight into your form with zero manual typing. Dial faster and get more quotes out the door.</p>
+          <div class="text-hubOrange font-bold text-sm mb-3">FIND PROSPECTS</div>
+          <h3 class="font-semibold text-white text-lg mb-3">
+            Start With Local Businesses You Want to Call.
+          </h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Capture available business names, phone numbers, and addresses
+            from Google Maps, Yelp, and BBB. Spend less time copying details
+            and more time working your prospect list.
+          </p>
         </div>
 
         <div class="p-6 rounded-xl border border-white/10 bg-black/20">
-          <div class="text-hubOrange font-bold text-xl mb-3">⚡</div>
-          <h3 class="font-medium text-white text-base mb-2">Double Your Daily Dial Volume</h3>
-          <p class="text-xs text-gray-400">Built-in 30-minute sprint timers and dial counters keep you accountable so you stop procrastinating and start winning recurring cleaning accounts.</p>
+          <div class="text-hubOrange font-bold text-sm mb-3">STAY FOCUSED</div>
+          <h3 class="font-semibold text-white text-lg mb-3">
+            Give Your Calling Sessions Structure.
+          </h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Use 30-minute sprint timers and dial counters to keep your
+            activity visible. Set aside a calling block, track your effort,
+            and keep moving to the next conversation.
+          </p>
         </div>
 
         <div class="p-6 rounded-xl border border-white/10 bg-black/20">
-          <div class="text-hubOrange font-bold text-xl mb-3">⏰</div>
-          <h3 class="font-medium text-white text-base mb-2">Never Let a Hot Contract Slip Away</h3>
-          <p class="text-xs text-gray-400">Set instant callback reminders for office managers who say "our contract is up in 3 months." Follow up at the exact right time to win the bid.</p>
+          <div class="text-hubOrange font-bold text-sm mb-3">FOLLOW UP</div>
+          <h3 class="font-semibold text-white text-lg mb-3">
+            Remember the Conversation—and the Callback.
+          </h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            When someone says, “Try me next month,” save the context and
+            set a reminder. Return to the prospect with your notes instead
+            of trying to remember where you left off.
+          </p>
         </div>
 
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 border-t border-white/10 max-w-xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-2">Simple, High-ROI Pricing</h2>
-      <p class="text-gray-300 text-sm mb-8">One commercial account pays for the tool for years to come. Cancel anytime.</p>
+    <!-- Audience Fit -->
+    <section class="py-12 border-t border-white/10">
+      <div class="max-w-3xl mx-auto p-6 md:p-8 rounded-2xl border border-white/10 bg-black/20">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">
+          Built for Cleaners Who Want to Take Control of Their Outreach.
+        </h2>
 
-      <div class="p-8 rounded-2xl border border-hubOrange/40 bg-black/40 backdrop-blur shadow-2xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 bg-hubOrange text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-lg">
-          Limited Founder Offer
-        </div>
+        <p class="text-gray-300 text-base leading-relaxed mb-5">
+          Scout is for commercial cleaning owners and their callers who
+          want to actively contact local businesses—not just wait for the
+          next referral.
+        </p>
+
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li>✓ You want a prospecting routine you or a team member can run.</li>
+          <li>✓ You want to find business prospects without a separate lead-list subscription.</li>
+          <li>✓ You want calls, notes, and callbacks closer together.</li>
+          <li>✓ You want help getting started rather than another tool to figure out alone.</li>
+        </ul>
+
+        <p class="text-sm text-gray-400 mt-6 leading-relaxed">
+          Scout is not a done-for-you appointment-setting service.
+          Business listings are starting points for outreach, not confirmed
+          requests for cleaning quotes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Overcoming Barriers -->
+    <section class="py-16 border-t border-white/10">
+      <div class="max-w-4xl mx-auto rounded-2xl border border-hubOrange/30 bg-gradient-to-b from-hubOrange/10 via-black/40 to-black/60 p-8 md:p-10 shadow-2xl text-center">
         
-        <span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-2 block">Monthly Outbound License</span>
-        
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <span class="text-2xl font-semibold text-gray-500 line-through">$97</span>
-          <div class="text-4xl font-bold text-white">$49<span class="text-sm font-normal text-gray-400">/mo</span></div>
+        <span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-3 block">
+          Overcoming the Barriers
+        </span>
+
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
+          Think You Can't Do Outreach or Hire Someone to Do It? <span class="text-hubOrange">Think Again.</span>
+        </h2>
+
+        <p class="text-gray-200 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+          We made outreach as simple as possible. Most commercial cleaning business owners avoid outreach for two simple reasons:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 text-left mb-10 max-w-3xl mx-auto">
+          <div class="bg-black/40 border border-white/10 rounded-xl p-5">
+            <div class="text-hubOrange font-bold text-lg mb-2">Problem A</div>
+            <h3 class="font-semibold text-white mb-2">"I don't know how to do it."</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              You don't need to be a born salesperson. We provide built-in scripts, proven phone frameworks, and video training to make every call simple and predictable.
+            </p>
+          </div>
+
+          <div class="bg-black/40 border border-white/10 rounded-xl p-5">
+            <div class="text-hubOrange font-bold text-sm font-bold text-hubOrange text-lg mb-2">Problem B</div>
+            <h3 class="font-semibold text-white mb-2">"I don't have the right tools."</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              No more messy spreadsheets or buying expensive lead lists. Scout gives you prospect data, one-click dialing, notes, and callback alerts in one clean workspace.
+            </p>
+          </div>
         </div>
 
-        <p class="text-xs text-gray-300 mb-6">Full access to the Walkthrough Scout Chrome Extension, directory scraper, pricing calculator, and master sales video training.</p>
-        
+        <div class="border-t border-white/10 pt-8 max-w-2xl mx-auto">
+          <h3 class="text-xl font-semibold text-white mb-3">
+            We solved both. Now ask yourself:
+          </h3>
+          <p class="text-gray-300 text-base leading-relaxed mb-6">
+            What would change for your commercial cleaning business if you doubled or tripled the number of walkthroughs you booked every month? What would that added revenue do for your life?
+          </p>
+
+          <p class="text-sm text-gray-400 mb-6">
+            If you have any doubts or want to see how this fits your market, let's talk.
+          </p>
+
+          <a
+            href="https://calendly.com/seamlessoutbound"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold shadow-lg shadow-hubOrange/20"
+          >
+            Book a Time & Let's Talk
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-16 border-t border-white/10 max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">
+        Your Prospecting Workspace. $49 a Month.
+      </h2>
+
+      <p class="text-gray-300 text-base leading-relaxed mb-8">
+        No separate lead-list subscription required.
+        Free onboarding included.
+      </p>
+
+      <div class="p-8 rounded-2xl border border-hubOrange/40 bg-black/40 backdrop-blur shadow-2xl">
+
+        <span class="text-xs uppercase tracking-wider text-hubOrange font-bold mb-3 block">
+          Walkthrough Scout Monthly License
+        </span>
+
+        <div class="text-5xl font-bold text-white mb-3">
+          $49<span class="text-base font-normal text-gray-400">/month</span>
+        </div>
+
+        <p class="text-sm text-gray-400 mb-7">
+          Cancel anytime.
+        </p>
+
+        <ul class="text-left text-sm text-gray-300 space-y-3 mb-8 max-w-md mx-auto">
+          <li>✓ Walkthrough Scout Chrome extension</li>
+          <li>✓ Business-directory contact capture</li>
+          <li>✓ Side-panel calling workflow, notes, and callback reminders</li>
+          <li>✓ Sprint timers and dial tracking</li>
+          <li>✓ Pricing calculator</li>
+          <li>✓ Sales video training</li>
+          <li>✓ Free 15-minute onboarding with Floyd</li>
+        </ul>
+
         <a
           href="https://buy.stripe.com/3cIdR9bvQ3A01rk0XF6AM01"
           target="_blank"
+          rel="noopener noreferrer"
           class="block w-full py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold shadow-lg shadow-hubOrange/20"
         >
-          Subscribe Now — $49/mo
+          Get Walkthrough Scout — $49/mo
         </a>
+
+        <p class="text-xs text-gray-400 mt-4 leading-relaxed">
+          Optional one-on-one sales coaching is available separately inside
+          the app. It is not required to use Scout.
+        </p>
       </div>
     </section>
 
-    <!-- Resources & Coaching Section -->
+    <!-- Onboarding & Training -->
     <section id="resources" class="py-16 border-t border-white/10">
-      <h2 class="text-2xl font-semibold mb-2 text-center">Resources & Sales Training</h2>
-      <p class="text-gray-300 text-sm mb-12 text-center max-w-xl mx-auto">
-        Need help setting up your app or want to sharpen your phone script to close more walkthroughs? We've got you covered.
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-center">
+        You Don't Have to Figure It Out Alone.
+      </h2>
+
+      <p class="text-gray-300 text-base leading-relaxed mb-10 text-center max-w-2xl mx-auto">
+        Get help with the tool first. Add personal sales coaching later
+        if you want more support with your calling approach.
       </p>
 
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        
-        <div class="p-6 rounded-xl border border-white/10 bg-black/20 flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-medium mb-2 text-hubOrange">Free 15-Minute Onboarding</h3>
-            <p class="text-xs text-gray-400 mb-4">Have questions about how the app works or need help getting set up? Book a free 1-on-1 onboarding session.</p>
-          </div>
-          <a
-            href="https://calendly.com/seamlessoutbound" 
-            target="_blank"
-            class="inline-block text-center py-2.5 px-4 rounded-full border border-white/20 hover:bg-white/10 transition text-xs font-medium"
-          >
-            🎓 Book Free 15-Min Onboarding Call
-          </a>
-        </div>
 
         <div class="p-6 rounded-xl border border-white/10 bg-black/20 flex flex-col justify-between">
           <div>
-            <h3 class="text-lg font-medium mb-2 text-hubOrange">Paid 1-on-1 Sales Training</h3>
-            <p class="text-xs text-gray-400 mb-4">Master cold calling, permission-based introductions, objection handling, and pitching Proof of Service with 1-on-1 coaching.</p>
+            <span class="text-xs uppercase tracking-wider text-hubOrange font-bold">
+              Included
+            </span>
+
+            <h3 class="text-lg font-semibold mt-2 mb-3">
+              Free 15-Minute Onboarding With Floyd
+            </h3>
+
+            <p class="text-sm text-gray-400 leading-relaxed mb-6">
+              Need help getting set up or understanding the workflow?
+              Book a one-on-one onboarding session so you can get your
+              questions answered and start using Scout.
+            </p>
           </div>
+
           <a
-            href="https://calendly.com/seamlessoutbound" 
+            href="https://calendly.com/seamlessoutbound"
             target="_blank"
-            class="inline-block text-center py-2.5 px-4 rounded-full bg-hubOrange hover:bg-orange-600 text-white transition text-xs font-bold shadow-lg shadow-hubOrange/20"
+            rel="noopener noreferrer"
+            class="inline-block text-center py-2.5 px-4 rounded-full border border-white/20 hover:bg-white/10 transition text-sm font-medium"
           >
-            🚀 Book 1-on-1 Sales Coaching
+            Book Free Onboarding
           </a>
+        </div>
+
+        <div class="p-6 rounded-xl border border-white/10 bg-black/20">
+          <span class="text-xs uppercase tracking-wider text-hubOrange font-bold">
+            Optional
+          </span>
+
+          <h3 class="text-lg font-semibold mt-2 mb-3">
+            One-on-One Sales Coaching
+          </h3>
+
+          <p class="text-sm text-gray-400 leading-relaxed mb-4">
+            Want personal help with introductions, your phone script,
+            objection handling, or asking for the walkthrough?
+            Optional paid coaching is available inside the app.
+          </p>
+
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Start with Scout and the included video training.
+            Add individual coaching only if you want it.
+          </p>
         </div>
 
       </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faq" class="py-16 border-t border-white/10">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-center">
+        A Few Questions Before You Start
+      </h2>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+
+        <details class="rounded-xl border border-white/10 bg-black/20 p-5">
+          <summary class="cursor-pointer font-medium">
+            Does Scout book appointments automatically?
+          </summary>
+          <p class="text-sm text-gray-400 leading-relaxed mt-4">
+            No. You or your caller make the calls and have the conversations.
+            Scout helps organize the prospecting, calling, notes, and
+            follow-up around that work.
+          </p>
+        </details>
+
+        <details class="rounded-xl border border-white/10 bg-black/20 p-5">
+          <summary class="cursor-pointer font-medium">
+            Do I need to buy a separate lead list?
+          </summary>
+          <p class="text-sm text-gray-400 leading-relaxed mt-4">
+            No separate lead-list subscription is required for the directory
+            prospecting workflow shown in the demonstration. You identify
+            businesses to contact and use Scout to capture available details
+            and manage your outreach.
+          </p>
+        </details>
+
+        <details class="rounded-xl border border-white/10 bg-black/20 p-5">
+          <summary class="cursor-pointer font-medium">
+            Are the businesses already looking for cleaning services?
+          </summary>
+          <p class="text-sm text-gray-400 leading-relaxed mt-4">
+            Not necessarily. A business listing is a prospect, not a confirmed
+            cleaning enquiry. Your outreach helps you find out who handles
+            cleaning, whether there is a need, and when to follow up.
+          </p>
+        </details>
+
+        <!-- Tech & Automation Services Link pointing to internal services page -->
+        <details class="rounded-xl border border-white/10 bg-black/20 p-5">
+          <summary class="cursor-pointer font-medium">
+            Do you help with tech, automation, or custom web development?
+          </summary>
+          <p class="text-sm text-gray-400 leading-relaxed mt-4">
+            Yes. Beyond Walkthrough Scout, Seamless Outbound helps cleaning companies build out full technical infrastructure—getting your tools to talk to each other, automating follow-ups, setting up custom web development, graphic design, and more. 
+            <a href="services.html" class="text-hubOrange underline hover:text-orange-300 font-medium">
+              Click here to explore our full services page.
+            </a>
+          </p>
+        </details>
+
+        <details class="rounded-xl border border-white/10 bg-black/20 p-5">
+          <summary class="cursor-pointer font-medium">
+            Is personal sales coaching required?
+          </summary>
+          <p class="text-sm text-gray-400 leading-relaxed mt-4">
+            No. Your subscription includes sales video training and free
+            onboarding. Individual paid coaching is optional and available
+            through the app.
+          </p>
+        </details>
+
+        <details class="rounded-xl border border-white/10 bg-black/20 p-5">
+          <summary class="cursor-pointer font-medium">
+            Can I see how it works before subscribing?
+          </summary>
+          <p class="text-sm text-gray-400 leading-relaxed mt-4">
+            Yes.
+            <a href="#demo" class="text-hubOrange underline hover:text-orange-300">
+              Watch the demonstration above
+            </a>
+            to see the product and calling approach in action.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 border-t border-white/10 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">
+        Make Your Next Prospecting Session More Organized.
+      </h2>
+
+      <p class="text-gray-300 text-base leading-relaxed max-w-2xl mx-auto mb-7">
+        Find local business prospects, keep your calls and follow-ups
+        together, and get help getting started.
+      </p>
+
+      <a
+        href="https://buy.stripe.com/3cIdR9bvQ3A01rk0XF6AM01"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block px-8 py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-bold shadow-lg shadow-hubOrange/20"
+      >
+        Get Walkthrough Scout — $49/mo
+      </a>
+
+      <p class="text-xs text-gray-400 mt-4">
+        Free onboarding included. Cancel anytime.
+      </p>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10 py-8 text-xs text-gray-400 text-center">
-    <p class="mb-2">© <script>document.write(new Date().getFullYear());</script> Seamless Outbound LLC — Built for Commercial Cleaning Outbound Sales</p>
-    <div class="flex justify-center items-center gap-6 mt-4">
-      <a href="pricing.html" class="text-gray-400 hover:text-hubOrange transition underline">Pricing</a>
-      <a href="terms.html" class="text-gray-400 hover:text-hubOrange transition underline">Terms of Service</a>
-      <a href="privacy.html" class="text-gray-400 hover:text-hubOrange transition underline">Privacy Policy</a>
-      <a href="refunds.html" class="text-gray-400 hover:text-hubOrange transition underline">Refund Policy</a>
+  <footer class="border-t border-white/10 py-10 text-xs text-gray-400 text-center">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="mb-3">
+        © <span id="copyright-year"></span> Seamless Outbound LLC — Walkthrough Scout Product
+      </p>
+
+      <!-- Internal Agency Link pointing to your services page -->
+      <p class="text-gray-300 mb-5 font-medium">
+        Need custom Automation, Web Development, UX, or Graphic Design? 
+        <a href="services.html" class="text-hubOrange hover:underline font-bold">Explore Our Services</a>
+      </p>
+
+      <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+        <a href="services.html" class="hover:text-hubOrange transition underline">Services</a>
+        <a href="blog.html" class="hover:text-hubOrange transition underline">Blog</a>
+        <a href="pricing.html" class="hover:text-hubOrange transition underline">Pricing</a>
+        <a href="terms.html" class="hover:text-hubOrange transition underline">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-hubOrange transition underline">Privacy Policy</a>
+        <a href="refunds.html" class="hover:text-hubOrange transition underline">Refund Policy</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Mobile Menu -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -315,6 +716,16 @@
     }
 
     menuBtn.addEventListener('click', toggleMenu);
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.getElementById('copyright-year').textContent =
+      new Date().getFullYear();
   </script>
 
 </body>
