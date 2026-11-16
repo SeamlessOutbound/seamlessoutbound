@@ -193,23 +193,27 @@
         </p>
       </div>
 
-      <!-- Placeholder Hero Image: Replace URL next once you generate your AI receptionist hero image -->
+      <!-- Hero Image -->
       <div class="relative">
         <div
           aria-hidden="true"
-          class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-blue-600/30 blur-3xl opacity-50"
+          class="absolute -inset-10 bg-gradient-to-tr from-hubOrange/30 via-transparent to-blue-600/30 blur-3xl opacity-50 pointer-events-none"
         ></div>
-        <div class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-2 shadow-2xl">
+        <div
+          class="relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-2 shadow-2xl cursor-pointer group"
+          onclick="openImageModal('photos/hero2.webp', 'AI voice and chat receptionist handling cleaning leads')"
+        >
           <img
             src="photos/hero2.webp"
-            alt="Placeholder preview of AI voice and chat receptionist handling cleaning leads"
-            class="rounded-lg w-full h-auto shadow-inner"
+            alt="AI voice and chat receptionist handling cleaning leads"
+            class="rounded-lg w-full h-auto shadow-inner transition-transform duration-300 group-hover:scale-[1.02]"
             fetchpriority="high"
           />
+          <div class="mt-2 flex items-center justify-between px-1 text-xs text-gray-400">
+            <span>Click image to view full size</span>
+            <span class="text-hubOrange font-bold">🔍 Expand</span>
+          </div>
         </div>
-        <p class="text-xs text-gray-400 mt-2 text-center">
-          Placeholder image — swap with your custom hero graphic next.
-        </p>
       </div>
     </section>
 
@@ -248,11 +252,11 @@
           <div class="flex flex-col items-center">
             <div
               class="relative cursor-pointer overflow-hidden rounded-2xl bg-black border border-white/15 p-2 shadow-2xl group w-full max-w-[440px]"
-              onclick="openImageModal('https://placehold.co/880x760/0f172a/FF7A59?text=PLACEHOLDER:+AI+Chat+%26+Call+Flow')"
+              onclick="openImageModal('https://placehold.co/880x760/0f172a/FF7A59?text=PLACEHOLDER:+AI+Chat+%26+Call+Flow', 'AI chat and voice call receptionist conversation')"
             >
               <img
                 src="https://placehold.co/880x760/0f172a/FF7A59?text=PLACEHOLDER:+AI+Chat+%26+Call+Flow"
-                alt="Placeholder preview of AI chat and voice call receptionist conversation"
+                alt="AI chat and voice call receptionist conversation"
                 class="w-full h-auto object-cover rounded-xl transform transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
               />
@@ -378,19 +382,23 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
-          <!-- Placeholder Scout Image: Replace URL next with your generated Walkthrough Scout graphic -->
+          <!-- Walkthrough Scout Workspace Image -->
           <div>
-            <div class="rounded-2xl border border-white/10 bg-black/50 p-2 shadow-xl">
+            <div
+              class="rounded-2xl border border-white/10 bg-black/50 p-2 shadow-xl cursor-pointer group"
+              onclick="openImageModal('photos/heropic.png', 'Walkthrough Scout browser prospecting workspace')"
+            >
               <img
-                src="https://placehold.co/900x600/0f172a/FF7A59?text=PLACEHOLDER:+Walkthrough+Scout+Workspace"
-                alt="Placeholder preview of Walkthrough Scout browser prospecting workspace"
-                class="rounded-lg w-full h-auto"
+                src="photos/heropic.png"
+                alt="Walkthrough Scout browser prospecting workspace"
+                class="rounded-lg w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
                 loading="lazy"
               />
+              <div class="mt-2 flex items-center justify-between px-1 text-xs text-gray-400">
+                <span>Click image to view full size</span>
+                <span class="text-hubOrange font-bold">🔍 Expand</span>
+              </div>
             </div>
-            <p class="text-xs text-gray-400 mt-2 text-center">
-              Placeholder image — swap with your Walkthrough Scout visual next.
-            </p>
           </div>
 
           <div class="space-y-5 text-left">
@@ -554,7 +562,7 @@
     class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
     onclick="closeImageModal()"
   >
-    <div class="relative max-w-3xl w-full" onclick="event.stopPropagation()">
+    <div class="relative max-w-4xl w-full" onclick="event.stopPropagation()">
       <button
         type="button"
         onclick="closeImageModal()"
@@ -567,7 +575,7 @@
         id="modal-img"
         src=""
         alt="Enlarged preview"
-        class="w-full h-auto rounded-2xl border border-white/15 shadow-2xl"
+        class="w-full max-h-[85vh] object-contain rounded-2xl border border-white/15 shadow-2xl"
       />
     </div>
   </div>
@@ -584,19 +592,30 @@
 
     document.getElementById("menu-btn")?.addEventListener("click", toggleMenu);
 
-    function openImageModal(src) {
+    function openImageModal(src, altText = "Enlarged preview") {
       const modal = document.getElementById("image-modal");
       const img = document.getElementById("modal-img");
-      if (!modal || !img) return;
+      if (!modal || !img || !src) return;
       img.src = src;
+      img.alt = altText;
       modal.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden");
     }
 
     function closeImageModal() {
       const modal = document.getElementById("image-modal");
+      const img = document.getElementById("modal-img");
       if (!modal) return;
       modal.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+      if (img) img.src = "";
     }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeImageModal();
+      }
+    });
   </script>
 </body>
 </html>
