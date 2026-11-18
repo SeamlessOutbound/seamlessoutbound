@@ -100,19 +100,20 @@
 
       <!-- Desktop Navigation -->
       <nav aria-label="Main navigation" class="hidden md:flex items-center gap-6 text-sm text-gray-300">
-        <a href="#demo" class="hover:text-hubOrange transition">Video</a>
+        <a href="#demo" class="hover:text-hubOrange transition">Watch Video</a>
         <a href="#habit" class="hover:text-hubOrange transition">The 30-Min Routine</a>
         <a href="#features" class="hover:text-hubOrange transition">Features & Benefits</a>
-        <a href="https://calendly.com/walkthroughscout" target="_blank" rel="noopener noreferrer" class="hover:text-hubOrange transition">Demo Call</a>
         <a href="#pricing" class="hover:text-hubOrange transition">Pricing</a>
         <a href="#faq" class="hover:text-hubOrange transition">FAQ</a>
       </nav>
 
       <a
-        href="#pricing"
+        href="https://calendly.com/walkthroughscout"
+        target="_blank"
+        rel="noopener noreferrer"
         class="hidden md:inline-flex shrink-0 px-5 py-2.5 rounded-full bg-hubOrange hover:bg-orange-600 transition shadow-lg shadow-hubOrange/20 text-sm font-extrabold text-white"
       >
-        Get Walkthrough Scout
+        Demo Call
       </a>
 
       <!-- Mobile Menu Button -->
@@ -141,17 +142,26 @@
       aria-label="Mobile navigation"
       class="hidden md:hidden absolute top-full left-0 w-full bg-soDark/95 border-b border-white/10 backdrop-blur px-6 py-6 space-y-4 shadow-2xl"
     >
-      <a href="#demo" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Watch A Video</a>
-      <a href="#habit" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">The 30-Min Routine</a>
-      <a href="#features" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Features & Benefits</a>
-      <a href="https://calendly.com/walkthroughscout" target="_blank" rel="noopener noreferrer" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Demo Call</a>
-      <a href="#pricing" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">Pricing</a>
-      <a href="#faq" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu()">FAQ</a>
-      <div class="pt-2">
+      <a href="#demo" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu(false)">Watch Video</a>
+      <a href="#habit" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu(false)">The 30-Min Routine</a>
+      <a href="#features" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu(false)">Features & Benefits</a>
+      <a href="#pricing" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu(false)">Pricing</a>
+      <a href="#faq" class="block text-gray-300 hover:text-hubOrange transition" onclick="toggleMenu(false)">FAQ</a>
+
+      <div class="pt-2 space-y-3">
+        <a
+          href="https://calendly.com/walkthroughscout"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full text-center px-4 py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-extrabold text-white"
+          onclick="toggleMenu(false)"
+        >
+          Demo Call
+        </a>
         <a
           href="#pricing"
-          class="block w-full text-center px-4 py-3 rounded-full bg-hubOrange hover:bg-orange-600 transition text-sm font-extrabold text-white"
-          onclick="toggleMenu()"
+          class="block w-full text-center px-4 py-3 rounded-full border border-white/20 hover:bg-white/10 transition text-sm font-bold text-gray-200"
+          onclick="toggleMenu(false)"
         >
           Get Walkthrough Scout
         </a>
@@ -191,7 +201,7 @@
             href="#demo"
             class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 transition text-base font-semibold text-center text-gray-200"
           >
-            ▶ Watch A Demo
+            ▶ Watch Video
           </a>
         </div>
 
@@ -250,7 +260,7 @@
       </span>
 
       <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">
-        Watch a Demo.
+        Watch Video.
       </h2>
 
       <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -729,15 +739,27 @@
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    function toggleMenu() {
-      mobileMenu.classList.toggle('hidden');
-      menuBtn.setAttribute(
-        'aria-expanded',
-        String(!mobileMenu.classList.contains('hidden'))
-      );
+    function toggleMenu(forceState) {
+      if (!menuBtn || !mobileMenu) return;
+      const shouldOpen =
+        typeof forceState === 'boolean'
+          ? forceState
+          : mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', !shouldOpen);
+      menuBtn.setAttribute('aria-expanded', String(shouldOpen));
     }
 
-    menuBtn.addEventListener('click', toggleMenu);
+    menuBtn?.addEventListener('click', function(event) {
+      event.stopPropagation();
+      toggleMenu(false);
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!mobileMenu || !menuBtn || mobileMenu.classList.contains('hidden')) return;
+      if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+        toggleMenu(false);
+      }
+    });
 
     function openImageModal(src, altText) {
       const modal = document.getElementById('image-modal');
