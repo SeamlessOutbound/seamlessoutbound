@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Free live Saturday workshop for cleaning business owners: learn how to book commercial walkthroughs in ~2 hours a week using a low-pressure routine, Walkthrough Scout live, and real live calls."
+  />
+  <title>Free Saturday Workshop: How Cleaning Owners Book Commercial Walkthroughs | Walkthrough Scout</title>
+
+  <!-- Load Montserrat for display headings and Inter for body copy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Load Tailwind CSS and configure brand palette and typography tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navyDeep: "#0B132B",
+            navyCard: "#111D3E",
+            cobalt: "#2563EB",
+            scoutOrange: "#FF7A59",
+            ctaAmber: "#F59E0B",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+            display: ["Montserrat", "Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Base deep navy canvas and display heading typography */
+    body {
+      background-color: #0B132B;
+      color: #F8FAFC;
+    }
+    h1, h2, h3, .font-display {
+      font-family: "Montserrat", "Inter", sans-serif;
+    }
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 2px solid #F59E0B;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-scoutOrange selection:text-white">
+
+  <!-- Top Auto-Updating Countdown & Workshop Date Bar -->
+  <div class="bg-gradient-to-r from-cobalt via-blue-700 to-indigo-800 border-b border-white/15 py-2.5 px-4 text-center text-xs sm:text-sm font-semibold">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+      <span>
+        LIVE WORKSHOP: <strong id="banner-date-text" class="text-amber-300">Next Saturday at 10:00 AM MST / 12:00 PM EST</strong>
+      </span>
+      <span class="hidden sm:inline text-white/40" aria-hidden="true">|</span>
+      <div
+        id="countdown-timer"
+        aria-label="Workshop countdown timer"
+        class="inline-flex items-center gap-1.5 font-mono font-bold text-white bg-black/35 px-3 py-1 rounded-full"
+      >
+        <span><span id="cd-days">00</span>d</span>
+        <span>:</span>
+        <span><span id="cd-hours">00</span>h</span>
+        <span>:</span>
+        <span><span id="cd-mins">00</span>m</span>
+        <span>:</span>
+        <span><span id="cd-secs">00</span>s</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal Sticky Header -->
+  <header class="border-b border-white/10 bg-navyDeep/95 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+      <!-- Walkthrough Scout SVG Logo Mark -->
+      <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+        <svg width="34" height="34" viewBox="0 0 128 128" class="shrink-0" aria-hidden="true">
+          <rect x="8" y="8" width="112" height="112" rx="24" fill="#0f172a" stroke="#334155" stroke-width="6" />
+          <path
+            d="M 32 84 C 32 50, 56 40, 60 56 C 64 72, 38 78, 48 92 C 58 102, 96 98, 96 64 C 60 90, 96 90, 96 32"
+            fill="none"
+            stroke="#FF7A59"
+            stroke-width="12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span class="font-display font-black text-sm sm:text-base tracking-tight whitespace-nowrap">
+          <span class="text-white">WALKTHROUGH</span><span class="text-scoutOrange">SCOUT</span>
+        </span>
+      </a>
+
+      <!-- Navigation & Primary Seat CTA -->
+      <div class="flex items-center gap-4 sm:gap-6">
+        <a href="index.html" class="text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition py-2">
+          Main Site
+        </a>
+        <button
+          type="button"
+          onclick="openRegModal()"
+          class="px-4 sm:px-5 py-2.5 rounded-xl bg-ctaAmber hover:bg-amber-400 text-slate-950 font-extrabold text-xs sm:text-sm transition shadow-lg cursor-pointer"
+        >
+          Save My Seat
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Squeeze Page Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16">
+    <!-- Hero Headline & Value Proposition -->
+    <div class="text-center max-w-4xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4">
+        Free Live Saturday Workshop For Cleaning Business Owners
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight text-white mb-4">
+        How Cleaning Owners Book More <span class="text-scoutOrange">Commercial Walkthroughs</span> Without Awkward Cold Calling
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Join Floyd live on <span id="hero-date-text" class="text-white font-semibold">Saturday</span> to see a calm, low-pressure <strong class="text-white">2-hour-a-week</strong> outreach routine, watch <strong class="text-white">Walkthrough Scout live</strong> in the browser, and hear <strong class="text-white">real live calls</strong>.
+      </p>
+    </div>
+
+    <!-- Two-Column Squeeze Area: Video Left + Constant Contact / Opt-In Right -->
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      <!-- Left Column: Talking-Head Video Container & Script Toggle -->
+      <div class="lg:col-span-7">
+        <div id="video-wrapper" class="rounded-2xl border border-white/15 bg-navyCard p-3 sm:p-4 shadow-2xl">
+          <!-- PASTE YOUR TALKING-HEAD VIDEO IFRAME INSIDE #video-wrapper WHEN READY -->
+          <div
+            role="button"
+            tabindex="0"
+            onclick="toggleScriptPreview()"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleScriptPreview();}"
+            class="cursor-pointer rounded-xl bg-slate-950/90 border border-dashed border-white/20 aspect-video flex flex-col items-center justify-center p-6 text-center hover:border-scoutOrange/70 transition"
+          >
+            <div class="w-16 h-16 rounded-full bg-scoutOrange/20 border border-scoutOrange flex items-center justify-center text-scoutOrange text-2xl font-black mb-4">
+              ▶
+            </div>
+            <p class="font-display font-extrabold text-lg sm:text-xl text-white mb-1">
+              60-Second Workshop Preview Video Slot
+            </p>
+            <p class="text-xs sm:text-sm text-slate-400 max-w-md mb-3">
+              Drop your YouTube, Vimeo, or Wistia iframe into <code class="text-amber-300">#video-wrapper</code>—or click here to preview the 60-second talking-head script.
+            </p>
+            <span class="text-xs font-bold text-amber-300 underline">Click to View / Hide 60s Script</span>
+          </div>
+
+          <div
+            id="script-preview"
+            class="hidden mt-4 p-4 sm:p-5 rounded-xl bg-slate-950/85 border border-white/10 text-xs sm:text-sm text-slate-300 space-y-2.5 leading-relaxed"
+          >
+            <p class="font-bold text-scoutOrange uppercase text-xs tracking-wider">60-Second Talking-Head Script</p>
+            <p>"If you run a cleaning company and want steadier commercial walkthroughs without feeling pushy on the phone, join me this Saturday morning."</p>
+            <p>"I'll show you how to fit a simple, low-pressure outreach routine into about two hours a week, pull up Walkthrough Scout live on screen, and make real live calls so you can hear how straightforward it is."</p>
+            <p>"Grab your free spot on the right and I'll send over the workshop link and reminder."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Constant Contact Form Slot & Fallback Opt-In Form -->
+      <div class="lg:col-span-5">
+        <div class="rounded-2xl border-2 border-ctaAmber/75 bg-navyCard p-6 sm:p-7 shadow-2xl">
+          <div class="text-center mb-5">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-ctaAmber">Reserve Your Free Spot</span>
+            <h2 class="text-xl sm:text-2xl font-black text-white mt-1">
+              Get the Live Workshop Link &amp; Reminders
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">
+              Session date: <strong id="form-date-text" class="text-amber-300">Next Saturday</strong>
+            </p>
+          </div>
+
+          <!-- PASTE YOUR CONSTANT CONTACT INLINE FORM CODE INSIDE #constant-contact-embed-slot -->
+          <div id="constant-contact-embed-slot">
+            <form onsubmit="handleSqueezeSubmit(event)" class="space-y-4">
+              <div>
+                <label for="optin-first-name" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                  First Name
+                </label>
+                <input
+                  id="optin-first-name"
+                  type="text"
+                  required
+                  placeholder="Your first name"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-ctaAmber text-sm"
+                />
+              </div>
+              <div>
+                <label for="optin-email" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                  Email Address
+                </label>
+                <input
+                  id="optin-email"
+                  type="email"
+                  required
+                  placeholder="you@yourcleaningcompany.com"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-ctaAmber text-sm"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full py-4 px-6 rounded-xl bg-ctaAmber hover:bg-amber-400 text-slate-950 font-display font-black text-sm sm:text-base uppercase tracking-wide shadow-xl transition transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                Save My Free Workshop Seat &rarr;
+              </button>
+              <p id="optin-status" class="hidden text-xs text-emerald-300 font-semibold text-center pt-1"></p>
+            </form>
+          </div>
+
+          <p class="text-[11px] text-slate-400 text-center mt-4">
+            100% free live workshop. No heavy slide decks—just low-pressure outreach, Walkthrough Scout live, and real calls.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3-Secret / False-Belief Breaker Cards -->
+    <section class="mt-20 pt-14 border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-scoutOrange">What You'll Discover Inside</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white mt-2">
+          3 Shifts That Make Commercial Walkthroughs Feel Achievable
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-white/10 bg-navyCard p-6">
+          <div class="text-xs font-black uppercase tracking-wider text-ctaAmber mb-2">Secret #1 &bull; Fear Removal</div>
+          <h3 class="text-lg font-extrabold text-white mb-2">Low-Pressure Outreach Beats Awkward Scripts</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Remove cold-calling dread with a calm, respectful conversation so you—or a part-time caller—can reach out without sounding scripted or pushy.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-navyCard p-6">
+          <div class="text-xs font-black uppercase tracking-wider text-ctaAmber mb-2">Secret #2 &bull; ~2-Hour Routine</div>
+          <h3 class="text-lg font-extrabold text-white mb-2">Fit Prospecting Around Active Cleaning Jobs</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Follow a practical ~2-hour-a-week rhythm designed around crews, house cleanings, and job sites—even if most of your current revenue is residential.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-navyCard p-6">
+          <div class="text-xs font-black uppercase tracking-wider text-ctaAmber mb-2">Secret #3 &bull; Live Walkthrough &amp; Calls</div>
+          <h3 class="text-lg font-extrabold text-white mb-2">Watch Walkthrough Scout &amp; Real Calls Live</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            See Walkthrough Scout live in the browser for tracking commercial prospects and callbacks, and listen in on real live calls instead of sitting through fluff slides.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Host Bio for Floyd + Optional 1-on-1 / Custom Services Block -->
+    <section class="mt-16 pt-14 border-t border-white/10 grid lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-4">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-scoutOrange">Your Host</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white">
+          Built by Floyd &mdash; Hands-On Outreach &amp; Practical Tools
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+          I'm Floyd, creator of Walkthrough Scout. With years of hands-on outbound sales and appointment-setting experience working alongside local service and cleaning workflows, I focus on helping cleaning owners book commercial walkthroughs through a simple browser workspace and a repeatable, low-friction calling routine.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 rounded-2xl border border-white/15 bg-navyCard p-6 space-y-3">
+        <p class="text-xs font-extrabold uppercase tracking-wider text-emerald-300">Optional 1-on-1 Help &amp; Custom Services</p>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Our Saturday workshop focuses on commercial walkthrough outreach and Walkthrough Scout. If you ever want 1-on-1 guidance or custom help with <strong class="text-white">web development, workflow automation, AI chatbots, or graphics</strong>, you can book a time to talk directly.
+        </p>
+        <a
+          href="https://calendly.com/walkthroughscout"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block px-5 py-3 rounded-xl bg-cobalt hover:bg-blue-500 text-white font-bold text-xs sm:text-sm transition"
+        >
+          Book a 1-on-1 Call on Calendly &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="border-t border-white/10 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span>&copy; Walkthrough Scout. All rights reserved.</span>
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <a href="index.html" class="hover:text-scoutOrange transition">Home</a>
+        <a href="services.html" class="hover:text-scoutOrange transition">Services</a>
+        <a href="privacy.html" class="hover:text-scoutOrange transition">Privacy</a>
+        <a href="https://calendly.com/walkthroughscout" target="_blank" rel="noopener noreferrer" class="hover:text-scoutOrange transition">Calendly</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Seat Reservation Modal -->
+  <div
+    id="reg-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="reg-modal-title"
+    class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+    onclick="closeRegModal()"
+  >
+    <div class="bg-navyCard border border-white/15 rounded-2xl max-w-md w-full p-6 shadow-2xl" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between mb-3">
+        <h3 id="reg-modal-title" class="font-display font-extrabold text-lg text-white">Reserve Your Saturday Spot</h3>
+        <button
+          type="button"
+          onclick="closeRegModal()"
+          aria-label="Close registration modal"
+          class="p-2 rounded-lg text-slate-400 hover:text-white text-sm font-bold cursor-pointer"
+        >
+          &#10005;
+        </button>
+      </div>
+      <p class="text-xs text-slate-300 mb-4">
+        Workshop date: <strong id="modal-date-text" class="text-amber-300">Next Saturday</strong>
+      </p>
+      <form onsubmit="handleModalSubmit(event)" class="space-y-3">
+        <input
+          type="text"
+          required
+          aria-label="First Name"
+          placeholder="First Name"
+          class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-white/15 text-white text-sm focus:outline-none focus:border-ctaAmber"
+        />
+        <input
+          type="email"
+          required
+          aria-label="Email Address"
+          placeholder="Email Address"
+          class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-white/15 text-white text-sm focus:outline-none focus:border-ctaAmber"
+        />
+        <button
+          type="submit"
+          class="w-full py-3 rounded-xl bg-ctaAmber hover:bg-amber-400 text-slate-950 font-extrabold text-sm transition cursor-pointer"
+        >
+          Save My Seat &rarr;
+        </button>
+        <p id="modal-status" class="hidden text-xs text-emerald-300 font-semibold text-center pt-1"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Countdown Date Resolution, Timer Ticker, Script Toggle & Modal Controls -->
+  <script>
+    /**
+     * Single webinar date configuration:
+     * - Set to `null` to automatically target the upcoming Saturday at 10:00 AM MST / 12:00 PM EST.
+     * - Or set to a specific ISO date string (e.g., "2026-11-28T10:00:00-07:00") to lock in a target Saturday.
+     */
+    const TARGET_WEBINAR_DATE = null;
+
+    /**
+     * Resolves the target Saturday Date object for the countdown and date labels.
+     * @returns {Date} Target Saturday workshop date/time
+     */
+    function getTargetWorkshopDate() {
+      try {
+        if (TARGET_WEBINAR_DATE) {
+          const parsed = new Date(TARGET_WEBINAR_DATE);
+          if (!Number.isNaN(parsed.getTime())) {
+            return parsed;
+          }
+        }
+        const now = new Date();
+        const target = new Date(now);
+        const dayOfWeek = now.getDay(); // 0 = Sunday, 6 = Saturday
+        const daysUntilSaturday = (6 - dayOfWeek + 7) % 7;
+        target.setDate(now.getDate() + daysUntilSaturday);
+        target.setHours(10, 0, 0, 0);
+        if (target <= now) {
+          target.setDate(target.getDate() + 7);
+        }
+        return target;
+      } catch (error) {
+        console.error("Failed to calculate workshop date:", error);
+        return new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+      }
+    }
+
+    const workshopDate = getTargetWorkshopDate();
+    const formattedDate = workshopDate.toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+
+    // Synchronize all date displays across banner, hero, form, and modal
+    const bannerEl = document.getElementById("banner-date-text");
+    const heroDateEl = document.getElementById("hero-date-text");
+    const formDateEl = document.getElementById("form-date-text");
+    const modalDateEl = document.getElementById("modal-date-text");
+
+    if (bannerEl) bannerEl.textContent = `${formattedDate} \u2022 10:00 AM MST / 12:00 PM EST`;
+    if (heroDateEl) heroDateEl.textContent = formattedDate;
+    if (formDateEl) formDateEl.textContent = formattedDate;
+    if (modalDateEl) modalDateEl.textContent = formattedDate;
+
+    /**
+     * Updates the live countdown timer (days, hours, minutes, seconds).
+     */
+    function updateCountdown() {
+      try {
+        const diff = Math.max(0, workshopDate.getTime() - Date.now());
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+
+        const pad = (n) => String(n).padStart(2, "0");
+        const daysEl = document.getElementById("cd-days");
+        const hoursEl = document.getElementById("cd-hours");
+        const minsEl = document.getElementById("cd-mins");
+        const secsEl = document.getElementById("cd-secs");
+
+        if (daysEl) daysEl.textContent = pad(days);
+        if (hoursEl) hoursEl.textContent = pad(hours);
+        if (minsEl) minsEl.textContent = pad(mins);
+        if (secsEl) secsEl.textContent = pad(secs);
+      } catch (error) {
+        console.error("Error updating countdown timer:", error);
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /**
+     * Toggles visibility of the 60-second talking-head script preview.
+     */
+    function toggleScriptPreview() {
+      document.getElementById("script-preview")?.classList.toggle("hidden");
+    }
+
+    /**
+     * Opens the seat reservation modal and locks background scroll.
+     */
+    function openRegModal() {
+      const modal = document.getElementById("reg-modal");
+      if (!modal) return;
+      modal.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    /**
+     * Closes the seat reservation modal and restores background scroll.
+     */
+    function closeRegModal() {
+      const modal = document.getElementById("reg-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    /**
+     * Handles fallback opt-in submission when Constant Contact embed is not yet swapped in.
+     * @param {Event} event - Form submission event
+     */
+    function handleSqueezeSubmit(event) {
+      event.preventDefault();
+      const status = document.getElementById("optin-status");
+      if (status) {
+        status.textContent = `You're on the list for ${formattedDate}! Paste your Constant Contact form code in #constant-contact-embed-slot for live list capture.`;
+        status.classList.remove("hidden");
+      }
+    }
+
+    /**
+     * Handles modal reservation submission feedback.
+     * @param {Event} event - Modal form submission event
+     */
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const status = document.getElementById("modal-status");
+      if (status) {
+        status.textContent = `Spot reserved for ${formattedDate}! Connect your Constant Contact form to sync sign-ups automatically.`;
+        status.classList.remove("hidden");
+      }
+    }
+
+    // Support Escape key to dismiss the registration modal
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeRegModal();
+      }
+    });
+  </script>
+</body>
+</html>
