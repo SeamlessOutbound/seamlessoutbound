@@ -313,7 +313,7 @@
       </div>
     </section>
 
-<!-- SECTION for non-intrusive Ai receptionist part 
+ SECTION for non-intrusive Ai receptionist part 
     <section id="ai-receptionist" class="mc-section" aria-labelledby="mc-heading">
   <style>
     .mc-section {
@@ -456,7 +456,7 @@
     </div>
   </div>
 </section>
-    -->
+    
     <!-- Free Monthly Training, Scripts, and Community Section -->
     <section id="training" class="py-16 border-t border-white/10">
       <div class="max-w-4xl mx-auto rounded-2xl border-2 border-hubOrange/50 bg-gradient-to-br from-hubOrange/15 via-black/50 to-blue-600/15 p-8 sm:p-10 shadow-2xl">
@@ -1023,10 +1023,16 @@
       menuBtn.setAttribute('aria-expanded', String(shouldOpen));
     }
 
+   // menuBtn?.addEventListener('click', function(event) {
+     // event.stopPropagation();
+     // toggleMenu(false);
+   // }); 
+
     menuBtn?.addEventListener('click', function(event) {
-      event.stopPropagation();
-      toggleMenu(false);
-    });
+     event.stopPropagation();
+     toggleMenu(); // Calling without arguments will toggle the 'hidden' class correctly
+   });
+
 
     document.addEventListener('click', function(event) {
       if (!mobileMenu || !menuBtn || mobileMenu.classList.contains('hidden')) return;
