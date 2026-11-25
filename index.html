@@ -313,8 +313,8 @@
       </div>
     </section>
 
- <!--SECTION for non-intrusive Ai receptionist part -->
-    <section id="ai-receptionist" class="mc-section" aria-labelledby="mc-heading">
+<!--SECTION for non-intrusive Ai receptionist part -->
+<section id="ai-receptionist" class="mc-section" aria-labelledby="mc-heading">
   <style>
     .mc-section {
       --mc-card-bg: #14131d;
@@ -332,7 +332,7 @@
     }
 
     .mc-card {
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
       background-color: var(--mc-card-bg);
       border: 1px solid var(--mc-border);
@@ -341,7 +341,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
-      align-items: center;
+      align-items: start;
       box-sizing: border-box;
     }
 
@@ -381,13 +381,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       width: 100%;
+      max-width: 280px;
+      justify-self: center;
     }
 
     .mc-image-slot {
       width: 100%;
-      aspect-ratio: 16 / 10;
+      max-width: 280px;
+      aspect-ratio: 4 / 3;
+      background-color: var(--mc-placeholder-bg);
       border: 1px dashed #523b35;
       border-radius: 10px;
       overflow: hidden;
@@ -426,42 +430,40 @@
       }
 
       .mc-card {
-        grid-template-columns: 1.15fr 0.95fr;
-        gap: 32px;
+        grid-template-columns: minmax(0, 1.35fr) 280px;
+        gap: 28px;
         padding: 34px 36px;
       }
     }
   </style>
 
   <div class="mc-card">
-  <div class="mc-content">
-    <span class="mc-eyebrow">NEVER MISS A LEAD</span>
-    <h2 id="mc-heading" class="mc-heading">
-      Missing calls going to competitors? Ask us about our AI Receptionist.
-    </h2>
-    <p class="mc-copy">
-      Waking up to confirmed bookings and appointments ready for you in the morning, even while you sleep.
-    </p>
-    <p class="mc-copy">
-      Stop letting potential clients call competitors for walkthrough quotes just because you couldn't pick up the phone.
-    </p>
-    <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 16px; border-radius: 8px;">
-      <iframe
-        src="https://www.youtube.com/embed/AiUD93xFCb4?si=qrS8h7S-_WPscI3F"
-        title="YouTube video player"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+    <div class="mc-content">
+      <span class="mc-eyebrow">NEVER MISS A LEAD</span>
+      <h2 id="mc-heading" class="mc-heading">
+        Missing calls going to competitors? Ask us about our AI Receptionist.
+      </h2>
+      <p class="mc-copy">
+        Waking up to confirmed bookings and appointments ready for you in the morning, even while you sleep.
+      </p>
+      <p class="mc-copy">
+        Stop letting potential clients call competitors for walkthrough quotes just because you couldn't pick up the phone.
+      </p>
+      <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 16px; border-radius: 8px;">
+        <iframe
+          src="https://www.youtube.com/embed/AiUD93xFCb4?si=qrS8h7S-_WPscI3F"
+          title="YouTube video player"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
-  </div>
-</div>
 
     <div class="mc-visual-col">
       <div class="mc-image-slot">
-       
-        <img src="photos/Some-Phone-Wizardry.jpg"/>
+        <img src="photos/Some-Phone-Wizardry.jpg" alt="Walkthrough Scout AI phone receptionist preview" />
       </div>
       <a href="https://calendly.com/walkthroughscout" class="mc-link">See how AI Receptionist works &rarr;</a>
     </div>
